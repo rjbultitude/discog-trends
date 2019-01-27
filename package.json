@@ -1,0 +1,16 @@
+{
+  "name": "discog-trends",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "test": "test"
+  },
+  "author": "Richard Bultitude",
+  "license": "ISC",
+  "dependencies": {
+    "disconnect": "^1.2.1",
+    "express": "^4.16.4"
+  }
+}

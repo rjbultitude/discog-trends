@@ -47,4 +47,4 @@ Desktop.ini
 # Project
 # add project specific ignores here
 /dist
-/server
+/server/creds.js

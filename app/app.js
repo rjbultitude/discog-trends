@@ -1,24 +1,31 @@
 const searchTerm = 'genre=Electronic';
 const params = {sort: 'year', sort_order: 'asc', page: 1, per_page: 100};
-const getHeader = {
+const getHeader = new Headers({
   mode: 'no-cors',
-  method: 'get',
+  method: 'GET',
   credentials: 'include'
-};
+});
 const postBody = JSON.stringify({
   params: params,
   searchTerm: searchTerm
 });
 const postHeader = {
   mode: 'no-cors',
-  method: 'post',
+  method: 'POST',
   credentials: 'include',
   headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
   },
   body: postBody
 };
+console.log('postHeader', postHeader);
+
+// search data
+const genre = 'Electronic';
+const sort = 'year'
+const sort_order = 'asc'
+const page = 1
+const per_page = 100;
 
 
 function isCassette(release) {

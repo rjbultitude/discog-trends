@@ -1,11 +1,19 @@
-const searchTerm = 'genre=Electronic';
-const params = {sort: 'year', sort_order: 'asc', page: 1, per_page: 100};
+// search data
+const genre = 'Electronic';
+const sort = 'year'
+const sortOrder = 'asc'
+const page = 1
+const perPage = 100;
+// params
+const searchTerm = `genre=${genre}`;
+const params = {sort: sort, sort_order: sortOrder, page: page, per_page: perPage};
+//headers
 const getHeader = new Headers({
   mode: 'no-cors',
   method: 'GET',
   credentials: 'include'
 });
-const postBody = JSON.stringify({
+const postBodyJSON = JSON.stringify({
   params: params,
   searchTerm: searchTerm
 });
@@ -14,19 +22,11 @@ const postHeader = {
   method: 'POST',
   credentials: 'include',
   headers: {
-    'Content-Type': 'application/json'
+    'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
   },
-  body: postBody
+  body: `genre=${genre}&sort=${sort}&sort_order=${sortOrder}&page=${page}&per_page=${perPage}`
 };
 console.log('postHeader', postHeader);
-
-// search data
-const genre = 'Electronic';
-const sort = 'year'
-const sort_order = 'asc'
-const page = 1
-const per_page = 100;
-
 
 function isCassette(release) {
   console.log('release.format', release.format);

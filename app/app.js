@@ -11,7 +11,7 @@ const postBody = JSON.stringify({
 });
 const postHeader = {
   mode: 'no-cors',
-  method: 'POST',
+  method: 'post',
   credentials: 'include',
   headers: {
     'Accept': 'application/json',
@@ -34,20 +34,13 @@ function filterResults(res, filterCb) {
   return res.filter(isCassette);
 }
 
-function handleDataSearch(res) {
-  res.then((db) => {
-    console.log('db', db);
-    db.search(searchTerm, params, (err, res) => {
-      if (err !== null) {
-        console.warn(err);
-      } else {
-        const cassList = filterResults(res.results, isCassette);
-        const cassListTitles = cassList.map((release) => {
-          return release.title;
-        });
-        console.log('cassListTitles', cassListTitles);
-      }
+function handleDataSearch(results) {
+  results.then((res) => {
+    const cassList = filterResults(res, isCassette);
+    const cassListTitles = cassList.map((release) => {
+      return release.title;
     });
+    console.log('cassListTitles', cassListTitles);
   });
 }
 
@@ -64,8 +57,8 @@ function handleData(res) {
 fetch(`http://localhost:8080/api/search`, postHeader)
   .then((response) => {
     if (response.ok) {
-      console.log('response', response);
-      //handleDataSearch(response.json());
+      const resJSON = response.json();
+      handleDataSearch(resJSON);
     } else {
       throw err;
     }

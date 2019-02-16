@@ -1,6 +1,5 @@
 const Discogs = require('disconnect').Client;
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
 const creds = require('./server/creds.js');
 const app = express();

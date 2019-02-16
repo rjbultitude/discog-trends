@@ -12,8 +12,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "disconnect": "^1.2.1",
-    "express": "^4.16.4",
-    "path": "^0.12.7"
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "http-server": "^0.11.1"

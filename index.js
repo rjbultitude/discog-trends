@@ -14,11 +14,8 @@ app.use(bodyParser.json());
 app.post('/api/search', function (req, res) {
   console.log('req.headers', req.headers);
   console.log('req.body', req.body);
-  const searchTerm = `genre=${req.body.genre}`;
-  const bodyCopy = Object.assign({}, req.body);
-  delete bodyCopy.genre;
-  const params = bodyCopy;
-  db.search(searchTerm, params, (err, data) => {
+  console.log('typeof req.body', typeof req.body);
+  db.search(req.body.searchTerm, req.body.params, (err, data) => {
     if (err !== null) {
         console.warn(err);
         return;
@@ -28,18 +25,9 @@ app.post('/api/search', function (req, res) {
   });
 });
 
-app.get('/api/search', function (req, res) {
-  // const searchTerm = req.param.searchTerm;
-  // const params = req.param.params;
-  db.search(searchTerm, params, (err, data) => {
-    if (err !== null) {
-        console.warn(err);
-        return;
-    }
-    // console.log('get data', data);
-    res.send(data.results);
-  });
-});
+// app.get('/api/search', function (req, res) {
+//   // TBC
+// });
 
 app.use(express.static('./'));
 

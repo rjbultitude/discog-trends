@@ -48,32 +48,28 @@ function handleDataSearch(results) {
       return release.title;
     });
     //console.log('cassListTitles', cassListTitles);
+    return cassListTitles;
   } else {
     console.warn('no results');
   }
 }
 
-function handleData(results) {
-  console.log('results', results);
-  const cassList = filterResults(results, isCassette);
-  const cassListTitles = cassList.map((release) => {
-    return release.title;
-  });
-  console.log('cassListTitles', cassListTitles);
+function getDiscogsData(callback) {
+  return fetch(`http://localhost:8080/api/search`, postHeader)
+    .then((response) => {
+      if (response.ok) {
+        response.json().then((res) => {
+          // console.log('res', res);
+          callback(handleDataSearch(res.results));
+        });
+      } else {
+        throw err;
+      }
+    })
+    .catch((err) => {
+      console.warn(err);
+    });
 }
 
-fetch(`http://localhost:8080/api/search`, postHeader)
-  .then((response) => {
-    if (response.ok) {
-      response.json().then((res) => {
-        console.log('res', res);
-        handleDataSearch(res.results);
-      });
-    } else {
-      throw err;
-    }
-  })
-  .catch((err) => {
-    console.warn(err);
-  });
+export { getDiscogsData as getDiscogsData};
 

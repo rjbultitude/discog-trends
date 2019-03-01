@@ -24,16 +24,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/api/search', cors(corsOptions), function (req, res) {
-  console.log('req.headers', req.headers);
-  console.log('req.body', req.body);
-  console.log('typeof req.body', typeof req.body);
   db.search(req.body.searchTerm, req.body.params, (err, data) => {
     if (err !== null) {
         console.warn(err);
         return;
     }
-    // console.log('post data', data);
-    res.send(data.results);
+    console.log('post data', data);
+    res.send(data);
   });
 });
 

@@ -27,10 +27,8 @@ const postHeader = {
   },
   body: postBodyJSON
 };
-console.log('postHeader', postHeader);
 
 function isCassette(release) {
-  console.log('release.format', release.format);
   for (let index = 0; index < release.format.length; index++) {
     if (release.format[index] === 'Cassette' || release.format[index] === 'Cass' || release.format[index] === 'MC') {
       return release;
@@ -39,34 +37,38 @@ function isCassette(release) {
 }
 
 function filterResults(res, filterCb) {
-  return res.filter(isCassette);
+  return res.filter(filterCb);
 }
 
 function handleDataSearch(results) {
-  results.then((res) => {
-    const cassList = filterResults(res, isCassette);
+  console.log('results', results);
+  const cassList = filterResults(results, isCassette);
+  if (cassList.length > 0) {
     const cassListTitles = cassList.map((release) => {
       return release.title;
     });
-    console.log('cassListTitles', cassListTitles);
-  });
+    //console.log('cassListTitles', cassListTitles);
+  } else {
+    console.warn('no results');
+  }
 }
 
-function handleData(res) {
-  //res.then((db) => {
-    const cassList = filterResults(res.results, isCassette);
-    const cassListTitles = cassList.map((release) => {
-      return release.title;
-    });
-    console.log('cassListTitles', cassListTitles);
-  //});
+function handleData(results) {
+  console.log('results', results);
+  const cassList = filterResults(results, isCassette);
+  const cassListTitles = cassList.map((release) => {
+    return release.title;
+  });
+  console.log('cassListTitles', cassListTitles);
 }
 
 fetch(`http://localhost:8080/api/search`, postHeader)
   .then((response) => {
     if (response.ok) {
-      const resJSON = response.json();
-      handleDataSearch(resJSON);
+      response.json().then((res) => {
+        console.log('res', res);
+        handleDataSearch(res.results);
+      });
     } else {
       throw err;
     }

@@ -25,7 +25,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 function getStaticData(res) {
-  console.log('res', res);
   fs.readFile('./data.json', 'utf8', (err, staticdata) => {
     if (err) {
       throw err;
@@ -55,5 +54,4 @@ app.use(express.static('./'));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
-  //console.log('db', db);
 });

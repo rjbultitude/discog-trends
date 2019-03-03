@@ -16,8 +16,9 @@ class List extends React.Component {
   }
 
   createList() {
+    console.log('this.state.discogsData', this.state.discogsData);
     return this.state.discogsData.map((item, i) => {
-      return React.createElement('li', {}, {item});
+      return React.createElement('li', {key: `li-${i}`}, item);
     });
   }
 
@@ -28,7 +29,7 @@ class List extends React.Component {
       );
     } else {
       return (
-        React.createElement('h2', {}, 'No data')
+        React.createElement('h2', {}, 'Loading...')
       );
     }
   }

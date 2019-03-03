@@ -1,0 +1,4178 @@
+{
+  "pagination": {
+    "per_page": 100,
+    "pages": 18,
+    "page": 1,
+    "urls": {
+      "last": "https://api.discogs.com/database/search?sort=year&per_page=100&sort_order=asc&q=genre%3DElectronic&page=18",
+      "next": "https://api.discogs.com/database/search?sort=year&per_page=100&sort_order=asc&q=genre%3DElectronic&page=2"
+    },
+    "items": 1733
+  },
+  "results": [
+    {
+      "style": [
+        "Modern Classical",
+        "Musique Concrète",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/8zRsH2sGxtRd3IjZIL9Z5ipYtQs=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-939021-1408883618-1447.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "France",
+      "barcode": [],
+      "uri": "/Various-Panorama-De-Musique-Concr%C3%A8te/master/277852",
+      "master_url": "https://api.discogs.com/masters/277852",
+      "label": [
+        "Club National Du Disque",
+        "Radiodiffusion-Télévision Française (RTF)"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "CND 15-16",
+      "community": {
+        "want": 121,
+        "have": 49
+      },
+      "year": "1958",
+      "cover_image": "https://img.discogs.com/x1bx2KO7IBU9oK6huJluEa924rE=/fit-in/409x376/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-939021-1408883618-1447.jpeg.jpg",
+      "title": "Various - Panorama De Musique Concrète",
+      "resource_url": "https://api.discogs.com/masters/277852",
+      "master_id": 277852,
+      "type": "master",
+      "id": 277852
+    },
+    {
+      "style": [
+        "Modern Classical",
+        "Musique Concrète",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/8zRsH2sGxtRd3IjZIL9Z5ipYtQs=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-939021-1408883618-1447.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "France",
+      "barcode": [],
+      "uri": "/Various-Panorama-De-Musique-Concr%C3%A8te/release/939021",
+      "master_url": "https://api.discogs.com/masters/277852",
+      "label": [
+        "Club National Du Disque",
+        "Radiodiffusion-Télévision Française (RTF)"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "CND 15-16",
+      "community": {
+        "want": 93,
+        "have": 18
+      },
+      "year": "1958",
+      "cover_image": "https://img.discogs.com/x1bx2KO7IBU9oK6huJluEa924rE=/fit-in/409x376/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-939021-1408883618-1447.jpeg.jpg",
+      "title": "Various - Panorama De Musique Concrète",
+      "resource_url": "https://api.discogs.com/releases/939021",
+      "master_id": 277852,
+      "type": "release",
+      "id": 939021
+    },
+    {
+      "style": [
+        "Musique Concrète"
+      ],
+      "thumb": "https://img.discogs.com/9apVI6v26QXBgRsXEsqlzlKG378=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2603409-1292708865.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation",
+        "Repress"
+      ],
+      "country": "France",
+      "barcode": [
+        "M6 199481 LDG 1501 XPARTX 42775 21",
+        "M6 242349 LDG 1502 21B",
+        "BIEM"
+      ],
+      "uri": "/Various-Deuxi%C3%A8me-Panorama-De-Musique-Concr%C3%A8te/release/2603409",
+      "master_url": "https://api.discogs.com/masters/117359",
+      "label": [
+        "Ducretet Thomson",
+        "Pathé Marconi, Chatou",
+        "Pathé Marconi, Chatou"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "DUC 9",
+      "community": {
+        "want": 56,
+        "have": 33
+      },
+      "year": "1964",
+      "cover_image": "https://img.discogs.com/GgX62LOxUQq3sQvIpOCID8Db08A=/fit-in/406x410/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2603409-1292708865.jpeg.jpg",
+      "title": "Various - Deuxième Panorama De Musique Concrète",
+      "resource_url": "https://api.discogs.com/releases/2603409",
+      "master_id": 117359,
+      "type": "release",
+      "id": 2603409
+    },
+    {
+      "style": [
+        "Experimental",
+        "Minimal",
+        "Contemporary",
+        "Post-Modern"
+      ],
+      "thumb": "https://img.discogs.com/20YF_Rwb1iT5ITZg_3TWtx4mvlw=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-793870-1159435764.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Douglas-Leedy-The-Electric-Zodiac/master/633855",
+      "master_url": "https://api.discogs.com/masters/633855",
+      "label": [
+        "Capitol Records"
+      ],
+      "genre": [
+        "Electronic",
+        "Classical"
+      ],
+      "catno": "ST-368",
+      "community": {
+        "want": 221,
+        "have": 79
+      },
+      "year": "1969",
+      "cover_image": "https://img.discogs.com/8VpwVW4ccXaHErkSQokG8l2p_fo=/fit-in/597x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-793870-1159435764.jpeg.jpg",
+      "title": "Douglas Leedy - The Electric Zodiac",
+      "resource_url": "https://api.discogs.com/masters/633855",
+      "master_id": 633855,
+      "type": "master",
+      "id": 633855
+    },
+    {
+      "style": [
+        "Experimental",
+        "Minimal",
+        "Contemporary",
+        "Post-Modern"
+      ],
+      "thumb": "https://img.discogs.com/20YF_Rwb1iT5ITZg_3TWtx4mvlw=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-793870-1159435764.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Douglas-Leedy-The-Electric-Zodiac/release/793870",
+      "master_url": "https://api.discogs.com/masters/633855",
+      "label": [
+        "Capitol Records"
+      ],
+      "genre": [
+        "Electronic",
+        "Classical"
+      ],
+      "catno": "ST-368",
+      "community": {
+        "want": 151,
+        "have": 74
+      },
+      "year": "1969",
+      "cover_image": "https://img.discogs.com/8VpwVW4ccXaHErkSQokG8l2p_fo=/fit-in/597x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-793870-1159435764.jpeg.jpg",
+      "title": "Douglas Leedy - The Electric Zodiac",
+      "resource_url": "https://api.discogs.com/releases/793870",
+      "master_id": 633855,
+      "type": "release",
+      "id": 793870
+    },
+    {
+      "style": [
+        "Psychedelic Rock",
+        "Jazz-Rock",
+        "Jazz-Funk",
+        "Big Band",
+        "Classical",
+        "Contemporary",
+        "Lounge",
+        "Latin Jazz",
+        "Pop Rock"
+      ],
+      "thumb": "https://img.discogs.com/hNM4RG9oQzUICR4-SifWx01H8xU=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-11643502-1520172780-7266.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Limited Edition"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Armijo-High-School-Band-Armijo-Spring-Review-1970-/release/11643502",
+      "master_url": null,
+      "label": [
+        "LRS"
+      ],
+      "genre": [
+        "Jazz",
+        "Rock",
+        "Funk / Soul",
+        "Pop",
+        "Classical"
+      ],
+      "catno": "LRSV-S-4434",
+      "community": {
+        "want": 13,
+        "have": 1
+      },
+      "year": "1970",
+      "cover_image": "https://img.discogs.com/fSRmO_ZTWA6DG-f9P7snLszGUMI=/fit-in/600x337/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-11643502-1520172780-7266.jpeg.jpg",
+      "title": "Armijo High School Band - Armijo Spring Review 1970 ",
+      "resource_url": "https://api.discogs.com/releases/11643502",
+      "master_id": 0,
+      "type": "release",
+      "id": 11643502
+    },
+    {
+      "style": [
+        "Synth-pop",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/stt9--GXkDGYauAnhpnavJ-NFSg=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2025643-1374074279-9152.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "7\"",
+        "Single",
+        "45 RPM"
+      ],
+      "country": "Germany",
+      "barcode": [
+        "94258A - 1",
+        "94258B - 1",
+        "GEMA",
+        "U"
+      ],
+      "uri": "/The-Foggy-Joe-Band-Zig-Zag-Dance/master/1376936",
+      "master_url": "https://api.discogs.com/masters/1376936",
+      "label": [
+        "Columbia",
+        "EMI Electrola",
+        "EMI Electrola GmbH",
+        "Druckhaus Maack KG",
+        "EMI Electrola GmbH"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "1 C 006-94 258",
+      "community": {
+        "want": 105,
+        "have": 32
+      },
+      "year": "1973",
+      "cover_image": "https://img.discogs.com/msf2ik3hT93GDqj8VwGS0W_9tiQ=/fit-in/499x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2025643-1374074279-9152.jpeg.jpg",
+      "title": "The Foggy Joe Band - Zig Zag Dance",
+      "resource_url": "https://api.discogs.com/masters/1376936",
+      "master_id": 1376936,
+      "type": "master",
+      "id": 1376936
+    },
+    {
+      "style": [
+        "Contemporary",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/uP-d51AHu1wyH7zfXClkzvhO16Q=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1683014-1236636274.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Box Set"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Butor-Pousseur-Votre-Faust/release/1683014",
+      "master_url": null,
+      "label": [
+        "BASF",
+        "Harmonia Mundi"
+      ],
+      "genre": [
+        "Electronic",
+        "Classical"
+      ],
+      "catno": "01 21580-6 1-3",
+      "community": {
+        "want": 149,
+        "have": 30
+      },
+      "year": "1973",
+      "cover_image": "https://img.discogs.com/UuZgPaIwoNjCet6NsiAIVelt8EM=/fit-in/592x549/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1683014-1236636274.jpeg.jpg",
+      "title": "Butor* / Pousseur* - Votre Faust",
+      "resource_url": "https://api.discogs.com/releases/1683014",
+      "master_id": 0,
+      "type": "release",
+      "id": 1683014
+    },
+    {
+      "style": [
+        "Synth-pop",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/stt9--GXkDGYauAnhpnavJ-NFSg=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2025643-1374074279-9152.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "7\"",
+        "Single",
+        "45 RPM"
+      ],
+      "country": "Germany",
+      "barcode": [
+        "94258A - 1",
+        "94258B - 1",
+        "GEMA",
+        "U"
+      ],
+      "uri": "/The-Foggy-Joe-Band-Zig-Zag-Dance/release/2025643",
+      "master_url": "https://api.discogs.com/masters/1376936",
+      "label": [
+        "Columbia",
+        "EMI Electrola",
+        "EMI Electrola GmbH",
+        "Druckhaus Maack KG",
+        "EMI Electrola GmbH"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "1 C 006-94 258",
+      "community": {
+        "want": 44,
+        "have": 21
+      },
+      "year": "1973",
+      "cover_image": "https://img.discogs.com/msf2ik3hT93GDqj8VwGS0W_9tiQ=/fit-in/499x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2025643-1374074279-9152.jpeg.jpg",
+      "title": "The Foggy Joe Band - Zig Zag Dance",
+      "resource_url": "https://api.discogs.com/releases/2025643",
+      "master_id": 1376936,
+      "type": "release",
+      "id": 2025643
+    },
+    {
+      "style": [
+        "Abstract",
+        "Ambient",
+        "Synth-pop",
+        "Easy Listening"
+      ],
+      "thumb": "https://img.discogs.com/45kaUZmh2Dv1bYRvG4pCL9E9daM=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2085401-1269623558.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP"
+      ],
+      "country": "France",
+      "barcode": [
+        "SACEM SDRM SACD SGDL",
+        "MP 35 A MONTPARNASSE 2000",
+        "MP 35 B MONTPARNASSE 2000"
+      ],
+      "uri": "/Pat-Prilly-Moog-Mig-Mag-Moog/master/357008",
+      "master_url": "https://api.discogs.com/masters/357008",
+      "label": [
+        "Editions Montparnasse 2000",
+        "Imprimerie Jean Colombet"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Stage & Screen"
+      ],
+      "catno": "MP 35",
+      "community": {
+        "want": 235,
+        "have": 83
+      },
+      "year": "1974",
+      "cover_image": "https://img.discogs.com/je5ayI7qY2vJUzbgCIsVEP4KYQA=/fit-in/590x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2085401-1269623558.jpeg.jpg",
+      "title": "Pat Prilly - Moog Mig Mag Moog",
+      "resource_url": "https://api.discogs.com/masters/357008",
+      "master_id": 357008,
+      "type": "master",
+      "id": 357008
+    },
+    {
+      "style": [
+        "Krautrock",
+        "Prog Rock"
+      ],
+      "thumb": "https://img.discogs.com/LnicHqpBC_aNvSi5qozT9opcl7M=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3734983-1484720111-6438.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Promo",
+        "Limited Edition"
+      ],
+      "country": "Italy",
+      "barcode": [],
+      "uri": "/Sensations-Fix-Sensations-Fix/master/960235",
+      "master_url": "https://api.discogs.com/masters/960235",
+      "label": [
+        "Polydor"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock"
+      ],
+      "catno": "AS 273",
+      "community": {
+        "want": 295,
+        "have": 17
+      },
+      "year": "1974",
+      "cover_image": "https://img.discogs.com/JhFPxecoBcRdQ8u6DbtsKGBYUBY=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3734983-1484720111-6438.jpeg.jpg",
+      "title": "Sensation's Fix* - Sensation's Fix",
+      "resource_url": "https://api.discogs.com/masters/960235",
+      "master_id": 960235,
+      "type": "master",
+      "id": 960235
+    },
+    {
+      "style": [
+        "Abstract",
+        "Ambient",
+        "Synth-pop",
+        "Easy Listening"
+      ],
+      "thumb": "https://img.discogs.com/45kaUZmh2Dv1bYRvG4pCL9E9daM=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2085401-1269623558.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP"
+      ],
+      "country": "France",
+      "barcode": [
+        "SACEM SDRM SACD SGDL",
+        "MP 35 A MONTPARNASSE 2000",
+        "MP 35 B MONTPARNASSE 2000"
+      ],
+      "uri": "/Pat-Prilly-Moog-Mig-Mag-Moog/release/2085401",
+      "master_url": "https://api.discogs.com/masters/357008",
+      "label": [
+        "Editions Montparnasse 2000",
+        "Imprimerie Jean Colombet"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Stage & Screen"
+      ],
+      "catno": "MP 35",
+      "community": {
+        "want": 127,
+        "have": 48
+      },
+      "year": "1974",
+      "cover_image": "https://img.discogs.com/je5ayI7qY2vJUzbgCIsVEP4KYQA=/fit-in/590x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2085401-1269623558.jpeg.jpg",
+      "title": "Pat Prilly - Moog Mig Mag Moog",
+      "resource_url": "https://api.discogs.com/releases/2085401",
+      "master_id": 357008,
+      "type": "release",
+      "id": 2085401
+    },
+    {
+      "style": [
+        "Krautrock",
+        "Prog Rock"
+      ],
+      "thumb": "https://img.discogs.com/LnicHqpBC_aNvSi5qozT9opcl7M=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3734983-1484720111-6438.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Promo",
+        "Limited Edition"
+      ],
+      "country": "Italy",
+      "barcode": [],
+      "uri": "/Sensations-Fix-Sensations-Fix/release/3734983",
+      "master_url": "https://api.discogs.com/masters/960235",
+      "label": [
+        "Polydor"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock"
+      ],
+      "catno": "AS 273",
+      "community": {
+        "want": 279,
+        "have": 14
+      },
+      "year": "1974",
+      "cover_image": "https://img.discogs.com/JhFPxecoBcRdQ8u6DbtsKGBYUBY=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3734983-1484720111-6438.jpeg.jpg",
+      "title": "Sensation's Fix* - Sensation's Fix",
+      "resource_url": "https://api.discogs.com/releases/3734983",
+      "master_id": 960235,
+      "type": "release",
+      "id": 3734983
+    },
+    {
+      "style": [
+        "Soul",
+        "Disco"
+      ],
+      "thumb": "https://img.discogs.com/UqNjDIAyO0QeRa5DvCECMe71hZ4=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-550319-1329434262.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "7\"",
+        "Single",
+        "45 RPM"
+      ],
+      "country": "Germany",
+      "barcode": [
+        "GEMA",
+        "96 456 A - 1",
+        "96 456 B - 1",
+        "U"
+      ],
+      "uri": "/Hot-Chocolate-Blue-Night/release/550319",
+      "master_url": "https://api.discogs.com/masters/384684",
+      "label": [
+        "RAK",
+        "EMI Electrola",
+        "EMI Electrola GmbH",
+        "RAK Records Ltd.",
+        "Druckhaus Maack KG",
+        "EMI Electrola GmbH"
+      ],
+      "genre": [
+        "Electronic",
+        "Funk / Soul"
+      ],
+      "catno": "1C 006-96 456",
+      "community": {
+        "want": 5,
+        "have": 40
+      },
+      "year": "1975",
+      "cover_image": "https://img.discogs.com/bOwoFs-HCKctTtd2NR1_u73qI_k=/fit-in/250x250/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-550319-1329434262.jpeg.jpg",
+      "title": "Hot Chocolate - Blue Night",
+      "resource_url": "https://api.discogs.com/releases/550319",
+      "master_id": 384684,
+      "type": "release",
+      "id": 550319
+    },
+    {
+      "style": [
+        "Abstract",
+        "Minimal"
+      ],
+      "thumb": "https://img.discogs.com/_g-Q0nc8POtmHTBDqneVvyxOOF0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-355412-1417863887-6545.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Various-New-Music-For-Electronic-And-Recorded-Media/master/228421",
+      "master_url": "https://api.discogs.com/masters/228421",
+      "label": [
+        "1750 Arch Records",
+        "1750 Arch, Inc.",
+        "1750 Arch, Inc.",
+        "1750 Arch Studios"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "S-1765",
+      "community": {
+        "want": 585,
+        "have": 295
+      },
+      "year": "1977",
+      "cover_image": "https://img.discogs.com/GiHNc8UB59E4d73K8vS49owPCyE=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-355412-1417863887-6545.jpeg.jpg",
+      "title": "Various - New Music For Electronic And Recorded Media",
+      "resource_url": "https://api.discogs.com/masters/228421",
+      "master_id": 228421,
+      "type": "master",
+      "id": 228421
+    },
+    {
+      "style": [
+        "Abstract",
+        "Minimal"
+      ],
+      "thumb": "https://img.discogs.com/_g-Q0nc8POtmHTBDqneVvyxOOF0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-355412-1417863887-6545.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Various-New-Music-For-Electronic-And-Recorded-Media/release/355412",
+      "master_url": "https://api.discogs.com/masters/228421",
+      "label": [
+        "1750 Arch Records",
+        "1750 Arch, Inc.",
+        "1750 Arch, Inc.",
+        "1750 Arch Studios"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "S-1765",
+      "community": {
+        "want": 468,
+        "have": 237
+      },
+      "year": "1977",
+      "cover_image": "https://img.discogs.com/GiHNc8UB59E4d73K8vS49owPCyE=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-355412-1417863887-6545.jpeg.jpg",
+      "title": "Various - New Music For Electronic And Recorded Media",
+      "resource_url": "https://api.discogs.com/releases/355412",
+      "master_id": 228421,
+      "type": "release",
+      "id": 355412
+    },
+    {
+      "style": [
+        "Euro-Disco",
+        "Punk"
+      ],
+      "thumb": "https://img.discogs.com/SUlZOSBB5WU_unAdjafHLNyx9RI=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-7098015-1495389442-3320.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album",
+        "Stereo"
+      ],
+      "country": "France",
+      "barcode": [
+        "RC 205"
+      ],
+      "uri": "/Laurent-Stopnicki-Traits-Portraits/release/7098015",
+      "master_url": null,
+      "label": [
+        "RCA",
+        "You You Music",
+        "France Imprimerie Sorel"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock"
+      ],
+      "catno": "PL 37402",
+      "community": {
+        "want": 5,
+        "have": 3
+      },
+      "year": "1980",
+      "cover_image": "https://img.discogs.com/YCUZxTNTLkxZWkN7V_Pjf4r_VTI=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7098015-1495389442-3320.jpeg.jpg",
+      "title": "Laurent Stopnicki - Traits Portraits",
+      "resource_url": "https://api.discogs.com/releases/7098015",
+      "master_id": 0,
+      "type": "release",
+      "id": 7098015
+    },
+    {
+      "style": [
+        "Disco",
+        "Synth-pop"
+      ],
+      "thumb": "https://img.discogs.com/248KhVXK0V4kUzhrRLbOdK5sw9M=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5759475-1401879878-9810.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Album",
+        "Picture Disc",
+        "Promo"
+      ],
+      "country": "France",
+      "barcode": [],
+      "uri": "/Maria-De-Rossi-Squattez-La-Lune/release/5759475",
+      "master_url": "https://api.discogs.com/masters/694775",
+      "label": [
+        "RCA"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "DL 37474",
+      "community": {
+        "want": 6,
+        "have": 9
+      },
+      "year": "1980",
+      "cover_image": "https://img.discogs.com/F-UgqIOJz4BhTThaB1uU9OlnFf4=/fit-in/226x223/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5759475-1401879878-9810.jpeg.jpg",
+      "title": "Maria De Rossi - Squattez La Lune",
+      "resource_url": "https://api.discogs.com/releases/5759475",
+      "master_id": 694775,
+      "type": "release",
+      "id": 5759475
+    },
+    {
+      "style": [
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/96uG1tKxWmb7VwYPz6hKx1F_-kc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5840262-1404156918-9184.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Compilation"
+      ],
+      "country": "Japan",
+      "barcode": [],
+      "uri": "/Various-B-Lives-4/release/5840262",
+      "master_url": null,
+      "label": [
+        "Skating Pears"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "SP-011",
+      "community": {
+        "want": 58,
+        "have": 5
+      },
+      "year": "1983",
+      "cover_image": "https://img.discogs.com/mfiWo0InOO0Vx85OnAhGH2w0LOk=/fit-in/600x782/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5840262-1404156918-9184.jpeg.jpg",
+      "title": "Various - B-Lives 4",
+      "resource_url": "https://api.discogs.com/releases/5840262",
+      "master_id": 0,
+      "type": "release",
+      "id": 5840262
+    },
+    {
+      "style": [
+        "Abstract",
+        "Soundtrack"
+      ],
+      "thumb": "https://img.discogs.com/-wEXb8KJmDs8qC2-ErPkZ7yFksY=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4165162-1357424564-7576.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Limited Edition"
+      ],
+      "country": "UK",
+      "barcode": [],
+      "uri": "/Nomusic-SpeleoGenesis/release/4165162",
+      "master_url": null,
+      "label": [
+        "Blue Dolphin",
+        "Red Rhino Distribution",
+        "Nomusic Ltd",
+        "Alvic Studios",
+        "Abbey Road Studios"
+      ],
+      "genre": [
+        "Electronic",
+        "Non-Music",
+        "Stage & Screen"
+      ],
+      "catno": "NOMLP001",
+      "community": {
+        "want": 6,
+        "have": 8
+      },
+      "year": "1984",
+      "cover_image": "https://img.discogs.com/c1CQM8C8I8zp9H5wWsSCZSCEps8=/fit-in/320x320/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4165162-1357424564-7576.jpeg.jpg",
+      "title": "Nomusic - SpeleoGenesis",
+      "resource_url": "https://api.discogs.com/releases/4165162",
+      "master_id": 0,
+      "type": "release",
+      "id": 4165162
+    },
+    {
+      "style": [
+        "Jazz-Funk",
+        "Jazz-Rock",
+        "Fusion"
+      ],
+      "thumb": "https://img.discogs.com/mmvUYWQyGK2O-nCZO55zAAW_X68=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5233836-1388310165-7899.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP"
+      ],
+      "country": "France",
+      "barcode": [],
+      "uri": "/Michel-Thibault-Samba-File/release/5233836",
+      "master_url": null,
+      "label": [
+        "Cabana Music",
+        "Studio Multison",
+        "Studio Multison",
+        "Cabana Music",
+        "Cabana Music"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Latin",
+        "Funk / Soul"
+      ],
+      "catno": "CA 94236",
+      "community": {
+        "want": 61,
+        "have": 9
+      },
+      "year": "1984",
+      "cover_image": "https://img.discogs.com/_l2-SnOSngyEwdhhsNST-OZc1fM=/fit-in/500x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5233836-1388310165-7899.jpeg.jpg",
+      "title": "Michel Thibault - Samba File",
+      "resource_url": "https://api.discogs.com/releases/5233836",
+      "master_id": 0,
+      "type": "release",
+      "id": 5233836
+    },
+    {
+      "style": [
+        "RnB/Swing",
+        "Soundtrack",
+        "Synth-pop",
+        "Hip Hop"
+      ],
+      "thumb": "https://img.discogs.com/BLIjEn_A3QLFUhbJq7gkLfR6QFI=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9058438-1474041626-1924.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "UK",
+      "barcode": [
+        "7599-25295-1",
+        "LC 0392",
+        "GEMA/BIEM",
+        "France: WE 381",
+        "U"
+      ],
+      "uri": "/Various-Krush-Groove-Music-From-The-Original-Motion-Picture-Sound-Track/release/9058438",
+      "master_url": "https://api.discogs.com/masters/158527",
+      "label": [
+        "Warner Bros. Records",
+        "Record Service GmbH",
+        "Warner Bros. Records Inc.",
+        "WEA International Inc.",
+        "WEA Musik GmbH",
+        "Amigo Studios"
+      ],
+      "genre": [
+        "Electronic",
+        "Hip Hop",
+        "Funk / Soul",
+        "Stage & Screen"
+      ],
+      "catno": "925 295-1",
+      "community": {
+        "want": 10,
+        "have": 12
+      },
+      "year": "1985",
+      "cover_image": "https://img.discogs.com/1k6wqWptkQ2_YCow5FlBQVGScpU=/fit-in/600x586/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-9058438-1474041626-1924.jpeg.jpg",
+      "title": "Various - Krush Groove (Music From The Original Motion Picture Sound Track)",
+      "resource_url": "https://api.discogs.com/releases/9058438",
+      "master_id": 158527,
+      "type": "release",
+      "id": 9058438
+    },
+    {
+      "style": [
+        "RnB/Swing",
+        "Soundtrack",
+        "Synth-pop",
+        "Hip Hop"
+      ],
+      "thumb": "https://img.discogs.com/lXUcre175_Fs6DwCbYPWfNQVJVA=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1404413-1408532668-8198.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "Europe",
+      "barcode": [
+        "7599-25295-1",
+        "LC 0392",
+        "GEMA/BIEM",
+        "France: WE 381",
+        "U"
+      ],
+      "uri": "/Various-Krush-Groove-Music-From-The-Original-Motion-Picture-Sound-Track/release/1404413",
+      "master_url": "https://api.discogs.com/masters/158527",
+      "label": [
+        "Warner Bros. Records",
+        "Record Service GmbH",
+        "Warner Bros. Records Inc.",
+        "WEA International Inc.",
+        "WEA Musik GmbH",
+        "Amigo Studios"
+      ],
+      "genre": [
+        "Electronic",
+        "Hip Hop",
+        "Funk / Soul",
+        "Stage & Screen"
+      ],
+      "catno": "925 295-1",
+      "community": {
+        "want": 28,
+        "have": 256
+      },
+      "year": "1985",
+      "cover_image": "https://img.discogs.com/nfitaxuj7som0OKkTz3p5ikNYnY=/fit-in/600x592/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1404413-1408532668-8198.jpeg.jpg",
+      "title": "Various - Krush Groove (Music From The Original Motion Picture Sound Track)",
+      "resource_url": "https://api.discogs.com/releases/1404413",
+      "master_id": 158527,
+      "type": "release",
+      "id": 1404413
+    },
+    {
+      "style": [
+        "Synth-pop"
+      ],
+      "thumb": "https://img.discogs.com/O1nLswqXF098K_F48noMlPPSF9Y=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-7179418-1435508442-7561.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\"",
+        "45 RPM",
+        "Maxi-Single",
+        "Misprint"
+      ],
+      "country": "Germany",
+      "barcode": [
+        "0 42288 31211 6",
+        "LC 0270",
+        "GEMA",
+        "883 121 - 1 51 32 0",
+        "883 121 - 1 52 32 0"
+      ],
+      "uri": "/Blue-Vision-Leila-Little-Willys-Camelride/release/7179418",
+      "master_url": "https://api.discogs.com/masters/788100",
+      "label": [
+        "Metronome",
+        "Metronome Musik GmbH",
+        "Boogietunes",
+        "Nordton"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "883 121-1",
+      "community": {
+        "want": 21,
+        "have": 3
+      },
+      "year": "1985",
+      "cover_image": "https://img.discogs.com/JISUAP4AK5joj9VCcDRfaKOkIRg=/fit-in/300x299/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7179418-1435508442-7561.jpeg.jpg",
+      "title": "Blue Vision - Leila (Little Willy's Camelride)",
+      "resource_url": "https://api.discogs.com/releases/7179418",
+      "master_id": 788100,
+      "type": "release",
+      "id": 7179418
+    },
+    {
+      "style": [
+        "Electro",
+        "Synth-pop"
+      ],
+      "thumb": "https://img.discogs.com/prZEacvIhqcPuI7Cnp5BMR752LQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9264752-1477616007-8839.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\"",
+        "33 ⅓ RPM",
+        "Test Pressing"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Shannon-Urgent/release/9264752",
+      "master_url": "https://api.discogs.com/masters/105720",
+      "label": [
+        "Specialty Records Corporation"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "ST-DM.41534",
+      "community": {
+        "want": 6,
+        "have": 2
+      },
+      "year": "1985",
+      "cover_image": "https://img.discogs.com/wI8y1aPPPcI2lGhpnF5MIld2hmA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-9264752-1477616007-8839.jpeg.jpg",
+      "title": "Shannon - Urgent",
+      "resource_url": "https://api.discogs.com/releases/9264752",
+      "master_id": 105720,
+      "type": "release",
+      "id": 9264752
+    },
+    {
+      "style": [
+        "New Age"
+      ],
+      "thumb": "https://img.discogs.com/wd-4j9DHEoQeW7hTGe2yLo7maUM=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2783054-1511136839-6035.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album",
+        "Remastered"
+      ],
+      "country": "New Zealand",
+      "barcode": [
+        "9 416918 340014"
+      ],
+      "uri": "/Jeff-Clarkson-Butterfly/master/942744",
+      "master_url": "https://api.discogs.com/masters/942744",
+      "label": [
+        "Evergreen",
+        "Home Studios"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "CD 001",
+      "community": {
+        "want": 7,
+        "have": 5
+      },
+      "year": "1986",
+      "cover_image": "https://img.discogs.com/mswXtKw9IKFJZvB80lT8FDYQYMA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2783054-1511136839-6035.jpeg.jpg",
+      "title": "Jeff Clarkson - Butterfly",
+      "resource_url": "https://api.discogs.com/masters/942744",
+      "master_id": 942744,
+      "type": "master",
+      "id": 942744
+    },
+    {
+      "style": [
+        "Synth-pop",
+        "Indie Rock"
+      ],
+      "thumb": "https://img.discogs.com/IPCiwgcO68HAI1VYY6isLXnelTk=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3173487-1319057364.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "7\"",
+        "45 RPM"
+      ],
+      "country": "UK",
+      "barcode": [],
+      "uri": "/Y-Do-I-If-You-Stay/release/3173487",
+      "master_url": null,
+      "label": [
+        "Not On Label"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "YYDOI 001",
+      "community": {
+        "want": 7,
+        "have": 10
+      },
+      "year": "1986",
+      "cover_image": "https://img.discogs.com/mU5Y7EvOctD5qRUEm6KUWXEj_Q0=/fit-in/495x476/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3173487-1319057364.jpeg.jpg",
+      "title": "Y-Do-I - If You Stay",
+      "resource_url": "https://api.discogs.com/releases/3173487",
+      "master_id": 0,
+      "type": "release",
+      "id": 3173487
+    },
+    {
+      "style": [
+        "Hard Rock",
+        "Punk"
+      ],
+      "thumb": "https://img.discogs.com/7wegcjFOetncmSy82jjWhobPTqc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1472429-1337952252-2978.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\"",
+        "Maxi-Single"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Afrika-Bambaataa-Family-Kick-Out-The-Jams/release/1472429",
+      "master_url": "https://api.discogs.com/masters/34535",
+      "label": [
+        "Tommy Boy"
+      ],
+      "genre": [
+        "Electronic",
+        "Hip Hop",
+        "Rock",
+        "Reggae"
+      ],
+      "catno": "258 473-0",
+      "community": {
+        "want": 23,
+        "have": 33
+      },
+      "year": "1986",
+      "cover_image": "https://img.discogs.com/u5PFKZJ-EtAe-EyH-cJ9HmausYY=/fit-in/576x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1472429-1337952252-2978.jpeg.jpg",
+      "title": "Afrika Bambaataa & Family - Kick Out The Jams",
+      "resource_url": "https://api.discogs.com/releases/1472429",
+      "master_id": 34535,
+      "type": "release",
+      "id": 1472429
+    },
+    {
+      "style": [
+        "New Age"
+      ],
+      "thumb": "https://img.discogs.com/wd-4j9DHEoQeW7hTGe2yLo7maUM=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2783054-1511136839-6035.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album",
+        "Remastered"
+      ],
+      "country": "New Zealand",
+      "barcode": [
+        "9 416918 340014"
+      ],
+      "uri": "/Jeff-Clarkson-Butterfly/release/2783054",
+      "master_url": "https://api.discogs.com/masters/942744",
+      "label": [
+        "Evergreen",
+        "Home Studios"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "CD 001",
+      "community": {
+        "want": 0,
+        "have": 2
+      },
+      "year": "1986",
+      "cover_image": "https://img.discogs.com/mswXtKw9IKFJZvB80lT8FDYQYMA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2783054-1511136839-6035.jpeg.jpg",
+      "title": "Jeff Clarkson - Butterfly",
+      "resource_url": "https://api.discogs.com/releases/2783054",
+      "master_id": 942744,
+      "type": "release",
+      "id": 2783054
+    },
+    {
+      "style": [
+        "Acid House",
+        "House"
+      ],
+      "thumb": "https://img.discogs.com/wWi0JtIfYW64DUK0juRNhnmzOfs=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1743007-1240493013.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "Europe",
+      "barcode": [
+        "0 35627 193910",
+        "LC 8280",
+        "LC 0316",
+        "BIEM GEMA",
+        "D: SE",
+        "F: RC270",
+        "UK: HH",
+        "PL71939-1(2)",
+        "PL71939-2(2)",
+        "C-5967",
+        "C-5970"
+      ],
+      "uri": "/Various-North-The-Sound-Of-The-Dance-Underground/release/1743007",
+      "master_url": "https://api.discogs.com/masters/107231",
+      "label": [
+        "Deconstruction",
+        "RCA",
+        "BMG Records (UK) Ltd.",
+        "BMG Records",
+        "BMG Ariola"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "PL 71939",
+      "community": {
+        "want": 91,
+        "have": 245
+      },
+      "year": "1988",
+      "cover_image": "https://img.discogs.com/5l9TVjCqERIOyA9vZ4-TUUH8cto=/fit-in/600x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1743007-1240493013.jpeg.jpg",
+      "title": "Various - North - The Sound Of The Dance Underground",
+      "resource_url": "https://api.discogs.com/releases/1743007",
+      "master_id": 107231,
+      "type": "release",
+      "id": 1743007
+    },
+    {
+      "style": [
+        "Acid House",
+        "House"
+      ],
+      "thumb": "https://img.discogs.com/xlJf6NcjNI-l8z3v4LkFLn1QrBo=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-45007-1321465882.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\"",
+        "45 RPM",
+        "Compilation"
+      ],
+      "country": "UK",
+      "barcode": [
+        "0 035627 193910"
+      ],
+      "uri": "/Various-North-The-Sound-Of-The-Dance-Underground/release/45007",
+      "master_url": "https://api.discogs.com/masters/107231",
+      "label": [
+        "Deconstruction",
+        "RCA",
+        "BMG Records (UK) Ltd.",
+        "BMG Records",
+        "BMG Ariola"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "PL 71939",
+      "community": {
+        "want": 206,
+        "have": 624
+      },
+      "year": "1988",
+      "cover_image": "https://img.discogs.com/732HUhjkH6v4mTP3ARVY_Q-WleM=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-45007-1321465882.jpeg.jpg",
+      "title": "Various - North - The Sound Of The Dance Underground",
+      "resource_url": "https://api.discogs.com/releases/45007",
+      "master_id": 107231,
+      "type": "release",
+      "id": 45007
+    },
+    {
+      "style": [
+        "Experimental",
+        "Contemporary Jazz"
+      ],
+      "thumb": "https://img.discogs.com/geg9NlBmutG_coY6c_m4mNCxye8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2145643-1391302859-2174.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "France",
+      "barcode": [],
+      "uri": "/Henri-DArtois-Algorythmes-Al%C3%A9as/release/2145643",
+      "master_url": null,
+      "label": [
+        "Aléas Productions"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Classical"
+      ],
+      "catno": "COR 002",
+      "community": {
+        "want": 0,
+        "have": 1
+      },
+      "year": "1988",
+      "cover_image": "https://img.discogs.com/uCUnWSOsmDOmOrpJyq87XsLnJTs=/fit-in/550x550/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2145643-1391302859-2174.jpeg.jpg",
+      "title": "Henri D'Artois - Algorythmes & Aléas",
+      "resource_url": "https://api.discogs.com/releases/2145643",
+      "master_id": 0,
+      "type": "release",
+      "id": 2145643
+    },
+    {
+      "style": [
+        "Avantgarde"
+      ],
+      "thumb": "https://img.discogs.com/V0JzU4DSNTyni88FdExd6gvpvWQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1330500-1210198637.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Japan",
+      "barcode": [],
+      "uri": "/John-Zorn-Cynical-Hysterie-Hour/master/409707",
+      "master_url": "https://api.discogs.com/masters/409707",
+      "label": [
+        "CBS/Sony",
+        "Shelley Palmer Studio",
+        "Studio Key-Stone"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Rock",
+        "Children's",
+        "Stage & Screen"
+      ],
+      "catno": "24DH 5291",
+      "community": {
+        "want": 90,
+        "have": 221
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/eVapYbZylzuVLu6Nn9JY4zioYPw=/fit-in/340x336/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1330500-1210198637.jpeg.jpg",
+      "title": "John Zorn - Cynical Hysterie Hour",
+      "resource_url": "https://api.discogs.com/masters/409707",
+      "master_id": 409707,
+      "type": "master",
+      "id": 409707
+    },
+    {
+      "style": [
+        "Hi NRG",
+        "Disco"
+      ],
+      "thumb": "https://img.discogs.com/ngnDnmK703Z7dlu9FPUB9ShhJw0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1330673-1439296923-1488.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "US",
+      "barcode": [
+        "053993000410"
+      ],
+      "uri": "/Various-The-Best-Of-Record-Shack-Records/release/1330673",
+      "master_url": "https://api.discogs.com/masters/184767",
+      "label": [
+        "Hot Productions",
+        "Record Shack Records",
+        "The Best Of"
+      ],
+      "genre": [
+        "Electronic",
+        "Funk / Soul"
+      ],
+      "catno": "HTCL 4",
+      "community": {
+        "want": 9,
+        "have": 19
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/Nnoy7WF_XUkznllV5ZHPCtT94g8=/fit-in/600x603/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1330673-1439296923-1488.jpeg.jpg",
+      "title": "Various - The Best Of Record Shack Records",
+      "resource_url": "https://api.discogs.com/releases/1330673",
+      "master_id": 184767,
+      "type": "release",
+      "id": 1330673
+    },
+    {
+      "style": [
+        "Pop Rap",
+        "Disco"
+      ],
+      "thumb": "https://img.discogs.com/mRy3uFAvoMFCgoymuUJkYnTWW7w=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5531013-1395769238-4538.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "7\"",
+        "45 RPM",
+        "Single",
+        "Reissue"
+      ],
+      "country": "France",
+      "barcode": [
+        "POL 102",
+        "SACEM SACD SDRM SGDL",
+        "8897347 A P0",
+        "8897347 B P0",
+        "0 42288 97347 8"
+      ],
+      "uri": "/Mel-Brooks-Its-Good-To-Be-The-King-Rap-Remix-1789/release/5531013",
+      "master_url": "https://api.discogs.com/masters/106929",
+      "label": [
+        "Off The Track Records",
+        "Montreuil Offset",
+        "Polydor"
+      ],
+      "genre": [
+        "Electronic",
+        "Hip Hop"
+      ],
+      "catno": "889 734-7",
+      "community": {
+        "want": 11,
+        "have": 8
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/7mSe6flxJfokbCPXf_3hY50wplA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5531013-1395769238-4538.jpeg.jpg",
+      "title": "Mel Brooks - It's Good To Be The King Rap / Remix 1789",
+      "resource_url": "https://api.discogs.com/releases/5531013",
+      "master_id": 106929,
+      "type": "release",
+      "id": 5531013
+    },
+    {
+      "style": [
+        "New Wave",
+        "Synth-pop"
+      ],
+      "thumb": "https://img.discogs.com/3SMErCFdblZyLCnKSTX2mBka4BE=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1417360-1217939459.jpeg.jpg",
+      "format": [
+        "CD",
+        "Maxi-Single"
+      ],
+      "country": "Germany",
+      "barcode": [
+        "0 42288 94792 9",
+        "889 479-2 01 /",
+        "LC 0309",
+        "BIEM STEMRA"
+      ],
+      "uri": "/The-Jeremy-Days-Julie-Thru-The-Blinds/release/1417360",
+      "master_url": "https://api.discogs.com/masters/159531",
+      "label": [
+        "Polydor",
+        "Polydor GmbH",
+        "PolyGram",
+        "PDO, Germany",
+        "Antenna Music"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock"
+      ],
+      "catno": "889 479-2",
+      "community": {
+        "want": 3,
+        "have": 15
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/7kLBvuk8vRYviCT1jyKZ1Fs1liE=/fit-in/450x350/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1417360-1217939459.jpeg.jpg",
+      "title": "The Jeremy Days - Julie Thru The Blinds",
+      "resource_url": "https://api.discogs.com/releases/1417360",
+      "master_id": 159531,
+      "type": "release",
+      "id": 1417360
+    },
+    {
+      "style": [
+        "New Age",
+        "Abstract",
+        "Experimental",
+        "Ambient"
+      ],
+      "thumb": "https://img.discogs.com/kFb-gPSGug4qOxxHMsnpLHzOWeY=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3296681-1324488192.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Various-Some-Music-Is-Private-Music/master/567233",
+      "master_url": "https://api.discogs.com/masters/567233",
+      "label": [
+        "Private Music"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Folk, World, & Country"
+      ],
+      "catno": "259 646",
+      "community": {
+        "want": 39,
+        "have": 45
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/7qWRyvV6aR3FoQu7VugBiAH9ISo=/fit-in/450x459/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3296681-1324488192.jpeg.jpg",
+      "title": "Various - Some Music Is Private Music",
+      "resource_url": "https://api.discogs.com/masters/567233",
+      "master_id": 567233,
+      "type": "master",
+      "id": 567233
+    },
+    {
+      "style": [
+        "New Age",
+        "Abstract",
+        "Experimental",
+        "Ambient"
+      ],
+      "thumb": "https://img.discogs.com/WRcFYQZ7kgEkYRkMcB8X45gCsSk=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2816385-1302341746.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Various-Some-Music-Is-Private-Music/release/2816385",
+      "master_url": "https://api.discogs.com/masters/567233",
+      "label": [
+        "Private Music"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Folk, World, & Country"
+      ],
+      "catno": "209 646",
+      "community": {
+        "want": 23,
+        "have": 16
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/nkTYaBO-4bBjGdGwGZ4V37Bp-2c=/fit-in/450x459/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2816385-1302341746.jpeg.jpg",
+      "title": "Various - Some Music Is Private Music",
+      "resource_url": "https://api.discogs.com/releases/2816385",
+      "master_id": 567233,
+      "type": "release",
+      "id": 2816385
+    },
+    {
+      "style": [
+        "Avantgarde"
+      ],
+      "thumb": "https://img.discogs.com/V0JzU4DSNTyni88FdExd6gvpvWQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1330500-1210198637.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Japan",
+      "barcode": [],
+      "uri": "/John-Zorn-Cynical-Hysterie-Hour/release/1330500",
+      "master_url": "https://api.discogs.com/masters/409707",
+      "label": [
+        "CBS/Sony",
+        "Shelley Palmer Studio",
+        "Studio Key-Stone"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Rock",
+        "Children's",
+        "Stage & Screen"
+      ],
+      "catno": "24DH 5291",
+      "community": {
+        "want": 46,
+        "have": 17
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/eVapYbZylzuVLu6Nn9JY4zioYPw=/fit-in/340x336/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1330500-1210198637.jpeg.jpg",
+      "title": "John Zorn - Cynical Hysterie Hour",
+      "resource_url": "https://api.discogs.com/releases/1330500",
+      "master_id": 409707,
+      "type": "release",
+      "id": 1330500
+    },
+    {
+      "style": [
+        "Pop Rap",
+        "Disco"
+      ],
+      "thumb": "https://img.discogs.com/gtEuy-vUr8dGgB4fdQupuKQN8Es=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-6372605-1417625857-8129.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\"",
+        "33 ⅓ RPM",
+        "Maxi-Single",
+        "Reissue",
+        "Stereo"
+      ],
+      "country": "France",
+      "barcode": [
+        "0 42288 97351 5",
+        "MPO 889 731-1 A",
+        "MPO 889 731-1 B",
+        "POL 122",
+        "SACEM / SACD / SDRM / SGDL"
+      ],
+      "uri": "/Mel-Brooks-Its-Good-To-Be-The-King-Rap-Remix-1789/release/6372605",
+      "master_url": "https://api.discogs.com/masters/106929",
+      "label": [
+        "Polydor",
+        "Off The Track Records",
+        "Polydor",
+        "Jo Lustig Ltd.",
+        "Brooksfilms Limited",
+        "Brooksfilms Limited",
+        "MPO",
+        "Montreuil Offset",
+        "Bee Bee Music",
+        "Island Music"
+      ],
+      "genre": [
+        "Electronic",
+        "Funk / Soul"
+      ],
+      "catno": "889 735-1",
+      "community": {
+        "want": 18,
+        "have": 19
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/W3-eUqaFKucisj6h01YCt4OzsOI=/fit-in/567x567/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6372605-1417625857-8129.jpeg.jpg",
+      "title": "Mel Brooks - It's Good To Be The King Rap (Remix 1789)",
+      "resource_url": "https://api.discogs.com/releases/6372605",
+      "master_id": 106929,
+      "type": "release",
+      "id": 6372605
+    },
+    {
+      "style": [
+        "New Age",
+        "Abstract",
+        "Experimental",
+        "Ambient"
+      ],
+      "thumb": "https://img.discogs.com/iMoS1J0eVitQr_rBfI8Z8nT1IqM=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8327030-1486488010-5724.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "Spain",
+      "barcode": [
+        "4 007192 096466",
+        "4007192096466",
+        "850 209646*A*1     ",
+        "850 209646*B*1",
+        "5C"
+      ],
+      "uri": "/Various-Some-Music-Is-Private-Music/release/8327030",
+      "master_url": "https://api.discogs.com/masters/567233",
+      "label": [
+        "Private Music",
+        "BMG Ariola España",
+        "Private Music",
+        "BMG Ariola S.A.",
+        "BMG Ariola S.A.",
+        "Indugraf Madrid, S.A."
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Folk, World, & Country"
+      ],
+      "catno": "209646",
+      "community": {
+        "want": 9,
+        "have": 9
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/NO_yElrYTWM-lKVlJaGy5wbyCu0=/fit-in/600x605/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8327030-1486488010-5724.jpeg.jpg",
+      "title": "Various - Some Music Is Private Music",
+      "resource_url": "https://api.discogs.com/releases/8327030",
+      "master_id": 567233,
+      "type": "release",
+      "id": 8327030
+    },
+    {
+      "style": [
+        "New Age",
+        "Abstract",
+        "Experimental",
+        "Ambient"
+      ],
+      "thumb": "https://img.discogs.com/kFb-gPSGug4qOxxHMsnpLHzOWeY=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3296681-1324488192.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Various-Some-Music-Is-Private-Music/release/3296681",
+      "master_url": "https://api.discogs.com/masters/567233",
+      "label": [
+        "Private Music"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Folk, World, & Country"
+      ],
+      "catno": "259 646",
+      "community": {
+        "want": 7,
+        "have": 20
+      },
+      "year": "1989",
+      "cover_image": "https://img.discogs.com/7qWRyvV6aR3FoQu7VugBiAH9ISo=/fit-in/450x459/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3296681-1324488192.jpeg.jpg",
+      "title": "Various - Some Music Is Private Music",
+      "resource_url": "https://api.discogs.com/releases/3296681",
+      "master_id": 567233,
+      "type": "release",
+      "id": 3296681
+    },
+    {
+      "style": [
+        "House",
+        "Pop Rock",
+        "Synth-pop"
+      ],
+      "thumb": "https://img.discogs.com/FODptuEdBnLIwJdzlrtPAaciYUs=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8472253-1462279241-9064.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Album",
+        "Unofficial Release",
+        "Stereo"
+      ],
+      "country": "United Arab Emirates",
+      "barcode": [],
+      "uri": "/Was-Not-Was-Are-You-Okay-/release/8472253",
+      "master_url": "https://api.discogs.com/masters/55704",
+      "label": [
+        "Thomsun Original"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Funk / Soul"
+      ],
+      "catno": "EN-3694",
+      "community": {
+        "want": 2,
+        "have": 1
+      },
+      "year": "1990",
+      "cover_image": "https://img.discogs.com/CtzLcbCK4d_bP4BHidgKrIV4gMs=/fit-in/600x591/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8472253-1462279241-9064.jpeg.jpg",
+      "title": "Was (Not Was) - Are You Okay ?",
+      "resource_url": "https://api.discogs.com/releases/8472253",
+      "master_id": 55704,
+      "type": "release",
+      "id": 8472253
+    },
+    {
+      "style": [
+        "Downtempo",
+        "Jazzdance"
+      ],
+      "thumb": "https://img.discogs.com/ZAo4PxxfBAhbqcHcecr-4W9dG0A=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8470412-1462228079-1093.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Album",
+        "Unofficial Release",
+        "Stereo"
+      ],
+      "country": "United Arab Emirates",
+      "barcode": [],
+      "uri": "/Soul-II-Soul-1990-A-New-Decade/release/8470412",
+      "master_url": "https://api.discogs.com/masters/79465",
+      "label": [
+        "Thomsun Original"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "EN-3607",
+      "community": {
+        "want": 11,
+        "have": 0
+      },
+      "year": "1990",
+      "cover_image": "https://img.discogs.com/12d4L21WqcQxcnfY0ZrM4BSEJmo=/fit-in/600x599/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8470412-1462228079-1093.jpeg.jpg",
+      "title": "Soul II Soul - 1990 A New Decade",
+      "resource_url": "https://api.discogs.com/releases/8470412",
+      "master_id": 79465,
+      "type": "release",
+      "id": 8470412
+    },
+    {
+      "style": [
+        "Modern Classical",
+        "Minimal",
+        "Ambient"
+      ],
+      "thumb": "https://img.discogs.com/078s-8nF0OumV_NTLSXXQWge_uU=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-240261-1149016652.jpeg.jpg",
+      "format": [
+        "CD"
+      ],
+      "country": "USA & Canada",
+      "barcode": [],
+      "uri": "/Eric-Scott-3-Mains/release/240261",
+      "master_url": null,
+      "label": [
+        "Day For Night"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "Day 001.cd",
+      "community": {
+        "want": 0,
+        "have": 3
+      },
+      "year": "1991",
+      "cover_image": "https://img.discogs.com/mC4vaRcA-UlWMEm7IFbufy5YXUc=/fit-in/328x328/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-240261-1149016652.jpeg.jpg",
+      "title": "Eric Scott - 3 Mains",
+      "resource_url": "https://api.discogs.com/releases/240261",
+      "master_id": 0,
+      "type": "release",
+      "id": 240261
+    },
+    {
+      "style": [
+        "Promotional"
+      ],
+      "thumb": "https://img.discogs.com/lQfxLcR6kKv6Bdd9cg8klAx9Wqc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-7025694-1431957387-3079.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Promo",
+        "Stereo"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Various-Greatest-Hits-Ergee-Limited-Edition-Vol-5/release/7025694",
+      "master_url": null,
+      "label": [
+        "Ergee"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Latin",
+        "Blues",
+        "Non-Music",
+        "Classical"
+      ],
+      "catno": "-",
+      "community": {
+        "want": 13,
+        "have": 6
+      },
+      "year": "1992",
+      "cover_image": "https://img.discogs.com/orr1P-auQ8Irf_lZIsFkXQZHCkw=/fit-in/600x588/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7025694-1431957387-3079.jpeg.jpg",
+      "title": "Various - Greatest Hits - Ergee Limited Edition Vol. 5",
+      "resource_url": "https://api.discogs.com/releases/7025694",
+      "master_id": 0,
+      "type": "release",
+      "id": 7025694
+    },
+    {
+      "style": [
+        "House",
+        "Hi NRG",
+        "Soul",
+        "Rhythm & Blues"
+      ],
+      "thumb": "https://img.discogs.com/x2NKFrDw1QtRDPZMqcCS-G3W9oQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8470491-1462230342-4552.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Album",
+        "Unofficial Release",
+        "Stereo"
+      ],
+      "country": "United Arab Emirates",
+      "barcode": [],
+      "uri": "/Kym-Sims-Too-Blind-To-See-It/release/8470491",
+      "master_url": "https://api.discogs.com/masters/93837",
+      "label": [
+        "Thomsun Original"
+      ],
+      "genre": [
+        "Electronic",
+        "Funk / Soul"
+      ],
+      "catno": "EN-4597",
+      "community": {
+        "want": 0,
+        "have": 0
+      },
+      "year": "1992",
+      "cover_image": "https://img.discogs.com/dQR9HFrGUwaCzAoLpYaZQzLfVtg=/fit-in/600x552/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8470491-1462230342-4552.jpeg.jpg",
+      "title": "Kym Sims - Too Blind To See It",
+      "resource_url": "https://api.discogs.com/releases/8470491",
+      "master_id": 93837,
+      "type": "release",
+      "id": 8470491
+    },
+    {
+      "style": [
+        "Hardcore",
+        "Breakbeat"
+      ],
+      "thumb": "https://img.discogs.com/VaD0HSuwkWFyQnlluY4gLA8Y4Ro=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-12969803-1545568262-8739.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\"",
+        "45 RPM",
+        "EP",
+        "White Label",
+        "Stereo"
+      ],
+      "country": "UK",
+      "barcode": [],
+      "uri": "/X-MAN-Play-Dat-Beat/release/12969803",
+      "master_url": null,
+      "label": [
+        "Boss Records"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "BOSS 12017",
+      "community": {
+        "want": 7,
+        "have": 1
+      },
+      "year": "1992",
+      "cover_image": "https://img.discogs.com/GgFmuSki2BhZ82CGS0pUyezz_Jw=/fit-in/600x450/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-12969803-1545568262-8739.jpeg.jpg",
+      "title": "X-MAN (16) - Play Dat Beat",
+      "resource_url": "https://api.discogs.com/releases/12969803",
+      "master_id": 0,
+      "type": "release",
+      "id": 12969803
+    },
+    {
+      "style": [
+        "Alternative Rock",
+        "Indie Pop",
+        "Indie Rock",
+        "Synth-pop"
+      ],
+      "thumb": "https://img.discogs.com/plqLZ1fPnyMbfTeAQK6b-XMWbnw=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1710873-1513557792-6807.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "Promo",
+        "Sampler"
+      ],
+      "country": "US",
+      "barcode": [
+        "∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗ 1 PRO CD 6101-2 SRC##01 ∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗ M1S1"
+      ],
+      "uri": "/Various-Boys-United/release/1710873",
+      "master_url": null,
+      "label": [
+        "Sire",
+        "Warner Bros. Records",
+        "Reprise Records",
+        "Genre",
+        "Mute",
+        "Kinetic Records",
+        "Some Bizzare",
+        "I Square Records",
+        "Sire Records Company",
+        "Sire Records Company",
+        "Warner Bros. Records Inc.",
+        "WEA Manufacturing",
+        "Specialty Records Corporation"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "PRO-CD-6101",
+      "community": {
+        "want": 4,
+        "have": 37
+      },
+      "year": "1993",
+      "cover_image": "https://img.discogs.com/uThLslnDf6cA8oyk-tE-Ddy76kk=/fit-in/600x606/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1710873-1513557792-6807.jpeg.jpg",
+      "title": "Various - Boys United",
+      "resource_url": "https://api.discogs.com/releases/1710873",
+      "master_id": 0,
+      "type": "release",
+      "id": 1710873
+    },
+    {
+      "style": [
+        "Experimental",
+        "Ambient"
+      ],
+      "thumb": "https://img.discogs.com/p_s0Dbbdx6skGhQETOx4XfvEq7M=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-233642-1203259916.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album",
+        "Reissue"
+      ],
+      "country": "UK",
+      "barcode": [
+        "5 016025 680962",
+        "5016025680962",
+        "TGCD 9 :⋅ MASTERED BY NIMBUS",
+        "TGCD 9 :⋅ 1:0 :MASTERED: ⋮BY NIMBUS⋮"
+      ],
+      "uri": "/Throbbing-Gristle-In-The-Shadow-Of-The-Sun/release/233642",
+      "master_url": "https://api.discogs.com/masters/10294",
+      "label": [
+        "The Grey Area",
+        "Mute",
+        "Industrial Records",
+        "Southern Music",
+        "Southern Music",
+        "Nimbus"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "TGCD9",
+      "community": {
+        "want": 112,
+        "have": 329
+      },
+      "year": "1993",
+      "cover_image": "https://img.discogs.com/ORpMmoEgkkcODmIdB3Fua1P6UkQ=/fit-in/591x587/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-233642-1203259916.jpeg.jpg",
+      "title": "Throbbing Gristle - In The Shadow Of The Sun",
+      "resource_url": "https://api.discogs.com/releases/233642",
+      "master_id": 10294,
+      "type": "release",
+      "id": 233642
+    },
+    {
+      "style": [
+        "Freestyle"
+      ],
+      "thumb": "https://img.discogs.com/lEm0EZ8p7G4kcsPck018E4wkJ8o=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8938795-1471863224-9489.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Maxi-Single"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Tony-Moran-Dreamin-Of-Making-Love/release/8938795",
+      "master_url": "https://api.discogs.com/masters/1048740",
+      "label": [
+        "Vision Records"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "32508-1279-4",
+      "community": {
+        "want": 3,
+        "have": 1
+      },
+      "year": "1993",
+      "cover_image": "https://img.discogs.com/AWIezp18QHs37dJtZS-3v5HuYJk=/fit-in/600x1037/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8938795-1471863224-9489.jpeg.jpg",
+      "title": "Tony Moran - Dreamin Of Making Love",
+      "resource_url": "https://api.discogs.com/releases/8938795",
+      "master_id": 1048740,
+      "type": "release",
+      "id": 8938795
+    },
+    {
+      "style": [
+        "Freestyle"
+      ],
+      "thumb": "https://img.discogs.com/lEm0EZ8p7G4kcsPck018E4wkJ8o=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8938795-1471863224-9489.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Maxi-Single"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Tony-Moran-Dreamin-Of-Making-Love/master/1048740",
+      "master_url": "https://api.discogs.com/masters/1048740",
+      "label": [
+        "Vision Records"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "32508-1279-4",
+      "community": {
+        "want": 37,
+        "have": 41
+      },
+      "year": "1993",
+      "cover_image": "https://img.discogs.com/AWIezp18QHs37dJtZS-3v5HuYJk=/fit-in/600x1037/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8938795-1471863224-9489.jpeg.jpg",
+      "title": "Tony Moran - Dreamin Of Making Love",
+      "resource_url": "https://api.discogs.com/masters/1048740",
+      "master_id": 1048740,
+      "type": "master",
+      "id": 1048740
+    },
+    {
+      "style": [
+        "Synth-pop"
+      ],
+      "thumb": "https://img.discogs.com/GMaS4UE8GJUzna5wJgbL9ZuMahQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2665345-1295641338.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Australia",
+      "barcode": [
+        "9 416333 154722"
+      ],
+      "uri": "/Shona-Laing-Genre/release/2665345",
+      "master_url": "https://api.discogs.com/masters/324606",
+      "label": [
+        "Epic"
+      ],
+      "genre": [
+        "Electronic",
+        "Pop"
+      ],
+      "catno": "471547.2",
+      "community": {
+        "want": 12,
+        "have": 7
+      },
+      "year": "1993",
+      "cover_image": "https://img.discogs.com/gaDnUHC1ZErBv8u2CNqyMpyASsY=/fit-in/334x346/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2665345-1295641338.jpeg.jpg",
+      "title": "Shona Laing - Genre",
+      "resource_url": "https://api.discogs.com/releases/2665345",
+      "master_id": 324606,
+      "type": "release",
+      "id": 2665345
+    },
+    {
+      "style": [
+        "Techno",
+        "Garage House",
+        "Acid House",
+        "Trip Hop"
+      ],
+      "thumb": "https://img.discogs.com/bl030iDXMW2yaZdkuEdUsgvf_MQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1401962-1527592635-5778.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\"",
+        "33 ⅓ RPM",
+        "Mini-Album",
+        "Stereo"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Veggi-Grooves-Hani-Jeep-Warehouse-Beats-Volume-1/release/1401962",
+      "master_url": null,
+      "label": [
+        "Super Doppler Communications"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "SDc 003",
+      "community": {
+        "want": 363,
+        "have": 22
+      },
+      "year": "1993",
+      "cover_image": "https://img.discogs.com/H2-CPNHC5onTxPcEHIaWcRyuNlQ=/fit-in/600x590/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1401962-1527592635-5778.jpeg.jpg",
+      "title": "Veggi Grooves, Hani - Jeep Warehouse Beats Volume 1",
+      "resource_url": "https://api.discogs.com/releases/1401962",
+      "master_id": 0,
+      "type": "release",
+      "id": 1401962
+    },
+    {
+      "style": [
+        "Special Effects",
+        "Abstract"
+      ],
+      "thumb": "https://img.discogs.com/TbgDbHv-Wf8jj0iXaWRQ12K6C5I=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-12101269-1528316398-1617.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Norway",
+      "barcode": [
+        "DURECO [01] CD 01",
+        "DDD",
+        "N©B"
+      ],
+      "uri": "/Beckman-3-Helt-P%C3%A5-Trynet/release/12101269",
+      "master_url": null,
+      "label": [
+        "Dritt Records",
+        "Dritt Records",
+        "Dritt Records",
+        "Dureco"
+      ],
+      "genre": [
+        "Electronic",
+        "Non-Music"
+      ],
+      "catno": "CD01",
+      "community": {
+        "want": 2,
+        "have": 3
+      },
+      "year": "1993",
+      "cover_image": "https://img.discogs.com/yMXyGz4QKV1h5ymPNNCRMtrLb9w=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-12101269-1528316398-1617.jpeg.jpg",
+      "title": "Beckman (3)* - Helt På Trynet",
+      "resource_url": "https://api.discogs.com/releases/12101269",
+      "master_id": 0,
+      "type": "release",
+      "id": 12101269
+    },
+    {
+      "style": [
+        "Abstract",
+        "Ambient",
+        "Dark Ambient",
+        "Electro",
+        "Experimental",
+        "Minimal Techno",
+        "New Age",
+        "Trance"
+      ],
+      "thumb": "https://img.discogs.com/DLG9IVwpjPNtwfUkI2EZtHhvS2c=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5321414-1390496510-4350.jpeg.jpg",
+      "format": [
+        "CD"
+      ],
+      "country": "US",
+      "barcode": [
+        "610637070026"
+      ],
+      "uri": "/Isadar-Elevations-Electronic-Soundscapes/release/5321414",
+      "master_url": null,
+      "label": [
+        "Mainya Music Entertainment"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "MME-0700",
+      "community": {
+        "want": 1,
+        "have": 0
+      },
+      "year": "1994",
+      "cover_image": "https://img.discogs.com/2FCbR0yuewWXx0_KSkF89NtdDNk=/fit-in/500x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5321414-1390496510-4350.jpeg.jpg",
+      "title": "Isadar - Elevations (Electronic Soundscapes)",
+      "resource_url": "https://api.discogs.com/releases/5321414",
+      "master_id": 0,
+      "type": "release",
+      "id": 5321414
+    },
+    {
+      "style": [
+        "Sound Collage",
+        "Musique Concrète",
+        "Noise",
+        "Ambient",
+        "Parody",
+        "Comedy",
+        "Political"
+      ],
+      "thumb": "https://img.discogs.com/Ukf_mndKQY0DZG8ObOB-2zzunns=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-235805-1238516892.gif.jpg",
+      "format": [
+        "Cassette",
+        "Album"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/The-Evolution-Control-Committee-Gunderphonic/master/1359345",
+      "master_url": "https://api.discogs.com/masters/1359345",
+      "label": [
+        "Not On Label (The Evolution Control Committee Self-released)"
+      ],
+      "genre": [
+        "Electronic",
+        "Non-Music",
+        "Pop"
+      ],
+      "catno": "none",
+      "community": {
+        "want": 42,
+        "have": 23
+      },
+      "year": "1994",
+      "cover_image": "https://img.discogs.com/wZ1tnUfpDi8ipJYc793JOQ_EFXk=/fit-in/530x399/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-235805-1238516892.gif.jpg",
+      "title": "The Evolution Control Committee - Gunderphonic",
+      "resource_url": "https://api.discogs.com/masters/1359345",
+      "master_id": 1359345,
+      "type": "master",
+      "id": 1359345
+    },
+    {
+      "style": [
+        "Experimental",
+        "Rhythmic Noise"
+      ],
+      "thumb": "https://img.discogs.com/V2vsJ0tzHwG9kAZCgWMZeZkmnJU=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-350600-1208707149.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Compilation",
+        "Box Set",
+        "Limited Edition",
+        "Numbered"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Various-Different-Forms-II/release/350600",
+      "master_url": null,
+      "label": [
+        "Hands Productions"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "B003",
+      "community": {
+        "want": 56,
+        "have": 54
+      },
+      "year": "1994",
+      "cover_image": "https://img.discogs.com/jrWT4dUQYjXNO11YZwm0zpC_tG4=/fit-in/342x480/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-350600-1208707149.jpeg.jpg",
+      "title": "Various - Different Forms II",
+      "resource_url": "https://api.discogs.com/releases/350600",
+      "master_id": 0,
+      "type": "release",
+      "id": 350600
+    },
+    {
+      "style": [
+        "Sound Collage",
+        "Musique Concrète",
+        "Noise",
+        "Ambient",
+        "Parody",
+        "Comedy",
+        "Political"
+      ],
+      "thumb": "https://img.discogs.com/Ukf_mndKQY0DZG8ObOB-2zzunns=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-235805-1238516892.gif.jpg",
+      "format": [
+        "Cassette",
+        "Album"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/The-Evolution-Control-Committee-Gunderphonic/release/235805",
+      "master_url": "https://api.discogs.com/masters/1359345",
+      "label": [
+        "Not On Label (The Evolution Control Committee Self-released)"
+      ],
+      "genre": [
+        "Electronic",
+        "Non-Music",
+        "Pop"
+      ],
+      "catno": "none",
+      "community": {
+        "want": 40,
+        "have": 22
+      },
+      "year": "1994",
+      "cover_image": "https://img.discogs.com/wZ1tnUfpDi8ipJYc793JOQ_EFXk=/fit-in/530x399/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-235805-1238516892.gif.jpg",
+      "title": "The Evolution Control Committee - Gunderphonic",
+      "resource_url": "https://api.discogs.com/releases/235805",
+      "master_id": 1359345,
+      "type": "release",
+      "id": 235805
+    },
+    {
+      "style": [
+        "Abstract"
+      ],
+      "thumb": "https://img.discogs.com/-7eAZ_rnrJXq-qww-k0qHgDW0AQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-355894-1310695259.jpeg.jpg",
+      "format": [
+        "CD",
+        "Single"
+      ],
+      "country": "Australia",
+      "barcode": [
+        "5021456050901",
+        "MADE BY DISCTRONICS B ** G001 ** #02"
+      ],
+      "uri": "/TISM-Jung-Talent-Time-The-Re-Mixes/release/355894",
+      "master_url": null,
+      "label": [
+        "Genre B.Goode",
+        "Shock Records Pty. Ltd.",
+        "Shock Records Pty. Ltd.",
+        "Disctronics B"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "G001",
+      "community": {
+        "want": 13,
+        "have": 35
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/w4KycWRZK4k8-PF1lMv6up0Fc1U=/fit-in/600x519/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-355894-1310695259.jpeg.jpg",
+      "title": "TISM - Jung Talent Time (The Re-Mixes)",
+      "resource_url": "https://api.discogs.com/releases/355894",
+      "master_id": 0,
+      "type": "release",
+      "id": 355894
+    },
+    {
+      "style": [
+        "Art Rock",
+        "Chanson",
+        "Avantgarde",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/WVS2jwTJfpG79VcZPlYes8r5wW0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2868888-1304841171.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Japan",
+      "barcode": [],
+      "uri": "/Brigitte-Fontaine-Genre-Humain/release/2868888",
+      "master_url": "https://api.discogs.com/masters/66378",
+      "label": [
+        "Virgin",
+        "Toshiba EMI Ltd",
+        "Studio Plus XXX"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "VJCP-25205",
+      "community": {
+        "want": 9,
+        "have": 5
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/QgW2AyLyz82wffCe1uDvAhNtuts=/fit-in/468x465/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2868888-1304841171.jpeg.jpg",
+      "title": "Brigitte Fontaine - Genre Humain",
+      "resource_url": "https://api.discogs.com/releases/2868888",
+      "master_id": 66378,
+      "type": "release",
+      "id": 2868888
+    },
+    {
+      "style": [
+        "House",
+        "Hardcore",
+        "Euro House",
+        "Hip Hop"
+      ],
+      "thumb": "",
+      "format": [
+        "CD",
+        "Compilation"
+      ],
+      "country": "Netherlands",
+      "barcode": [],
+      "uri": "/Various-The-Good-Music-Dance-Collection-Volume-1/release/1450802",
+      "master_url": "https://api.discogs.com/masters/18565",
+      "label": [
+        "Alliance Music"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "1905052",
+      "community": {
+        "want": 1,
+        "have": 2
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/images/spacer.gif",
+      "title": "Various - The Good Music Dance Collection Volume 1",
+      "resource_url": "https://api.discogs.com/releases/1450802",
+      "master_id": 18565,
+      "type": "release",
+      "id": 1450802
+    },
+    {
+      "style": [
+        "Art Rock",
+        "Chanson",
+        "Avantgarde",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/Jlnx5Yjt2fDawDwmMHHTkDC42AU=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-10819844-1504852890-1211.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Europe",
+      "barcode": [
+        "7 24384 05002 3",
+        "PM 538",
+        "8405002",
+        "LC 3098",
+        "BIEM/STEMRA",
+        "840500 @ 1",
+        "1 - 2 - 14 - NL",
+        "IFPI AAH16"
+      ],
+      "uri": "/Brigitte-Fontaine-Genre-Humain/release/10819844",
+      "master_url": "https://api.discogs.com/masters/66378",
+      "label": [
+        "Virgin",
+        "Virgin France S.A.",
+        "Studio Plus XXX"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "724384050023",
+      "community": {
+        "want": 1,
+        "have": 7
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/CZE5oH-NIheo3egO7EdsgaCOHhw=/fit-in/600x593/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-10819844-1504852890-1211.jpeg.jpg",
+      "title": "Brigitte Fontaine - Genre Humain",
+      "resource_url": "https://api.discogs.com/releases/10819844",
+      "master_id": 66378,
+      "type": "release",
+      "id": 10819844
+    },
+    {
+      "style": [
+        "Modern Classical",
+        "Future Jazz",
+        "Minimal"
+      ],
+      "thumb": "",
+      "format": [
+        "CD",
+        "Album",
+        "Promo"
+      ],
+      "country": "France",
+      "barcode": [
+        "7 24384 01602 9",
+        "EMI 8401602 CDM01 1-1-2-NL",
+        "BIEM STEMRA"
+      ],
+      "uri": "/Pascal-Comelade-El-Cabaret-Galactic/release/3938754",
+      "master_url": "https://api.discogs.com/masters/479466",
+      "label": [
+        "Les Disques Du Soleil Et De L'Acier",
+        "Delabel",
+        "Les Disques Du Soleil Et De L'Acier",
+        "Delabel",
+        "Studio CCAM",
+        "France 3 Sud",
+        "Semafor Studio",
+        "Casino de Vernet-les-Bains"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "7243 8 40160 2 9",
+      "community": {
+        "want": 6,
+        "have": 7
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/images/spacer.gif",
+      "title": "Pascal Comelade - El Cabaret Galactic",
+      "resource_url": "https://api.discogs.com/releases/3938754",
+      "master_id": 479466,
+      "type": "release",
+      "id": 3938754
+    },
+    {
+      "style": [
+        "Art Rock",
+        "Chanson",
+        "Avantgarde",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/moHgT4NelAs0orZCgCaxzMugdns=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-12386956-1534233377-5130.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album",
+        "Promo"
+      ],
+      "country": "Japan",
+      "barcode": [
+        "4 988006 712379",
+        "JASRAC"
+      ],
+      "uri": "/Brigitte-Fontaine-Genre-Humain-%E3%81%B5%E3%81%9F%E3%81%9F%E3%81%B3%E3%83%A9%E3%82%B8%E3%82%AA%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB/release/12386956",
+      "master_url": "https://api.discogs.com/masters/66378",
+      "label": [
+        "Virgin",
+        "Toshiba EMI Ltd",
+        "Toshiba EMI Ltd",
+        "Toshiba EMI Ltd",
+        "Studio Plus XXX"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "VJCP-25205",
+      "community": {
+        "want": 1,
+        "have": 0
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/4UcjpsfH6Be0jfombeDT5pULGqQ=/fit-in/600x530/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-12386956-1534233377-5130.jpeg.jpg",
+      "title": "Brigitte Fontaine - Genre Humain = ふたたび、ラジオのように",
+      "resource_url": "https://api.discogs.com/releases/12386956",
+      "master_id": 66378,
+      "type": "release",
+      "id": 12386956
+    },
+    {
+      "style": [
+        "Soundtrack",
+        "Modern Classical",
+        "Avantgarde",
+        "Oi",
+        "Alternative Rock"
+      ],
+      "thumb": "https://img.discogs.com/PqX4H5qYTauitJRqVJR_ClCY8g0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-460417-1116684558.jpg.jpg",
+      "format": [
+        "CD",
+        "Album",
+        "Repress"
+      ],
+      "country": "Australia",
+      "barcode": [
+        "9 398601 008626",
+        "IFPI L281 - MADE BY PMI. ** PTR002 ** #04",
+        "IFPI L281",
+        "IFPI L282 - MADE BY PMI. * PTR002 * #05",
+        "IFPI L282",
+        "PTR002 THIS COMPILATION ℗ ©1992 PICTURE THIS RECORDS"
+      ],
+      "uri": "/John-Clifford-White-Romper-Stomper-Original-Soundtrack/master/426298",
+      "master_url": "https://api.discogs.com/masters/426298",
+      "label": [
+        "Picture This",
+        "Picture This Records",
+        "Picture This Records",
+        "PMI",
+        "Combined Creative Services",
+        "MDS"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Stage & Screen"
+      ],
+      "catno": "PTR002",
+      "community": {
+        "want": 202,
+        "have": 344
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/Xp3XRQXJKPIEImbwlsdIZdORs6E=/fit-in/300x262/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-460417-1116684558.jpg.jpg",
+      "title": "John Clifford White - Romper Stomper (Original Soundtrack)",
+      "resource_url": "https://api.discogs.com/masters/426298",
+      "master_id": 426298,
+      "type": "master",
+      "id": 426298
+    },
+    {
+      "style": [
+        "Avantgarde",
+        "Chanson",
+        "Art Rock",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/E81H4qSm3-xyQAvdpXyDD0Zf4ls=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9530535-1482179326-1452.mpo.jpg",
+      "format": [
+        "Cassette",
+        "Album"
+      ],
+      "country": "France",
+      "barcode": [
+        "24384 05004"
+      ],
+      "uri": "/Brigitte-Fontaine-Genre-Humain/release/9530535",
+      "master_url": "https://api.discogs.com/masters/66378",
+      "label": [
+        "Virgin"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "724384050047",
+      "community": {
+        "want": 4,
+        "have": 2
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/XnJgsbSuecP1oJk3HHbKZsKtqGM=/fit-in/600x800/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-9530535-1482179326-1452.mpo.jpg",
+      "title": "Brigitte Fontaine - Genre Humain",
+      "resource_url": "https://api.discogs.com/releases/9530535",
+      "master_id": 66378,
+      "type": "release",
+      "id": 9530535
+    },
+    {
+      "style": [
+        "Modern Classical",
+        "Future Jazz",
+        "Minimal"
+      ],
+      "thumb": "https://img.discogs.com/YfbBXoDk1-mibAoFt69gsK1diOQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4156031-1357157805-7893.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Germany",
+      "barcode": [
+        "4 013079 213420",
+        "GEMA",
+        "LC 6383",
+        "BOD NINE 2134"
+      ],
+      "uri": "/Pascal-Comelade-El-Cabaret-Galactic/release/4156031",
+      "master_url": "https://api.discogs.com/masters/479466",
+      "label": [
+        "99 Records",
+        "Les Disques Du Soleil Et De L'Acier",
+        "Les Disques Du Soleil Et De L'Acier",
+        "BOD Berlin Optical Disc",
+        "Ninety-Nine Distribution",
+        "Studio CCAM",
+        "France 3 Sud",
+        "Semafor Studio",
+        "Casino de Vernet-les-Bains"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "2134",
+      "community": {
+        "want": 6,
+        "have": 7
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/RVkJDQrCtaqxXjPRlqpr2_2EKAc=/fit-in/599x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4156031-1357157805-7893.jpeg.jpg",
+      "title": "Pascal Comelade - El Cabaret Galactic",
+      "resource_url": "https://api.discogs.com/releases/4156031",
+      "master_id": 479466,
+      "type": "release",
+      "id": 4156031
+    },
+    {
+      "style": [
+        "Art Rock",
+        "Chanson",
+        "Avantgarde",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/DyUGSy6FTkO5KB2i8R7tMWFU7Vk=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1318093-1209214779.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Europe",
+      "barcode": [
+        "7 24384 05002 3",
+        "PM 538",
+        "8405002",
+        "LC 3098",
+        "BIEM/STEMRA"
+      ],
+      "uri": "/Brigitte-Fontaine-Genre-Humain/release/1318093",
+      "master_url": "https://api.discogs.com/masters/66378",
+      "label": [
+        "Virgin",
+        "Virgin France S.A.",
+        "Studio Plus XXX"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "724384050023",
+      "community": {
+        "want": 14,
+        "have": 164
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/GAOlt6IDkCfCld4AkGUfv8ZShKk=/fit-in/595x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1318093-1209214779.jpeg.jpg",
+      "title": "Brigitte Fontaine - Genre Humain",
+      "resource_url": "https://api.discogs.com/releases/1318093",
+      "master_id": 66378,
+      "type": "release",
+      "id": 1318093
+    },
+    {
+      "style": [
+        "House",
+        "Hardcore",
+        "Euro House",
+        "Hip Hop"
+      ],
+      "thumb": "",
+      "format": [
+        "CD",
+        "Compilation"
+      ],
+      "country": "Netherlands",
+      "barcode": [],
+      "uri": "/Various-The-Good-Music-Dance-Collection-Volume-1/master/18565",
+      "master_url": "https://api.discogs.com/masters/18565",
+      "label": [
+        "Alliance Music"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "1905052",
+      "community": {
+        "want": 1,
+        "have": 2
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/images/spacer.gif",
+      "title": "Various - The Good Music Dance Collection Volume 1",
+      "resource_url": "https://api.discogs.com/masters/18565",
+      "master_id": 18565,
+      "type": "master",
+      "id": 18565
+    },
+    {
+      "style": [
+        "Modern Classical",
+        "Future Jazz",
+        "Minimal"
+      ],
+      "thumb": "https://img.discogs.com/rs2ZNcV3NZXcl611Jyl1j4V0pJY=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-203983-1527213657-4016.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "France",
+      "barcode": [
+        "SACEM"
+      ],
+      "uri": "/Pascal-Comelade-El-Cabaret-Galactic/master/479466",
+      "master_url": "https://api.discogs.com/masters/479466",
+      "label": [
+        "Les Disques Du Soleil Et De L'Acier",
+        "Studio CCAM",
+        "France 3 Sud",
+        "Semafor Studio",
+        "Casino de Vernet-les-Bains"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "CDSA 54035",
+      "community": {
+        "want": 37,
+        "have": 96
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/p-_1roC5XCo0wJDN_LksUC5WIAY=/fit-in/600x589/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-203983-1527213657-4016.jpeg.jpg",
+      "title": "Pascal Comelade - El Cabaret Galactic",
+      "resource_url": "https://api.discogs.com/masters/479466",
+      "master_id": 479466,
+      "type": "master",
+      "id": 479466
+    },
+    {
+      "style": [
+        "Experimental",
+        "African",
+        "Romani"
+      ],
+      "thumb": "https://img.discogs.com/z53DIEz1lefHh-7JeWp6DCwq7RU=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-7307105-1469822775-7559.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "Promo"
+      ],
+      "country": "US",
+      "barcode": [
+        "DADR  0KG91 <910> VRCDS001"
+      ],
+      "uri": "/Various-Sync-Without-Trace-Volume-One-One-Stop/release/7307105",
+      "master_url": null,
+      "label": [
+        "Rykodisc",
+        "Hannibal Records",
+        "Rykodisc",
+        "Rykodisc"
+      ],
+      "genre": [
+        "Electronic",
+        "Jazz",
+        "Rock",
+        "Blues",
+        "Pop",
+        "Folk, World, & Country"
+      ],
+      "catno": "VRCD S001",
+      "community": {
+        "want": 1,
+        "have": 2
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/gKYr1PaB-kb0aBq18wx5jjYeymU=/fit-in/600x528/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7307105-1469822775-7559.jpeg.jpg",
+      "title": "Various - Sync Without Trace Volume One (One Stop)",
+      "resource_url": "https://api.discogs.com/releases/7307105",
+      "master_id": 0,
+      "type": "release",
+      "id": 7307105
+    },
+    {
+      "style": [
+        "Art Rock",
+        "Chanson",
+        "Avantgarde",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/parFBdUWZbU3dmTKdGnZ9kphxis=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-6850157-1427954062-9400.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album",
+        "Promo"
+      ],
+      "country": "France",
+      "barcode": [],
+      "uri": "/Brigitte-Fontaine-Genre-Humain/release/6850157",
+      "master_url": "https://api.discogs.com/masters/66378",
+      "label": [
+        "Virgin",
+        "Virgin France S.A.",
+        "Studio Plus XXX"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "SA 3520",
+      "community": {
+        "want": 4,
+        "have": 0
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/s5KZNZCtsnNlb_5K6k-25WWN0Ks=/fit-in/600x601/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6850157-1427954062-9400.jpeg.jpg",
+      "title": "Brigitte Fontaine - Genre Humain",
+      "resource_url": "https://api.discogs.com/releases/6850157",
+      "master_id": 66378,
+      "type": "release",
+      "id": 6850157
+    },
+    {
+      "style": [
+        "Art Rock",
+        "Chanson",
+        "Avantgarde",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/DyUGSy6FTkO5KB2i8R7tMWFU7Vk=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1318093-1209214779.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Europe",
+      "barcode": [
+        "7 24384 05002 3",
+        "PM 538",
+        "8405002",
+        "LC 3098",
+        "BIEM/STEMRA"
+      ],
+      "uri": "/Brigitte-Fontaine-Genre-Humain/master/66378",
+      "master_url": "https://api.discogs.com/masters/66378",
+      "label": [
+        "Virgin",
+        "Virgin France S.A.",
+        "Studio Plus XXX"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Pop"
+      ],
+      "catno": "724384050023",
+      "community": {
+        "want": 33,
+        "have": 178
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/GAOlt6IDkCfCld4AkGUfv8ZShKk=/fit-in/595x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1318093-1209214779.jpeg.jpg",
+      "title": "Brigitte Fontaine - Genre Humain",
+      "resource_url": "https://api.discogs.com/masters/66378",
+      "master_id": 66378,
+      "type": "master",
+      "id": 66378
+    },
+    {
+      "style": [
+        "Ambient",
+        "Downtempo"
+      ],
+      "thumb": "https://img.discogs.com/ayjcL4rBIljZlSBcR8AOEIUsc3I=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5248198-1388682502-2276.jpeg.jpg",
+      "format": [
+        "CD",
+        "Mixed",
+        "Compilation",
+        "Unofficial Release",
+        "Promo"
+      ],
+      "country": "USA & Canada",
+      "barcode": [
+        "DADR 0LE62<236>SR9596PROMO"
+      ],
+      "uri": "/Various-The-Silent-Mix-V2/release/5248198",
+      "master_url": null,
+      "label": [
+        "Silent"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "SR9596",
+      "community": {
+        "want": 12,
+        "have": 1
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/KT_1vnBqfc-OS9rp1Aw0dMZQz4M=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5248198-1388682502-2276.jpeg.jpg",
+      "title": "Various - The Silent Mix V.2",
+      "resource_url": "https://api.discogs.com/releases/5248198",
+      "master_id": 0,
+      "type": "release",
+      "id": 5248198
+    },
+    {
+      "style": [
+        "Ambient",
+        "New Age"
+      ],
+      "thumb": "https://img.discogs.com/tDdrhujFTpcWbg939zYSowndKDI=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-6710596-1425112893-9818.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Belgium",
+      "barcode": [
+        "8712273066523"
+      ],
+      "uri": "/Mystic-Mood-Orchestra-Fantasy/release/6710596",
+      "master_url": null,
+      "label": [
+        "Molly Music",
+        "Molly Music",
+        "Molly Music",
+        "Edition Incontro",
+        "Edition Incontro",
+        "Music Products B.V."
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "MOX6652-2",
+      "community": {
+        "want": 0,
+        "have": 0
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/u9WPiUr5HXw08VBPEycipeBnEvs=/fit-in/595x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6710596-1425112893-9818.jpeg.jpg",
+      "title": "Mystic Mood Orchestra - Fantasy",
+      "resource_url": "https://api.discogs.com/releases/6710596",
+      "master_id": 0,
+      "type": "release",
+      "id": 6710596
+    },
+    {
+      "style": [
+        "Modern Classical",
+        "Future Jazz",
+        "Minimal"
+      ],
+      "thumb": "https://img.discogs.com/rs2ZNcV3NZXcl611Jyl1j4V0pJY=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-203983-1527213657-4016.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "France",
+      "barcode": [
+        "SACEM"
+      ],
+      "uri": "/Pascal-Comelade-El-Cabaret-Galactic/release/203983",
+      "master_url": "https://api.discogs.com/masters/479466",
+      "label": [
+        "Les Disques Du Soleil Et De L'Acier",
+        "Studio CCAM",
+        "France 3 Sud",
+        "Semafor Studio",
+        "Casino de Vernet-les-Bains"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "CDSA 54035",
+      "community": {
+        "want": 17,
+        "have": 60
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/p-_1roC5XCo0wJDN_LksUC5WIAY=/fit-in/600x589/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-203983-1527213657-4016.jpeg.jpg",
+      "title": "Pascal Comelade - El Cabaret Galactic",
+      "resource_url": "https://api.discogs.com/releases/203983",
+      "master_id": 479466,
+      "type": "release",
+      "id": 203983
+    },
+    {
+      "style": [
+        "Trance",
+        "Techno",
+        "Ambient"
+      ],
+      "thumb": "https://img.discogs.com/N8bAqmnHyhqpeS4ilGbaQqtiGRQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-52528-1524071358-1358.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "Germany",
+      "barcode": [
+        "4005902641616",
+        "LC 5305"
+      ],
+      "uri": "/Various-Dark-Hearts-2/release/52528",
+      "master_url": "https://api.discogs.com/masters/56286",
+      "label": [
+        "Harthouse",
+        "Harthouse"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "HH ? 009 LP",
+      "community": {
+        "want": 130,
+        "have": 265
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/S-lVT0QKpunFGDluuXGK3kPL9oE=/fit-in/600x589/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-52528-1524071358-1358.jpeg.jpg",
+      "title": "Various - Dark Hearts 2",
+      "resource_url": "https://api.discogs.com/releases/52528",
+      "master_id": 56286,
+      "type": "release",
+      "id": 52528
+    },
+    {
+      "style": [
+        "Ambient",
+        "New Age"
+      ],
+      "thumb": "https://img.discogs.com/qWbx0Jqr8NarCt7tV-ER752aPOw=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5857190-1404641028-7201.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "Belgium",
+      "barcode": [
+        "8 712273 066530",
+        "IFPI L292",
+        "INTER SERVICE PRESS CD/MOX 66532-2 01",
+        "Sacem"
+      ],
+      "uri": "/Mystic-Mood-Orchestra-Future-Of-Universe/release/5857190",
+      "master_url": null,
+      "label": [
+        "Molly-Music",
+        "Molly-Music",
+        "Molly-Music",
+        "I.S.P.",
+        "Music Products B.V.",
+        "Edition Incontro",
+        "Edition Incontro",
+        "Edition Incontro"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "MOX6653-2",
+      "community": {
+        "want": 0,
+        "have": 1
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/0km03h5vSW_56Z0XaGcPI2VNJxs=/fit-in/594x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5857190-1404641028-7201.jpeg.jpg",
+      "title": "Mystic Mood Orchestra - Future Of Universe",
+      "resource_url": "https://api.discogs.com/releases/5857190",
+      "master_id": 0,
+      "type": "release",
+      "id": 5857190
+    },
+    {
+      "style": [
+        "Modern Classical",
+        "Future Jazz",
+        "Minimal"
+      ],
+      "thumb": "https://img.discogs.com/bZe7UHxsd9zDV95FuWn3Ja0w-yo=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5663108-1399287326-4836.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "France",
+      "barcode": [
+        "7 24384 01602 9",
+        "EMI 8401602 CDM01 1-1-2-NL",
+        "BIEM STEMRA"
+      ],
+      "uri": "/Pascal-Comelade-El-Cabaret-Galactic/release/5663108",
+      "master_url": "https://api.discogs.com/masters/479466",
+      "label": [
+        "Les Disques Du Soleil Et De L'Acier",
+        "Delabel",
+        "Les Disques Du Soleil Et De L'Acier",
+        "Delabel",
+        "Studio CCAM",
+        "France 3 Sud",
+        "Semafor Studio",
+        "Casino de Vernet-les-Bains"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "7243 8 40160 2 9",
+      "community": {
+        "want": 8,
+        "have": 22
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/Efh-qOu1pzi2ISMJ8h3p2pKjlQU=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5663108-1399287326-4836.jpeg.jpg",
+      "title": "Pascal Comelade - El Cabaret Galactic",
+      "resource_url": "https://api.discogs.com/releases/5663108",
+      "master_id": 479466,
+      "type": "release",
+      "id": 5663108
+    },
+    {
+      "style": [
+        "Soundtrack",
+        "Modern Classical",
+        "Avantgarde",
+        "Oi",
+        "Alternative Rock"
+      ],
+      "thumb": "https://img.discogs.com/PqX4H5qYTauitJRqVJR_ClCY8g0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-460417-1116684558.jpg.jpg",
+      "format": [
+        "CD",
+        "Album",
+        "Repress"
+      ],
+      "country": "Australia",
+      "barcode": [
+        "9 398601 008626",
+        "IFPI L281 - MADE BY PMI. ** PTR002 ** #04",
+        "IFPI L281",
+        "IFPI L282 - MADE BY PMI. * PTR002 * #05",
+        "IFPI L282",
+        "PTR002 THIS COMPILATION ℗ ©1992 PICTURE THIS RECORDS"
+      ],
+      "uri": "/John-Clifford-White-Romper-Stomper-Original-Soundtrack/release/460417",
+      "master_url": "https://api.discogs.com/masters/426298",
+      "label": [
+        "Picture This",
+        "Picture This Records",
+        "Picture This Records",
+        "PMI",
+        "Combined Creative Services",
+        "MDS"
+      ],
+      "genre": [
+        "Electronic",
+        "Rock",
+        "Stage & Screen"
+      ],
+      "catno": "PTR002",
+      "community": {
+        "want": 33,
+        "have": 215
+      },
+      "year": "1995",
+      "cover_image": "https://img.discogs.com/Xp3XRQXJKPIEImbwlsdIZdORs6E=/fit-in/300x262/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-460417-1116684558.jpg.jpg",
+      "title": "John Clifford White - Romper Stomper (Original Soundtrack)",
+      "resource_url": "https://api.discogs.com/releases/460417",
+      "master_id": 426298,
+      "type": "release",
+      "id": 460417
+    },
+    {
+      "style": [
+        "Electro",
+        "Future Jazz",
+        "New Age",
+        "Ambient",
+        "Drum n Bass",
+        "Synth-pop",
+        "Techno",
+        "Alternative Rock"
+      ],
+      "thumb": "https://img.discogs.com/N3D1dHTaQMfTLdyIi0aHXV3lJPY=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9814707-1486749755-3984.jpeg.jpg",
+      "format": [
+        "CD",
+        "Album"
+      ],
+      "country": "UK",
+      "barcode": [
+        "7 98387 95192 2"
+      ],
+      "uri": "/Arto-Lindsay-Hyper-Civilizado-Arto-Lindsay-Remixes/release/9814707",
+      "master_url": "https://api.discogs.com/masters/195573",
+      "label": [
+        "Gramavision",
+        "Rykodisc Ltd."
+      ],
+      "genre": [
+        "Electronic",
+        "Rock"
+      ],
+      "catno": "GCD 79519",
+      "community": {
+        "want": 1,
+        "have": 18
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/Ag8faOeuQ6gzOMboIcSTHJR9UYw=/fit-in/600x519/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-9814707-1486749755-3984.jpeg.jpg",
+      "title": "Arto Lindsay - Hyper Civilizado (Arto Lindsay Remixes)",
+      "resource_url": "https://api.discogs.com/releases/9814707",
+      "master_id": 195573,
+      "type": "release",
+      "id": 9814707
+    },
+    {
+      "style": [
+        "Goa Trance",
+        "Trance"
+      ],
+      "thumb": "https://img.discogs.com/75lA_j1OaN2PeikPv_06ydYdAhw=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3721-1114647982.jpg.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "Partially Mixed"
+      ],
+      "country": "UK",
+      "barcode": [
+        "5 032198 000109",
+        "82975 AFRCD4  1 : 1 : 1 .",
+        "IFPI L041"
+      ],
+      "uri": "/Various-Retrodelica-Back-From-The-Future/release/3721",
+      "master_url": "https://api.discogs.com/masters/244800",
+      "label": [
+        "Flying Rhino Records",
+        "Retrodelica",
+        "Flying Rhino Records Ltd.",
+        "Flying Rhino Records Ltd.",
+        "The Town House"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "AFR CD 4",
+      "community": {
+        "want": 109,
+        "have": 213
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/r67pULVnULLywWwi3zzlfeUtLQw=/fit-in/600x582/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3721-1114647982.jpg.jpg",
+      "title": "Various - Retrodelica : Back From The Future",
+      "resource_url": "https://api.discogs.com/releases/3721",
+      "master_id": 244800,
+      "type": "release",
+      "id": 3721
+    },
+    {
+      "style": [
+        "House",
+        "Hardcore",
+        "Techno",
+        "Downtempo"
+      ],
+      "thumb": "https://img.discogs.com/tpcxvDNYW6raPOVvAjetbHew83g=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-85786-1426691257-5007.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "CD",
+        "Compilation",
+        "Mixed"
+      ],
+      "country": "US",
+      "barcode": [
+        "7 20841 03352 3",
+        "720841033523",
+        "IFPI L124",
+        "IFPI 2405",
+        "EX335/1  ·  MASTERED BY NIMBUS",
+        "IFPI L127",
+        "IFPI 2432",
+        "EX335/2  ·  MASTERED BY NIMBUS"
+      ],
+      "uri": "/Moby-Rare-The-Collected-B-Sides-19891993/release/85786",
+      "master_url": "https://api.discogs.com/masters/22696",
+      "label": [
+        "Instinct Records",
+        "Nimbus",
+        "Instinct Records",
+        "Instinct Records"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "EX-335-2",
+      "community": {
+        "want": 61,
+        "have": 518
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/uNKwV3Lqf-hzVJYWkKHX5XDp6IU=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-85786-1426691257-5007.jpeg.jpg",
+      "title": "Moby - Rare: The Collected B-Sides (1989–1993)",
+      "resource_url": "https://api.discogs.com/releases/85786",
+      "master_id": 22696,
+      "type": "release",
+      "id": 85786
+    },
+    {
+      "style": [
+        "House",
+        "Hardcore",
+        "Techno",
+        "Downtempo"
+      ],
+      "thumb": "https://img.discogs.com/tpcxvDNYW6raPOVvAjetbHew83g=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-85786-1426691257-5007.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "CD",
+        "Compilation",
+        "Mixed"
+      ],
+      "country": "US",
+      "barcode": [
+        "7 20841 03352 3",
+        "720841033523",
+        "IFPI L124",
+        "IFPI 2405",
+        "EX335/1  ·  MASTERED BY NIMBUS",
+        "IFPI L127",
+        "IFPI 2432",
+        "EX335/2  ·  MASTERED BY NIMBUS"
+      ],
+      "uri": "/Moby-Rare-The-Collected-B-Sides-19891993/master/22696",
+      "master_url": "https://api.discogs.com/masters/22696",
+      "label": [
+        "Instinct Records",
+        "Nimbus",
+        "Instinct Records",
+        "Instinct Records"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "EX-335-2",
+      "community": {
+        "want": 179,
+        "have": 898
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/uNKwV3Lqf-hzVJYWkKHX5XDp6IU=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-85786-1426691257-5007.jpeg.jpg",
+      "title": "Moby - Rare: The Collected B-Sides (1989–1993)",
+      "resource_url": "https://api.discogs.com/masters/22696",
+      "master_id": 22696,
+      "type": "master",
+      "id": 22696
+    },
+    {
+      "style": [
+        "Goa Trance",
+        "Trance"
+      ],
+      "thumb": "https://img.discogs.com/75lA_j1OaN2PeikPv_06ydYdAhw=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3721-1114647982.jpg.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "Partially Mixed"
+      ],
+      "country": "UK",
+      "barcode": [
+        "5 032198 000109",
+        "82975 AFRCD4  1 : 1 : 1 .",
+        "IFPI L041"
+      ],
+      "uri": "/Various-Retrodelica-Back-From-The-Future/master/244800",
+      "master_url": "https://api.discogs.com/masters/244800",
+      "label": [
+        "Flying Rhino Records",
+        "Retrodelica",
+        "Flying Rhino Records Ltd.",
+        "Flying Rhino Records Ltd.",
+        "The Town House"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "AFR CD 4",
+      "community": {
+        "want": 115,
+        "have": 214
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/r67pULVnULLywWwi3zzlfeUtLQw=/fit-in/600x582/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3721-1114647982.jpg.jpg",
+      "title": "Various - Retrodelica : Back From The Future",
+      "resource_url": "https://api.discogs.com/masters/244800",
+      "master_id": 244800,
+      "type": "master",
+      "id": 244800
+    },
+    {
+      "style": [
+        "Acid House",
+        "Techno",
+        "Acid"
+      ],
+      "thumb": "https://img.discogs.com/FZzwmvTFnaYAZZOY578PtboNVh8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-209645-1516761288-7543.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "UK",
+      "barcode": [
+        "5 024526 002169",
+        "LEAF LP 1 - A1",
+        "LEAF LP 1 - B1",
+        "LEAF LP 1 - C1",
+        "LEAF LP 1 - D1"
+      ],
+      "uri": "/Various-Leaf/release/209645",
+      "master_url": "https://api.discogs.com/masters/141053",
+      "label": [
+        "Psychic Records"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "LEAFLP1",
+      "community": {
+        "want": 79,
+        "have": 77
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/djKNyasgLveQVnhgI5WY9r_G7xw=/fit-in/600x601/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-209645-1516761288-7543.jpeg.jpg",
+      "title": "Various - Leaf",
+      "resource_url": "https://api.discogs.com/releases/209645",
+      "master_id": 141053,
+      "type": "release",
+      "id": 209645
+    },
+    {
+      "style": [
+        "Trance",
+        "Euro House"
+      ],
+      "thumb": "https://img.discogs.com/ajBv_xjw7zVBf790vDIhHIlwJp0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2592244-1510172455-9774.jpeg.jpg",
+      "format": [
+        "CD",
+        "Single"
+      ],
+      "country": "France",
+      "barcode": [
+        "3 483901 081625",
+        "ARC 309"
+      ],
+      "uri": "/DSmile-My-Dream/release/2592244",
+      "master_url": "https://api.discogs.com/masters/474033",
+      "label": [
+        "CNR Music",
+        "Optical Disc De France",
+        "CNR Music France"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "300816 2",
+      "community": {
+        "want": 10,
+        "have": 2
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/4lpfWKG3I2_lVTu3RXrwnPyVyIo=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2592244-1510172455-9774.jpeg.jpg",
+      "title": "D.Smile* - My Dream",
+      "resource_url": "https://api.discogs.com/releases/2592244",
+      "master_id": 474033,
+      "type": "release",
+      "id": 2592244
+    },
+    {
+      "style": [
+        "House",
+        "Hardcore",
+        "Techno",
+        "Downtempo"
+      ],
+      "thumb": "https://img.discogs.com/3bUDVhy4wywjF19XgqLSM05XICI=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4817974-1479055614-9285.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "CD",
+        "Compilation",
+        "Mixed"
+      ],
+      "country": "US",
+      "barcode": [
+        "7 20841 03352 3",
+        "720841033523",
+        "REC00318 B&B Datadesign",
+        "REC00319 B&B Datadesign"
+      ],
+      "uri": "/Moby-Rare-The-Collected-B-Sides-1989-1993/release/4817974",
+      "master_url": "https://api.discogs.com/masters/22696",
+      "label": [
+        "Instinct Records",
+        "B&B Datadesign"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "EX-335-2",
+      "community": {
+        "want": 15,
+        "have": 20
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/oNBscAAjneTnTJftfYDJPFrNhKQ=/fit-in/600x591/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4817974-1479055614-9285.jpeg.jpg",
+      "title": "Moby - Rare: The Collected B-Sides (1989-1993)",
+      "resource_url": "https://api.discogs.com/releases/4817974",
+      "master_id": 22696,
+      "type": "release",
+      "id": 4817974
+    },
+    {
+      "style": [
+        "Acid",
+        "House",
+        "Abstract",
+        "Techno",
+        "Tech House",
+        "Ambient",
+        "Electro",
+        "Drum n Bass",
+        "Experimental"
+      ],
+      "thumb": "",
+      "format": [
+        "Cassette",
+        "Compilation",
+        "Stereo"
+      ],
+      "country": "UK",
+      "barcode": [
+        "6 08277 90014 8"
+      ],
+      "uri": "/Various-Trance-Europe-Express-5/release/11019872",
+      "master_url": "https://api.discogs.com/masters/42955",
+      "label": [
+        "Volume",
+        "Trance Europe Express"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "TEEX MC 005",
+      "community": {
+        "want": 9,
+        "have": 1
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/images/spacer.gif",
+      "title": "Various - Trance Europe Express 5",
+      "resource_url": "https://api.discogs.com/releases/11019872",
+      "master_id": 42955,
+      "type": "release",
+      "id": 11019872
+    },
+    {
+      "style": [
+        "Techno",
+        "Big Beat",
+        "Disco",
+        "Hip Hop",
+        "Industrial",
+        "Latin",
+        "Jungle",
+        "Dance-pop",
+        "Pop Rap",
+        "Contemporary Jazz",
+        "Cool Jazz",
+        "Bossa Nova",
+        "Classic Rock",
+        "Doo Wop",
+        "Gangsta",
+        "Ska",
+        "Barbershop",
+        "Parody",
+        "Tribal",
+        "Surf",
+        "Sound Collage",
+        "Space-Age",
+        "Chinese Classical",
+        "Country",
+        "Hillbilly",
+        "Reggae",
+        "Movie Effects",
+        "Special Effects",
+        "Spoken Word"
+      ],
+      "thumb": "https://img.discogs.com/s5tED86dDSIP9sSIxPR0Bs3dINE=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-11568406-1518647950-6862.jpeg.jpg",
+      "format": [
+        "CD",
+        "Mini",
+        "Shape",
+        "CD-ROM",
+        "Album",
+        "Unofficial Release",
+        "Stereo",
+        "Mono",
+        "NTSC"
+      ],
+      "country": "US",
+      "barcode": [],
+      "uri": "/Nickelodeon-MTV-Networks-Viacom-Productions-Nickelodeon-Music-Sound-Library/release/11568406",
+      "master_url": null,
+      "label": [
+        "Nickelodeon"
+      ],
+      "genre": [
+        "Electronic",
+        "Hip Hop",
+        "Jazz",
+        "Rock",
+        "Reggae",
+        "Blues",
+        "Non-Music",
+        "Pop",
+        "Children's",
+        "Folk, World, & Country"
+      ],
+      "catno": "NMSL01 NMSL02 NMSL03 NMSL04 NMSL05",
+      "community": {
+        "want": 9,
+        "have": 2
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/ZV8COgmbc0D_9ZQ2d4Uiy2unWNE=/fit-in/480x480/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-11568406-1518647950-6862.jpeg.jpg",
+      "title": "Nickelodeon, MTV Networks, Viacom Productions - Nickelodeon Music & Sound Library",
+      "resource_url": "https://api.discogs.com/releases/11568406",
+      "master_id": 0,
+      "type": "release",
+      "id": 11568406
+    },
+    {
+      "style": [
+        "House",
+        "Hardcore",
+        "Techno",
+        "Downtempo"
+      ],
+      "thumb": "https://img.discogs.com/-p9oAfI8a-2GFfaLMm4R6XI6IRA=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4820544-1376532254-1247.png.jpg",
+      "format": [
+        "CD",
+        "Compilation",
+        "CD",
+        "Mixed"
+      ],
+      "country": "US",
+      "barcode": [
+        "720841033523",
+        "MOBY DISC 1 ###1/2DCA4593# L805",
+        "MOBY DISC 2 ###2/2DCA4594# L803",
+        "MOBY DISC 1 ***1/2DCA4593* L805",
+        "L805",
+        "IFPI F700",
+        "[logo]***2/2DCA4594*  MOBY DISC 2  01",
+        "IFPI LL26",
+        "none"
+      ],
+      "uri": "/Moby-Rare-The-Collected-B-Sides-1989-1993/release/4820544",
+      "master_url": "https://api.discogs.com/masters/22696",
+      "label": [
+        "Instinct Records",
+        "Instinct Records",
+        "Instinct Records",
+        "DCA",
+        "DCA"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "EX-335-2",
+      "community": {
+        "want": 14,
+        "have": 44
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/OvPyw7OnEkW24Zn01Lp5oNtrWb0=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4820544-1376532254-1247.png.jpg",
+      "title": "Moby - Rare: The Collected B-Sides (1989-1993)",
+      "resource_url": "https://api.discogs.com/releases/4820544",
+      "master_id": 22696,
+      "type": "release",
+      "id": 4820544
+    },
+    {
+      "style": [
+        "Noise",
+        "Industrial"
+      ],
+      "thumb": "https://img.discogs.com/pVimdcqmzI4f10wJP1XePw-Qws8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4464422-1365609784-9693.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Album",
+        "Limited Edition"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Arbre-Noir-Sens-Propre-De-La-Raison/release/4464422",
+      "master_url": "https://api.discogs.com/masters/543461",
+      "label": [
+        "Trial Communications"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "TC-003/1",
+      "community": {
+        "want": 6,
+        "have": 3
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/hKFJl1gLjqge0XvnL_tFmDtC8gk=/fit-in/500x321/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4464422-1365609784-9693.jpeg.jpg",
+      "title": "Arbre Noir - Sens Propre De La Raison",
+      "resource_url": "https://api.discogs.com/releases/4464422",
+      "master_id": 543461,
+      "type": "release",
+      "id": 4464422
+    },
+    {
+      "style": [
+        "Trance",
+        "Euro House"
+      ],
+      "thumb": "https://img.discogs.com/dsCIXIeOH3B7rKQ4DoY_00iQ26o=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2676092-1296116468.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\""
+      ],
+      "country": "France",
+      "barcode": [
+        "3 483901 081663"
+      ],
+      "uri": "/DSmile-My-Dream/release/2676092",
+      "master_url": "https://api.discogs.com/masters/474033",
+      "label": [
+        "CNR Music"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "300816 6",
+      "community": {
+        "want": 7,
+        "have": 7
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/DzIk5gHczhkOpjrCFY5kPhWoHhk=/fit-in/600x613/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2676092-1296116468.jpeg.jpg",
+      "title": "D.Smile* - My Dream",
+      "resource_url": "https://api.discogs.com/releases/2676092",
+      "master_id": 474033,
+      "type": "release",
+      "id": 2676092
+    },
+    {
+      "style": [
+        "Acid",
+        "House",
+        "Abstract",
+        "Techno",
+        "Tech House",
+        "Ambient",
+        "Electro",
+        "Drum n Bass",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/u0rIOAEiIfvrUyrr0O8kkbAcGoc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-33213-1232232132.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "UK",
+      "barcode": [],
+      "uri": "/Various-Trance-Europe-Express-5/master/42955",
+      "master_url": "https://api.discogs.com/masters/42955",
+      "label": [
+        "Volume",
+        "Trance Europe Express"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "TEEXLP 005",
+      "community": {
+        "want": 522,
+        "have": 732
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/PaPU4IjJAVE3Zx6nDxr7cKxC_bI=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-33213-1232232132.jpeg.jpg",
+      "title": "Various - Trance Europe Express 5",
+      "resource_url": "https://api.discogs.com/masters/42955",
+      "master_id": 42955,
+      "type": "master",
+      "id": 42955
+    },
+    {
+      "style": [
+        "Noise",
+        "Industrial"
+      ],
+      "thumb": "https://img.discogs.com/pVimdcqmzI4f10wJP1XePw-Qws8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4464422-1365609784-9693.jpeg.jpg",
+      "format": [
+        "Cassette",
+        "Album",
+        "Limited Edition"
+      ],
+      "country": "Germany",
+      "barcode": [],
+      "uri": "/Arbre-Noir-Sens-Propre-De-La-Raison/master/543461",
+      "master_url": "https://api.discogs.com/masters/543461",
+      "label": [
+        "Trial Communications"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "TC-003/1",
+      "community": {
+        "want": 15,
+        "have": 4
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/hKFJl1gLjqge0XvnL_tFmDtC8gk=/fit-in/500x321/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4464422-1365609784-9693.jpeg.jpg",
+      "title": "Arbre Noir - Sens Propre De La Raison",
+      "resource_url": "https://api.discogs.com/masters/543461",
+      "master_id": 543461,
+      "type": "master",
+      "id": 543461
+    },
+    {
+      "style": [
+        "Trance",
+        "Euro House"
+      ],
+      "thumb": "https://img.discogs.com/dsCIXIeOH3B7rKQ4DoY_00iQ26o=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-2676092-1296116468.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "12\""
+      ],
+      "country": "France",
+      "barcode": [
+        "3 483901 081663"
+      ],
+      "uri": "/DSmile-My-Dream/master/474033",
+      "master_url": "https://api.discogs.com/masters/474033",
+      "label": [
+        "CNR Music"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "300816 6",
+      "community": {
+        "want": 17,
+        "have": 9
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/DzIk5gHczhkOpjrCFY5kPhWoHhk=/fit-in/600x613/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-2676092-1296116468.jpeg.jpg",
+      "title": "D.Smile* - My Dream",
+      "resource_url": "https://api.discogs.com/masters/474033",
+      "master_id": 474033,
+      "type": "master",
+      "id": 474033
+    },
+    {
+      "style": [
+        "Acid",
+        "House",
+        "Abstract",
+        "Techno",
+        "Tech House",
+        "Ambient",
+        "Electro",
+        "Drum n Bass",
+        "Experimental"
+      ],
+      "thumb": "https://img.discogs.com/u0rIOAEiIfvrUyrr0O8kkbAcGoc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-33213-1232232132.jpeg.jpg",
+      "format": [
+        "Vinyl",
+        "LP",
+        "Compilation"
+      ],
+      "country": "UK",
+      "barcode": [],
+      "uri": "/Various-Trance-Europe-Express-5/release/33213",
+      "master_url": "https://api.discogs.com/masters/42955",
+      "label": [
+        "Volume",
+        "Trance Europe Express"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "TEEXLP 005",
+      "community": {
+        "want": 311,
+        "have": 255
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/PaPU4IjJAVE3Zx6nDxr7cKxC_bI=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-33213-1232232132.jpeg.jpg",
+      "title": "Various - Trance Europe Express 5",
+      "resource_url": "https://api.discogs.com/releases/33213",
+      "master_id": 42955,
+      "type": "release",
+      "id": 33213
+    },
+    {
+      "style": [
+        "Trip Hop"
+      ],
+      "thumb": "https://img.discogs.com/sQ7Tq0uG4YZgLB4ZsU4KuascOx8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-27256-1287742775.jpeg.jpg",
+      "format": [
+        "CD",
+        "Compilation"
+      ],
+      "country": "UK",
+      "barcode": [
+        "7 31454 06142 1",
+        "731454061421",
+        "IFPI L134",
+        "IFPI 0463",
+        "IFPI 0496",
+        "MW061CD/1 10433321 01 & MADE IN U.K. BY PDO",
+        "MW061CD/2 20433321 04 & MADE IN U.K. BY PDO",
+        "BIEM/MCPS",
+        "ASCAP",
+        "MW061CD2(1)",
+        "MW061CD(2)"
+      ],
+      "uri": "/Various-Headz-2A/release/27256",
+      "master_url": "https://api.discogs.com/masters/18179",
+      "label": [
+        "Mo Wax",
+        "Headz",
+        "Mo Wax Recordings",
+        "A&M Records Ltd.",
+        "Source",
+        "Grand Royal Records",
+        "Sever Sound Recordings",
+        "Axis Productions",
+        "Mo Wax",
+        "A&M Records Ltd.",
+        "Warp Records Limited",
+        "EMI-Medley",
+        "Mo Wax Recordings",
+        "Disques Solid",
+        "Dust Brothers Music",
+        "Samz Jointz",
+        "Sony Music Entertainment (Japan) Inc.",
+        "Island Records Ltd.",
+        "Retroactive",
+        "4th Wave",
+        "Midnight Funk Association",
+        "Ninja Tune",
+        "Dorado Records Ltd.",
+        "City Slang",
+        "Circa Records Ltd.",
+        "Capitol Records, Inc.",
+        "Kids N.Y.L.L.C.",
+        "Howard Bernstein",
+        "Lunar Funk",
+        "Solo",
+        "Mo Wax",
+        "A&M Records Ltd.",
+        "PDO, UK",
+        "PDO, UK",
+        "Robbins Music Corp.",
+        "EMI-Casadida Music Publishing",
+        "Warner Chappell Music",
+        "Dust Brothers Music",
+        "Warner/Chappell",
+        "Copyright Control",
+        "Abstrakt Genre",
+        "Sam I Am Songs Inc.",
+        "Fiction Songs Ltd.",
+        "Planet E Communications, Inc.",
+        "Just Isn't Music",
+        "Wrapped in Rubber Music",
+        "Rough Trade Publishing",
+        "Island Music Ltd.",
+        "Brooklyn Dust Music",
+        "PolyGram International Publishing, Inc.",
+        "Kids N.Y.L.L.C.",
+        "Easy Sound Studio",
+        "Room 2000",
+        "House Of Hits",
+        "The Beat Farm",
+        "Cabin Studios",
+        "UXB Studios",
+        "The Otherworld",
+        "G-Son Studios",
+        "Tin Pan Alley Studios",
+        "Fort Apache",
+        "ILL Mansions Recording Studios",
+        "Acid Lab Studios",
+        "G-Son Studios",
+        "Tin Pan Alley Studios",
+        "Acid Lab Studios",
+        "Future Disc"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "MW061CD",
+      "community": {
+        "want": 222,
+        "have": 536
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/i8qf0EX8QvUkBPH-5d0K78RNJgY=/fit-in/600x585/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-27256-1287742775.jpeg.jpg",
+      "title": "Various - Headz 2A",
+      "resource_url": "https://api.discogs.com/releases/27256",
+      "master_id": 18179,
+      "type": "release",
+      "id": 27256
+    },
+    {
+      "style": [
+        "House",
+        "Deep House",
+        "Garage House"
+      ],
+      "thumb": "",
+      "format": [
+        "Cassette",
+        "Mixed"
+      ],
+      "country": "UK",
+      "barcode": [
+        "743213428044"
+      ],
+      "uri": "/K-Klass-Remix-And-Additional-Production/release/1472018",
+      "master_url": "https://api.discogs.com/masters/180509",
+      "label": [
+        "Deconstruction"
+      ],
+      "genre": [
+        "Electronic"
+      ],
+      "catno": "74321 34280 4",
+      "community": {
+        "want": 4,
+        "have": 2
+      },
+      "year": "1996",
+      "cover_image": "https://img.discogs.com/images/spacer.gif",
+      "title": "K-Klass - Remix And Additional Production",
+      "resource_url": "https://api.discogs.com/releases/1472018",
+      "master_id": 180509,
+      "type": "release",
+      "id": 1472018
+    }
+  ]
+}

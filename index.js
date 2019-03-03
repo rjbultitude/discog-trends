@@ -5,7 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const creds = require('./server/creds.js');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const db = new Discogs(creds).database();
 
 // Setup CORS
@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 
 function getStaticData(res) {
   console.log('res', res);
-  fs.readFile('./data.js', 'utf8', (err, staticdata) => {
+  fs.readFile('./data.json', 'utf8', (err, staticdata) => {
     if (err) {
       throw err;
     }

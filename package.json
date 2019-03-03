@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "build": "./node_modules/.bin/parcel build ./app/ui.js",
+    "dev": "parcel ./app/app.js",
+    "build": "./node_modules/.bin/parcel build ./app/app.js",
     "test": "test"
   },
   "author": "Richard Bultitude",

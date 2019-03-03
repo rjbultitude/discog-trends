@@ -1,4 +1,4 @@
-import {filterData, getCassettes} from './filter-funcs.js';
+import {filterData, getCassettes, getVinyl} from './filter-funcs.js';
 
 // search data
 const genre = 'Electronic';
@@ -35,7 +35,7 @@ function getDiscogsData(callback) {
     .then((response) => {
       if (response.ok) {
         response.json().then((res) => {
-          callback(filterData(res.results, getCassettes));
+          callback(filterData(res.results, getVinyl));
         });
       } else {
         throw err;

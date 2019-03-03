@@ -1,10 +1,12 @@
 const Discogs = require('disconnect').Client;
 const express = require('express');
+const Bundler = require('parcel-bundler');
 const fs = require('fs');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const creds = require('./server/creds.js');
 const app = express();
+const bundler = new Bundler('./app/app.js');
 const port = process.env.PORT || 8080;
 const db = new Discogs(creds).database();
 
@@ -51,6 +53,10 @@ app.post('/api/search', cors(corsOptions), function (req, res) {
 // });
 
 app.use(express.static('./'));
+
+if (process.env.NODE_ENV === 'develop') {
+  app.use(bundler.middleware());
+}
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);

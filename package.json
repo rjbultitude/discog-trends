@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
+    "start": "NODE_ENV=develop node ./index.js",
     "dev": "parcel ./app/app.js",
     "build": "./node_modules/.bin/parcel build ./app/app.js",
     "test": "test"

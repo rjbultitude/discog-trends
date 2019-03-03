@@ -16,7 +16,6 @@ class List extends React.Component {
   }
 
   createList() {
-    console.log('this.state.discogsData', this.state.discogsData);
     return this.state.discogsData.map((item, i) => {
       return React.createElement('li', {key: `li-${i}`}, item);
     });

@@ -6,19 +6,8 @@ export default class Results extends React.Component {
     this.state = {};
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.length > 0) {
-      this.setState({discogsData: newProps});
-    }
-  }
-
-  componentDidMount() {
-    console.log('results props', this.props);
-    this.setState({discogsData: this.props.discogsData});
-  }
-
   createList() {
-    return this.state.discogsData.map((item, i) => {
+    return this.props.discogsData.map((item, i) => {
       return React.createElement('li', {key: `li-${i}`}, item);
     });
   }
@@ -26,7 +15,7 @@ export default class Results extends React.Component {
   render() {
       return (
         <div className="results-wrapper">
-          {this.state.discogsData ?
+          {this.props.discogsData && Array.isArray(this.props.discogsData) ?
             React.createElement('ul', {}, this.createList())
             : React.createElement('h2', {}, 'Loading...')}
         </div>

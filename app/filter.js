@@ -54,7 +54,7 @@ export default class Filter extends React.Component {
     return (
       <div className="filter-wrapper">
         {React.createElement('div', {}, this.createFilter())}
-        {this.state.discogsData ?
+        {this.state.discogsData && this.state.discogsData.length > 0 ?
           <Results discogsData={this.state.discogsData} />
           : null}
       </div>

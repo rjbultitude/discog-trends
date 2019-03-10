@@ -26,6 +26,14 @@ export function getVinyl(release) {
   }
 }
 
+export function getCD(release) {
+  for (let index = 0; index < release.format.length; index++) {
+    if (release.format[index] === 'CD' || release.format[index] === 'Compact Disc') {
+      return release;
+    }
+  }
+}
+
 export function getStyle(release, styleTerm) {
   for (let index = 0; index < release.style.length; index++) {
     if (release.style[index] === styleTerm) {

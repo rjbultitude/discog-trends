@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getDiscogsData} from './getdata.js';
+import {filterData, getCassettes, getVinyl, getCD} from './filter-funcs.js';
 import Results from './results.js';
 
-const formats = ['Cassette', 'Vinyl', 'CD'];
+const CASS_STRING = 'Cassette';
+const VINYL_STRING = 'Vinyl';
+const CD_STRING = 'CD';
+const formats = ['--', CASS_STRING, VINYL_STRING, CD_STRING];
 
 export default class Filter extends React.Component {
   constructor(props) {
@@ -13,8 +17,27 @@ export default class Filter extends React.Component {
 
   componentDidMount() {
     getDiscogsData((data) => {
-      this.setState({discogsData: data});
+      //const filteredData = filterData(data, getCassettes);
+      this.setState({discogsData: [], originalData: data});
     });
+  }
+
+  updateFilter(formatString) {
+    if (formatString === CASS_STRING) {
+      return filterData(this.state.originalData, getCassettes);
+    } else if (formatString === VINYL_STRING) {
+      return filterData(this.state.originalData, getVinyl);
+    } else if (formatString === CD_STRING) {
+      return filterData(this.state.originalData, getCD);
+    } else {
+      return [];
+    }
+  }
+
+  change(event) {
+    let newData = this.updateFilter(event.target.value);
+    console.log('newData', newData);
+    this.setState({discogsData: newData});
   }
 
   createOptions() {
@@ -24,7 +47,7 @@ export default class Filter extends React.Component {
   }
 
   createFilter() {
-    return React.createElement('select', {}, this.createOptions())
+    return React.createElement('select', {onChange: (e) => {this.change(e)}}, this.createOptions())
   }
 
   render() {

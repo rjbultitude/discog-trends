@@ -4,10 +4,16 @@ export default class Results extends React.Component {
   constructor(props) {
     super();
     this.state = {};
-    console.log('results props', this.props);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.length > 0) {
+      this.setState({discogsData: newProps});
+    }
   }
 
   componentDidMount() {
+    console.log('results props', this.props);
     this.setState({discogsData: this.props.discogsData});
   }
 

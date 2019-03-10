@@ -35,7 +35,7 @@ function getDiscogsData(callback) {
     .then((response) => {
       if (response.ok) {
         response.json().then((res) => {
-          callback(filterData(res.results, getVinyl));
+          callback(res.results);
         });
       } else {
         throw err;

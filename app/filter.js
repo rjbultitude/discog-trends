@@ -1,27 +1,40 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import {getDiscogsData} from './getdata.js';
+import Results from './results.js';
 
-class Filter extends React.Component {
+const formats = ['Cassette', 'Vinyl', 'CD'];
+
+export default class Filter extends React.Component {
   constructor(props) {
     super();
-    this.state;
+    this.state = {};
   }
 
   componentDidMount() {
     getDiscogsData((data) => {
-      console.log(data);
       this.setState({discogsData: data});
     });
   }
 
   createOptions() {
-    return this.state.discogsData.map((item, i) => {
+    return formats.map((item, i) => {
       return React.createElement('option', {key: `opt-${i}`}, item);
     });
   }
 
+  createFilter() {
+    return React.createElement('select', {}, this.createOptions())
+  }
+
   render() {
     return (
-      React.createElement('select', {}, this.createOptions)
+      <div className="filter-wrapper">
+        {React.createElement('div', {}, this.createFilter())}
+        {this.state.discogsData ?
+          <Results discogsData={this.state.discogsData} />
+          : null}
+      </div>
     );
   }
 }

@@ -13,7 +13,8 @@ This ensures the all the node packages are installed. Follow the [NPM guide](htt
 
 ## Build
 
-TBC
+For dev mode run `npm run start`
+For production mode run `npm run build`
 
 ### Tools
 

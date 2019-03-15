@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getDiscogsData} from './getdata.js';
-import {filterData, getCassettes, getVinyl, getCD} from './filter-funcs.js';
+import {filterData, getCassettes, getVinyl, getCD, getDemand} from './filter-funcs.js';
 import Results from './results.js';
 
 const CASS_STRING = 'Cassette';
@@ -24,11 +24,11 @@ export default class Filter extends React.Component {
 
   updateFilter(formatString) {
     if (formatString === CASS_STRING) {
-      return filterData(this.state.originalData, getCassettes);
+      return filterData(this.state.originalData, getCassettes, getDemand);
     } else if (formatString === VINYL_STRING) {
-      return filterData(this.state.originalData, getVinyl);
+      return filterData(this.state.originalData, getVinyl, getDemand);
     } else if (formatString === CD_STRING) {
-      return filterData(this.state.originalData, getCD);
+      return filterData(this.state.originalData, getCD, getDemand);
     } else {
       return [];
     }
@@ -53,7 +53,8 @@ export default class Filter extends React.Component {
   render() {
     return (
       <div className="filter-wrapper">
-        {React.createElement('div', {}, this.createFilter())}
+        {React.createElement('label', {}, 'Format')}
+        {React.createElement('select', {onChange: (e) => {this.change(e)}}, this.createOptions())}
         {this.state.discogsData && this.state.discogsData.length > 0 ?
           <Results discogsData={this.state.discogsData} />
           : null}

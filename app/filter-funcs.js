@@ -1,8 +1,11 @@
-export function filterData(results, filterFn) {
+export function filterData(results, filterFn, getDemand) {
   const resultsFiltered = results.filter(filterFn);
   if (resultsFiltered.length > 0) {
     const resultsFilteredTitles = resultsFiltered.map((release) => {
-      return release.title;
+      return {
+        title: release.title,
+        demand: getDemand(release)
+      };
     });
     return resultsFilteredTitles;
   } else {
@@ -44,6 +47,8 @@ export function getStyle(release, styleTerm) {
 
 export function getDemand(release, mult = 1) {
   if (release.community.want > release.community.have * mult) {
-    return release;
+    return 'true';
+  } else {
+    return 'false'
   }
 }

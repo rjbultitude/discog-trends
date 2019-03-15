@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Results extends React.Component {
   constructor(props) {
@@ -19,10 +20,13 @@ export default class Results extends React.Component {
 
   createHeaders() {
     const keys = Object.keys(this.props.discogsData[0]);
-    console.log('keys', keys);
-    return keys.map((key) => {
-      return React.createElement('th', {key}, key);
-    });
+    return (
+      <tr>
+        {keys.map((key) => {
+          return React.createElement('th', {key}, key);
+        })}
+      </tr>
+    );
   }
 
   createTable() {
@@ -44,3 +48,7 @@ export default class Results extends React.Component {
       );
   }
 }
+
+Results.propTypes = {
+  discogsData: PropTypes.arrayOf(PropTypes.instanceOf(Object)).isRequired,
+};

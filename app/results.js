@@ -7,11 +7,19 @@ export default class Results extends React.Component {
     this.state = {};
   }
 
+  createTitleLinks(title, url) {
+    return (
+      <a href={`${url}`} target="_blank">
+        {title}
+      </a>
+    );
+  }
+
   createCells() {
     return this.props.discogsData.map((item, i) => {
       return (
         <tr key={`li-${i}`}>
-          {React.createElement('td', {}, item.title)}
+          {React.createElement('td', {}, this.createTitleLinks(item.title, item.url))}
           {React.createElement('td', {}, item.demand)}
         </tr>
       );

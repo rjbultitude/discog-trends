@@ -21,3 +21,18 @@ For production mode run `npm run build`
 [disconnect](https://github.com/bartve/disconnect)
 
 [express](https://expressjs.com/)
+
+[React](https://reactjs.com)
+
+### Plans
+
+#### Functionality
+Show demand (_want_ vs _have_)
+Show rarity (Position in Range of _have_)
+Show change over time (if possible)
+
+Add fields for `year` and `genre`
+
+#### Approach
+Use styled components
+Crunch big data using Python

@@ -22,7 +22,7 @@ const corsOptions = {
   }
 };
 
-//app.use(express.json());
+// Tell Node how to handle the request body
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -36,10 +36,11 @@ function getStaticData(res) {
   });
 }
 
+// Search requests
 app.post('/api/search', cors(corsOptions), function (req, res) {
   db.search(req.body.searchTerm, req.body.params, (err, data) => {
     if (err !== null) {
-      console.warn(err);
+      console.warn('error running search', err);
       getStaticData(res);
       return;
     }
@@ -48,12 +49,11 @@ app.post('/api/search', cors(corsOptions), function (req, res) {
   });
 });
 
-// app.get('/api/search', function (req, res) {
-//   // TBC
-// });
-
+// Run app from root
 app.use(express.static('./'));
 
+// Configure Parcel middleware
+// to serve app in development mode
 if (process.env.NODE_ENV === 'develop') {
   app.use(bundler.middleware());
 }

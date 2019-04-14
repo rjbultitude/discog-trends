@@ -17,12 +17,11 @@ export default class Filter extends React.Component {
 
   componentDidMount() {
     getDiscogsData((data) => {
-      //const filteredData = filterData(data, getCassettes);
       this.setState({discogsData: [], originalData: data});
     });
   }
 
-  updateFilter(formatString) {
+  updateFilterFormat(formatString) {
     if (formatString === CASS_STRING) {
       return filterData(this.state.originalData, getCassettes, getDemand);
     } else if (formatString === VINYL_STRING) {
@@ -35,7 +34,7 @@ export default class Filter extends React.Component {
   }
 
   change(event) {
-    let newData = this.updateFilter(event.target.value);
+    let newData = this.updateFilterFormat(event.target.value);
     console.log('newData', newData);
     this.setState({discogsData: newData});
   }
@@ -44,10 +43,6 @@ export default class Filter extends React.Component {
     return formats.map((item, i) => {
       return React.createElement('option', {key: `opt-${i}`}, item);
     });
-  }
-
-  createFilter() {
-    return React.createElement('select', {onChange: (e) => {this.change(e)}}, this.createOptions())
   }
 
   render() {

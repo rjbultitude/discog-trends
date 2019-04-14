@@ -1,9 +1,15 @@
+const DISCOGS_URL_BASE = 'http://www.discogs.com';
+
+// Take search results data and filter it
+// using a callback function
+// getDemand is a dependency
 export function filterData(results, filterFn, getDemand) {
   const resultsFiltered = results.filter(filterFn);
   if (resultsFiltered.length > 0) {
     const resultsFilteredTitles = resultsFiltered.map((release) => {
       return {
         title: release.title,
+        url: `${DISCOGS_URL_BASE}${release.uri}`,
         demand: getDemand(release)
       };
     });
@@ -45,10 +51,14 @@ export function getStyle(release, styleTerm) {
   }
 }
 
-export function getDemand(release, mult = 1) {
+//@ts-check
+export function getDemand(release, mult = 2) {
   if (release.community.want > release.community.have * mult) {
-    return 'true';
+    return 'High';
+  }
+  else if (release.community.want > release.community.have) {
+    return 'Medium';
   } else {
-    return 'false'
+    return 'Low'
   }
 }

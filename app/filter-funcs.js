@@ -1,12 +1,15 @@
+import { release } from "os";
+
 const DISCOGS_URL_BASE = 'http://www.discogs.com';
 
 // Take search results data and filter it
 // using a callback function
 // getDemand is a dependency
-export function filterData(results, filterFn, getDemand) {
-  const resultsFiltered = results.filter(filterFn);
-  if (resultsFiltered.length > 0) {
-    const resultsFilteredTitles = resultsFiltered.map((release) => {
+export function filterData(results, genreString, filterFn, getDemand) {
+  const resultsGenreFiltered = results.filter(getGenre, genreString);
+  const resultsFormatFiltered = resultsGenreFiltered.filter(filterFn);
+  if (resultsFormatFiltered.length > 0) {
+    const resultsFilteredTitles = resultsFormatFiltered.map((release) => {
       return {
         title: release.title,
         url: `${DISCOGS_URL_BASE}${release.uri}`,
@@ -46,6 +49,14 @@ export function getCD(release) {
 export function getStyle(release, styleTerm) {
   for (let index = 0; index < release.style.length; index++) {
     if (release.style[index] === styleTerm) {
+      return release;
+    }
+  }
+}
+
+export function getGenre(release) {
+  for (let index = 0; index < release.genre.length; index++) {
+    if (release.genre[index] === this) {
       return release;
     }
   }

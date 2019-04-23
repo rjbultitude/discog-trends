@@ -31,7 +31,9 @@ export default class Results extends React.Component {
     return (
       <tr>
         {keys.map((key) => {
-          return React.createElement('th', {key}, key);
+          if (key !== 'url') {
+            return React.createElement('th', {key}, key);
+          }
         })}
       </tr>
     );
@@ -48,11 +50,11 @@ export default class Results extends React.Component {
 
   render() {
       return (
-        <div className="results-wrapper">
+        <React.Fragment>
           {this.props.discogsData && Array.isArray(this.props.discogsData) ?
             this.createTable()
             : React.createElement('h2', {}, 'Loading...')}
-        </div>
+        </React.Fragment>
       );
   }
 }

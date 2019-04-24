@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Could be a functional component
 export default class Results extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {};
   }
 

@@ -6,6 +6,8 @@ import {colours} from '../theme.js';
 
 // Styles
 const Label = styled.label`
+  display: inline-block;
+  width: 70px;
   font-size: 1.5rem;
   text-align: center;
   color: ${colours.deepPurple};

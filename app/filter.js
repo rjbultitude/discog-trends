@@ -16,6 +16,9 @@ const CD_STRING = 'CD';
 const FORMATS = ['--', CASS_STRING, VINYL_STRING, CD_STRING];
 const GENRES = ['--', 'Electronic', 'Jazz', 'Stage & Screen', 'Rock', 'Funk / Soul', 'Pop'];
 
+const FilterWrapper = styled.div`padding-top: 15px; padding-bottom: 15px`;
+const FilterField = styled.div`padding-left: 15px; padding-right: 15px`;
+
 export default class Filter extends React.Component {
   constructor(props) {
     super(props);
@@ -79,23 +82,27 @@ export default class Filter extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Label text='Genre' />
-        {React.createElement('select', {
-          onChange: (e) => {
-            this.changeGenre(e);
-          }
-        }, this.createOptions(GENRES))}
-        <Label text='Format' />
-        {React.createElement('select', {
-          onChange: (e) => {
-            this.changeFormat(e);
-          }
-        }, this.createOptions(FORMATS))}
-        {this.state.discogsData && this.state.discogsData.length > 0 ?
-          <Results discogsData={this.state.discogsData} />
-          : null}
-      </React.Fragment>
+      <FilterWrapper>
+        <FilterField>
+          <Label text='Genre' />
+          {React.createElement('select', {
+            onChange: (e) => {
+              this.changeGenre(e);
+            }
+          }, this.createOptions(GENRES))}
+        </FilterField>
+        <FilterField>
+          <Label text='Format' />
+          {React.createElement('select', {
+            onChange: (e) => {
+              this.changeFormat(e);
+            }
+          }, this.createOptions(FORMATS))}
+          {this.state.discogsData && this.state.discogsData.length > 0 ?
+            <Results discogsData={this.state.discogsData} />
+            : null}
+          </FilterField>
+      </FilterWrapper>
     );
   }
 }

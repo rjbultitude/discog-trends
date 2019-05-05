@@ -16,9 +16,9 @@ app.use(
   csp({
     // Specify directives as normal.
     directives: {
-      defaultSrc: ["'self'", '*.discogs.com'],
-      scriptSrc: ["'self'",],
-      styleSrc: ["'self'"],
+      defaultSrc: ["'self'", 'http://localhost', '*.discogs.com'],
+      scriptSrc: ["'self'", 'http://localhost', '*.discogs.com'],
+      styleSrc: ["'self'", "'unsafe-inline'", 'http://localhost', '*.discogs.com'],
     }
   })
 );

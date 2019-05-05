@@ -21,6 +21,7 @@ export default class Filter extends React.Component {
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
+    this.change = this.change.bind(this);
   }
 
   componentDidMount() {
@@ -30,34 +31,38 @@ export default class Filter extends React.Component {
     });
   }
 
-  updateFilter(genreString, formatString) {
-    if (formatString === CASS_STRING) {
-      return filterData(this.state.originalData, genreString, getCassettes, getDemand);
-    } else if (formatString === VINYL_STRING) {
-      return filterData(this.state.originalData, genreString, getVinyl, getDemand);
-    } else if (formatString === CD_STRING) {
-      return filterData(this.state.originalData, genreString, getCD, getDemand);
+  updateFilter() {
+    console.log('this.state.format', this.state.format);
+    console.log('this.state.genre', this.state.genre);
+    if (this.state.format === CASS_STRING) {
+      return filterData(this.state.originalData, this.state.genre, getCassettes, getDemand);
+    } else if (this.state.format === VINYL_STRING) {
+      return filterData(this.state.originalData, this.state.genre, getVinyl, getDemand);
+    } else if (this.state.format === CD_STRING) {
+      return filterData(this.state.originalData, this.state.genre, getCD, getDemand);
     } else {
       return [];
     }
   }
 
   change() {
-    let newData = this.updateFilter(this.state.genre, this.state.format);
+    let newData = this.updateFilter();
     console.log('newData', newData);
     this.setState({discogsData: newData});
   }
 
   changeGenre(e) {
-    this.setState({'genre': e.target.value});
-    console.log('this.state', this.state);
-    this.change();
+    this.setState({'genre': e.target.value}, () => {
+      console.log('this.state', this.state);
+      this.change();
+    });
   }
 
   changeFormat(e) {
-    this.setState({'format': e.target.value});
-    console.log('this.state', this.state);
-    this.change();
+    this.setState({'format': e.target.value}, () => {
+      console.log('this.state', this.state);
+      this.change();
+    });
   }
 
   createOptions(optionsArr) {

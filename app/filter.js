@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom';
 import {getDiscogsData} from './getdata.js';
 import {filterData, getCassettes, getVinyl, getCD, getDemand} from './filter-funcs.js';
 import Results from './results.js';
+// Styles
+import styled from 'styled-components';
+import {colours} from './theme.js';
+// Components
+import Label from './components/label.js';
 
+// Constants
 const CASS_STRING = 'Cassette';
 const VINYL_STRING = 'Vinyl';
 const CD_STRING = 'CD';
@@ -74,13 +80,13 @@ export default class Filter extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {React.createElement('label', {}, 'Genre')}
+        <Label text='Genre' />
         {React.createElement('select', {
           onChange: (e) => {
             this.changeGenre(e);
           }
         }, this.createOptions(GENRES))}
-        {React.createElement('label', {}, 'Format')}
+        <Label text='Format' />
         {React.createElement('select', {
           onChange: (e) => {
             this.changeFormat(e);

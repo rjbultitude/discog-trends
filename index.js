@@ -9,6 +9,19 @@ const app = express();
 const bundler = new Bundler('./app/app.js');
 const port = process.env.PORT || 8080;
 const db = new Discogs(creds).database();
+const csp = require('helmet-csp');
+
+// Setup CSP
+app.use(
+  csp({
+    // Specify directives as normal.
+    directives: {
+      defaultSrc: ["'self'", '*.discogs.com'],
+      scriptSrc: ["'self'",],
+      styleSrc: ["'self'"],
+    }
+  })
+);
 
 // Setup CORS
 const whitelist = [`http://localhost:${port}`, 'http://discogstrends.com'];

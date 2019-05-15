@@ -5,7 +5,9 @@ import styled from 'styled-components';
 import {colours} from '../theme.js';
 
 // Styles
-const Label = styled.label`
+const Label = styled.label.attrs({
+  htmlFor: 'test'
+})`
   display: inline-block;
   width: 70px;
   font-size: 1rem;
@@ -15,7 +17,7 @@ const Label = styled.label`
 
 export default (props) => {
   return (
-    <Label>
+    <Label htmlFor={props.forVal}>
       {props.text}
     </Label>
   );

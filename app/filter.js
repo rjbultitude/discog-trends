@@ -16,6 +16,8 @@ const VINYL_STRING = 'Vinyl';
 const CD_STRING = 'CD';
 const FORMATS = ['--', CASS_STRING, VINYL_STRING, CD_STRING];
 const GENRES = ['--', 'Electronic', 'Jazz', 'Stage & Screen', 'Rock', 'Funk / Soul', 'Pop'];
+const genresStr = 'genres';
+const formatsStr = 'formats';
 
 const FilterWrapper = styled.div`padding: ${padding}`;
 const FilterField = styled.div`padding: ${padding}`;
@@ -79,12 +81,12 @@ export default class Filter extends React.Component {
     return (
       <FilterWrapper>
         <FilterField>
-          <Label text='Genre' />
-          <Select selectOptions={GENRES} changeCB={this.changeGenre} />
+          <Label text='Genre' forVal={genresStr} />
+          <Select selectOptions={GENRES} changeCB={this.changeGenre} id={genresStr} />
         </FilterField>
         <FilterField>
-          <Label text='Format' />
-          <Select selectOptions={FORMATS} changeCB={this.changeFormat} />
+          <Label text='Format' forVal={formatsStr} />
+          <Select selectOptions={FORMATS} changeCB={this.changeFormat} id={formatsStr} />
           </FilterField>
           {this.state.discogsData && this.state.discogsData.length > 0 ?
             <Results discogsData={this.state.discogsData} />

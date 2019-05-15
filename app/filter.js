@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import {colours, padding} from './theme.js';
 // Components
 import Label from './components/label.js';
+import Select from './components/select.js';
 
 // Constants
 const CASS_STRING = 'Cassette';
@@ -74,30 +75,16 @@ export default class Filter extends React.Component {
     });
   }
 
-  createOptions(optionsArr) {
-    return optionsArr.map((item, i) => {
-      return React.createElement('option', {key: `opt-${i}`}, item);
-    });
-  }
-
   render() {
     return (
       <FilterWrapper>
         <FilterField>
           <Label text='Genre' />
-          {React.createElement('select', {
-            onChange: (e) => {
-              this.changeGenre(e);
-            }
-          }, this.createOptions(GENRES))}
+          <Select selectOptions={GENRES} changeCB={this.changeGenre} />
         </FilterField>
         <FilterField>
           <Label text='Format' />
-          {React.createElement('select', {
-            onChange: (e) => {
-              this.changeFormat(e);
-            }
-          }, this.createOptions(FORMATS))}
+          <Select selectOptions={FORMATS} changeCB={this.changeFormat} />
           </FilterField>
           {this.state.discogsData && this.state.discogsData.length > 0 ?
             <Results discogsData={this.state.discogsData} />

@@ -1,4 +1,4 @@
-import {filterData, getCassettes, getVinyl} from './filter-funcs.js';
+import {filterData, getCassettes, getVinyl} from '../filter/filter-funcs.js';
 
 // search data
 const genre = 'Electronic';

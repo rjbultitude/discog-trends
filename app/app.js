@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {getDiscogsData} from './getdata.js';
-import Filter from './filter.js';
+import Filter from './filter/filter.js';
 import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`

@@ -9,6 +9,7 @@ module.exports = function(app) {
         defaultSrc: ["'self'", 'http://localhost', '*.discogs.com'],
         scriptSrc: ["'self'", 'http://localhost', '*.discogs.com'],
         styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'http://localhost', '*.discogs.com'],
+        fontSrc: ['fonts.gstatic.com'],
       }
     })
   );

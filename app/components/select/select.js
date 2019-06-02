@@ -2,7 +2,7 @@ import React from 'react';
 
 // Styles
 import styled from 'styled-components';
-import {colours} from '../utils/theme.js';
+import {colours} from '../../utils/theme.js';
 
 // Styles
 const Select = styled.select`

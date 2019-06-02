@@ -1,5 +1,3 @@
-import {filterData, getCassettes, getVinyl} from '../filter/filter-funcs.js';
-
 // search data
 const genre = 'Electronic';
 const sort = 'year'

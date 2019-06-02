@@ -1,15 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {getDiscogsData} from '../utils/getdata.js';
-import {filterData, getCassettes, getVinyl, getCD, getDemand} from './filter-funcs.js';
-import Results from '../results.js';
+import {getDiscogsData} from '../../utils/getdata.js';
+import {filterData, getCassettes, getVinyl, getCD, getDemand} from '../../utils/filter-funcs.js';
+import Results from './results.js';
 // Styles
 import styled from 'styled-components';
-import {colours, padding} from '../utils/theme.js';
+import {colours, padding} from '../../utils/theme.js';
 // Components
-import Label from '../components/label.js';
-import Select from '../components/select.js';
-import * as appConstants from '../utils/constants.js';
+import Label from '../label/label.js';
+import Select from '../select/select.js';
+import * as appConstants from '../../utils/constants.js';
 
 const FilterWrapper = styled.div`padding: ${padding}`;
 const FilterField = styled.div`padding: ${padding}`;

@@ -1,56 +1,27 @@
 const Discogs = require('disconnect').Client;
 const express = require('express');
 const Bundler = require('parcel-bundler');
-const fs = require('fs');
-const cors = require('cors');
 const bodyParser = require('body-parser');
 const creds = require('./server/creds.js');
 const app = express();
 const bundler = new Bundler('./app/app.js');
 const port = process.env.PORT || 8080;
 const db = new Discogs(creds).database();
-const csp = require('helmet-csp');
+const configureCSP = require('./server/csp.js');
+const configureCors = require('./server/cors.js');
+const getStaticData = require('./server/get-static-data.js');
 
-// Setup CSP
-app.use(
-  csp({
-    // Specify directives as normal.
-    directives: {
-      defaultSrc: ["'self'", 'http://localhost', '*.discogs.com'],
-      scriptSrc: ["'self'", 'http://localhost', '*.discogs.com'],
-      styleSrc: ["'self'", "'unsafe-inline'", 'http://localhost', '*.discogs.com'],
-    }
-  })
-);
-
-// Setup CORS
-const whitelist = [`http://localhost:${port}`, 'http://discogstrends.com'];
-const corsOptions = {
-  origin: function(origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-};
+// Security policy
+configureCSP(app);
+// CORS
+const corsOptions = configureCors(port);
 
 // Tell Node how to handle the request body
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-function getStaticData(res) {
-  fs.readFile('./data.json', 'utf8', (err, staticdata) => {
-    if (err) {
-      throw err;
-    }
-    const staticdataJSON = JSON.parse(staticdata);
-    res.send(staticdataJSON);
-  });
-}
-
 // Search requests
-app.post('/api/search', cors(corsOptions), function (req, res) {
+app.post('/api/search', corsOptions, function (req, res) {
   db.search(req.body.searchTerm, req.body.params, (err, data) => {
     if (err !== null) {
       console.warn('error running search', err);

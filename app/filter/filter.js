@@ -9,15 +9,7 @@ import {colours, padding} from '../utils/theme.js';
 // Components
 import Label from '../components/label.js';
 import Select from '../components/select.js';
-
-// Constants
-const CASS_STRING = 'Cassette';
-const VINYL_STRING = 'Vinyl';
-const CD_STRING = 'CD';
-const FORMATS = ['--', CASS_STRING, VINYL_STRING, CD_STRING];
-const GENRES = ['--', 'Electronic', 'Jazz', 'Stage & Screen', 'Rock', 'Funk / Soul', 'Pop'];
-const genresStr = 'genres';
-const formatsStr = 'formats';
+import * as appConstants from '../utils/constants.js';
 
 const FilterWrapper = styled.div`padding: ${padding}`;
 const FilterField = styled.div`padding: ${padding}`;
@@ -46,11 +38,11 @@ export default class Filter extends React.Component {
   updateFilter() {
     console.log('this.state.format', this.state.format);
     console.log('this.state.genre', this.state.genre);
-    if (this.state.format === CASS_STRING) {
+    if (this.state.format === appConstants.CASS_STRING) {
       return filterData(this.state.originalData, this.state.genre, getCassettes, getDemand);
-    } else if (this.state.format === VINYL_STRING) {
+    } else if (this.state.format === appConstants.VINYL_STRING) {
       return filterData(this.state.originalData, this.state.genre, getVinyl, getDemand);
-    } else if (this.state.format === CD_STRING) {
+    } else if (this.state.format === appConstants.CD_STRING) {
       return filterData(this.state.originalData, this.state.genre, getCD, getDemand);
     } else {
       return [];
@@ -81,12 +73,12 @@ export default class Filter extends React.Component {
     return (
       <FilterWrapper>
         <FilterField>
-          <Label text='Genre' forVal={genresStr} />
-          <Select selectOptions={GENRES} changeCB={this.changeGenre} id={genresStr} />
+          <Label text='Genre' forVal={appConstants.GENRES_STR} />
+          <Select selectOptions={appConstants.GENRES} changeCB={this.changeGenre} id={appConstants.GENRES_STR} />
         </FilterField>
         <FilterField>
-          <Label text='Format' forVal={formatsStr} />
-          <Select selectOptions={FORMATS} changeCB={this.changeFormat} id={formatsStr} />
+          <Label text='Format' forVal={appConstants.FORMATS_STR} />
+          <Select selectOptions={appConstants.FORMATS} changeCB={this.changeFormat} id={appConstants.FORMATS_STR} />
           </FilterField>
           {this.state.discogsData && this.state.discogsData.length > 0 ?
             <Results discogsData={this.state.discogsData} />

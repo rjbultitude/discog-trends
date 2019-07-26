@@ -1,0 +1,48 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Discogs Trends Proxy
+paths:
+  /api/search:
+    post:
+      summary: "Search Discogs DB by query"
+      requestBody:
+          $ref: '#/components/requestBodies/SearchTermParams'
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid status value"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+components:
+  requestBodies:
+      SearchTermParams:
+        description: "A JSON object with a search term and params"
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas'
+  schemas:
+    searchTerm:
+      type: string
+    params:
+      type: object
+      properties:
+        sort:
+          type: string
+        sort_order:
+          type: string
+        page:
+          type: number
+        per_page:
+          type: number

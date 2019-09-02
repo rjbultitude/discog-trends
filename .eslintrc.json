@@ -6,13 +6,6 @@
     "serviceworker": true
   },
   "rules": {
-    "prettier/prettier": ["error"],
-    "indent": "off",
-    "comma-dangle": ["error", "never"],
-    "space-before-function-paren": ["error", "never"],
-    "no-unused-vars": ["error", { "varsIgnorePattern": "should|expect" }],
-    "no-underscore-dangle": "off",
-    "prefer-arrow-callback": "off",
-    "no-var": "off"
+    "prettier/prettier": ["error"]
   }
 }

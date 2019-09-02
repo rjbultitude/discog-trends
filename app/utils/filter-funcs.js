@@ -1,5 +1,3 @@
-import { release } from 'os';
-
 const DISCOGS_URL_BASE = 'http://www.discogs.com';
 
 // Take search results data and filter it

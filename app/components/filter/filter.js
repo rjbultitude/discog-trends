@@ -1,17 +1,27 @@
 import React from 'react';
-import {getDiscogsData} from '../../utils/getdata.js';
-import {filterData, getCassettes, getVinyl, getCD, getDemand} from '../../utils/filter-funcs.js';
+import { getDiscogsData } from '../../utils/getdata.js';
+import {
+  filterData,
+  getCassettes,
+  getVinyl,
+  getCD,
+  getDemand,
+} from '../../utils/filter-funcs.js';
 import Results from './results.js';
 // Styles
 import styled from 'styled-components';
-import {colours, padding} from '../../utils/theme.js';
+import { colours, padding } from '../../utils/theme.js';
 // Components
 import Label from '../label/label.js';
 import Select from '../select/select.js';
 import * as appConstants from '../../utils/constants.js';
 
-const FilterWrapper = styled.div`padding: ${padding}`;
-const FilterField = styled.div`padding: ${padding}`;
+const FilterWrapper = styled.div`
+  padding: ${padding};
+`;
+const FilterField = styled.div`
+  padding: ${padding};
+`;
 
 export default class Filter extends React.Component {
   constructor(props) {
@@ -20,7 +30,7 @@ export default class Filter extends React.Component {
       discogsData: [],
       originalData: [],
       genre: '',
-      format: ''
+      format: '',
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
@@ -28,9 +38,9 @@ export default class Filter extends React.Component {
   }
 
   componentDidMount() {
-    getDiscogsData((data) => {
-      this.setState({originalData: data});
-      console.log(this.state)
+    getDiscogsData(data => {
+      this.setState({ originalData: data });
+      console.log(this.state);
     });
   }
 
@@ -38,11 +48,26 @@ export default class Filter extends React.Component {
     console.log('this.state.format', this.state.format);
     console.log('this.state.genre', this.state.genre);
     if (this.state.format === appConstants.CASS_STRING) {
-      return filterData(this.state.originalData, this.state.genre, getCassettes, getDemand);
+      return filterData(
+        this.state.originalData,
+        this.state.genre,
+        getCassettes,
+        getDemand
+      );
     } else if (this.state.format === appConstants.VINYL_STRING) {
-      return filterData(this.state.originalData, this.state.genre, getVinyl, getDemand);
+      return filterData(
+        this.state.originalData,
+        this.state.genre,
+        getVinyl,
+        getDemand
+      );
     } else if (this.state.format === appConstants.CD_STRING) {
-      return filterData(this.state.originalData, this.state.genre, getCD, getDemand);
+      return filterData(
+        this.state.originalData,
+        this.state.genre,
+        getCD,
+        getDemand
+      );
     } else {
       return [];
     }
@@ -51,18 +76,18 @@ export default class Filter extends React.Component {
   change() {
     let newData = this.updateFilter();
     console.log('newData', newData);
-    this.setState({discogsData: newData});
+    this.setState({ discogsData: newData });
   }
 
   changeGenre(e) {
-    this.setState({'genre': e.target.value}, () => {
+    this.setState({ genre: e.target.value }, () => {
       console.log('this.state', this.state);
       this.change();
     });
   }
 
   changeFormat(e) {
-    this.setState({'format': e.target.value}, () => {
+    this.setState({ format: e.target.value }, () => {
       console.log('this.state', this.state);
       this.change();
     });
@@ -72,16 +97,25 @@ export default class Filter extends React.Component {
     return (
       <FilterWrapper>
         <FilterField>
-          <Label text='Genre' forVal={appConstants.GENRES_STR} />
-          <Select selectOptions={appConstants.GENRES} changeCB={this.changeGenre} id={appConstants.GENRES_STR} />
+          <h2>Filter</h2>
+          <Label text="Genre" forVal={appConstants.GENRES_STR} />
+          <Select
+            selectOptions={appConstants.GENRES}
+            changeCB={this.changeGenre}
+            id={appConstants.GENRES_STR}
+          />
         </FilterField>
         <FilterField>
-          <Label text='Format' forVal={appConstants.FORMATS_STR} />
-          <Select selectOptions={appConstants.FORMATS} changeCB={this.changeFormat} id={appConstants.FORMATS_STR} />
-          </FilterField>
-          {this.state.discogsData && this.state.discogsData.length > 0 ?
-            <Results discogsData={this.state.discogsData} />
-            : null}
+          <Label text="Format" forVal={appConstants.FORMATS_STR} />
+          <Select
+            selectOptions={appConstants.FORMATS}
+            changeCB={this.changeFormat}
+            id={appConstants.FORMATS_STR}
+          />
+        </FilterField>
+        {this.state.discogsData && this.state.discogsData.length > 0 ? (
+          <Results discogsData={this.state.discogsData} />
+        ) : null}
       </FilterWrapper>
     );
   }

@@ -8,6 +8,12 @@ jobs:
         - npm i
         - echo 'Testing'
         - npm run test
+    - stage: deploy_branch
+      script:
+        - npm install -g firebase-tools
+        - echo 'Deploying'
+        - ./before_deploy.sh
+        - firebase deploy --token "$FIREBASE_TOKEN"
     - stage: deploy
       script:
         - npm install -g firebase-tools
@@ -17,7 +23,9 @@ stages:
   - name: test
     # require the type to be a PR
     if: type = pull_request
+  - name: deploy_branch
+    # require the type to be a push
+    if: type = push
   - name: deploy
     # require the type to be push to master
     if: type = push AND branch = master
-before_deploy: ./before_deploy.sh

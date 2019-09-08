@@ -16,6 +16,8 @@ jobs:
         - npm install -g firebase-tools
         - ./before_deploy.sh
         - echo 'Deploying'
+        - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+        - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
         - firebase deploy --token "$FIREBASE_TOKEN"
     - stage: deploy
       name: 'deploy to staging'

@@ -12,7 +12,7 @@ jobs:
     - stage: 'deploy_branch'
       name: 'deploy feature envs'
       script:
-        - npm run build:prod
+        - npm run build
         - npm install -g firebase-tools
         - ./before_deploy.sh
         - echo 'Deploying'

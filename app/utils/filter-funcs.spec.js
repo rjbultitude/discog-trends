@@ -1,4 +1,4 @@
-const filterFuncs = require('./filterData.js');
+import { getCassettes } from './filter-funcs.js';
 
 // mocks
 const release = {
@@ -31,5 +31,5 @@ const release = {
 };
 
 test('getCassettes', () => {
-  expect(filterFuncs.getCassettes(release)).toBeFalsy();
+  expect(getCassettes(release)).toBeFalsy();
 });

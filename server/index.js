@@ -8,12 +8,30 @@ const bodyParser = require('body-parser');
 const app = express();
 // Local files
 const creds = require('./creds.js');
-const bundler = new Bundler('../app/app.js');
 const port = process.env.PORT || 8080;
 const db = new Discogs(creds).database();
 const configureCSP = require('./csp.js');
 const configureCors = require('./cors.js');
 const getStaticData = require('./get-static-data.js');
+// Config
+const isProd = process.env.NODE_ENV === 'production';
+let options;
+if (isProd) {
+  options = {
+    production: true,
+    cache: false,
+    minify: true,
+    sourceMaps: false,
+    http: true,
+  };
+} else {
+  options = {
+    cache: true,
+    minify: false,
+    sourceMaps: true,
+    watch: true,
+  };
+}
 
 // Security policy
 configureCSP(app);
@@ -40,11 +58,12 @@ app.post('/api/search', corsOptions, function(req, res) {
 // Run app from root
 app.use(express.static('./'));
 
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+
 // Configure Parcel middleware
 // to serve app in development mode
-if (process.env.NODE_ENV === 'develop') {
-  app.use(bundler.middleware());
-}
+const bundler = new Bundler('./index.html', options);
+app.use(bundler.middleware());
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);

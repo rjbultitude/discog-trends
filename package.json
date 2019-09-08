@@ -4,8 +4,8 @@
   "description": "",
   "main": "./server/index.js",
   "scripts": {
-    "start": "nodemon ./server/index.js",
-    "dev": "parcel ./app/app.js",
+    "start": "NODE_ENV=development node ./server/index.js",
+    "dev": "parcel index.html",
     "build": "parcel build ./app/app.js",
     "test": "jest",
     "lint:quality": "eslint .",

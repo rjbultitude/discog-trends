@@ -1,31 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+function createTitleLinks(title, url) {
+  return (
+    <a href={`${url}`} target="_blank" rel="noopener noreferrer">
+      {title}
+    </a>
+  );
+}
+
 // Could be a functional component
 export default class Results extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.title;
-    this.url;
-  }
-
-  createTitleLinks() {
-    return (
-      <a href={`${this.url}`} target="_blank" rel="noopener noreferrer">
-        {this.title}
-      </a>
-    );
   }
 
   createCells() {
     const { discogsData } = this.props;
     return discogsData.map((item, i) => {
-      this.title = item.title;
-      this.url = item.url;
       return (
         <tr key={`li-${i}`}>
-          {React.createElement('td', {}, this.createTitleLinks())}
+          {React.createElement(
+            'td',
+            {},
+            createTitleLinks(item.title, item.url)
+          )}
           {React.createElement('td', {}, item.demand)}
         </tr>
       );

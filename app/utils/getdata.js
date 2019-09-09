@@ -44,4 +44,4 @@ function getDiscogsData(callback) {
     });
 }
 
-export { getDiscogsData };
+export default getDiscogsData;

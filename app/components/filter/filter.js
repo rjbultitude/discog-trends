@@ -1,7 +1,7 @@
 import React from 'react';
 // Styles
 import styled from 'styled-components';
-import { getDiscogsData } from '../../utils/getdata';
+import getDiscogsData from '../../utils/getdata';
 import {
   filterData,
   getCassettes,

@@ -14,8 +14,9 @@ const Select = styled.select`
 `;
 
 function createOptions(optionsArr) {
-  return optionsArr.map((item, i) => {
-    return React.createElement('option', { key: `opt-${i}` }, item);
+  return optionsArr.map(item => {
+    const itemName = item.replace(/\s/g, '');
+    return React.createElement('option', { key: `opt-${itemName}` }, item);
   });
 }
 

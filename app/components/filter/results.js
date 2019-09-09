@@ -18,9 +18,10 @@ export default class Results extends React.Component {
 
   createCells() {
     const { discogsData } = this.props;
-    return discogsData.map((item, i) => {
+    return discogsData.map(item => {
+      const catNo = item.catno.replace(/\s/g, '');
       return (
-        <tr key={`li-${i}`}>
+        <tr key={`li-${catNo}`}>
           {React.createElement(
             'td',
             {},

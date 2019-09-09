@@ -22,6 +22,6 @@ export default props => {
 };
 
 Label.propTypes = {
-  forVal: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  forVal: PropTypes.string,
+  text: PropTypes.string,
 };

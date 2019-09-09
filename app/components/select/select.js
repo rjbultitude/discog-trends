@@ -29,6 +29,6 @@ export default props => {
 };
 
 Select.propTypes = {
-  changeCB: PropTypes.instanceOf(Object).isRequired,
-  selectOptions: PropTypes.instanceOf(Object).isRequired,
+  changeCB: PropTypes.instanceOf(Object),
+  selectOptions: PropTypes.instanceOf(Object),
 };

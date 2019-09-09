@@ -21,6 +21,7 @@ jobs:
       name: 'deploy to live'
       if: branch = master
       script:
+        - npm run build
         - npm install -g firebase-tools
         - echo 'Deploying'
         - firebase deploy --token "$FIREBASE_TOKEN"

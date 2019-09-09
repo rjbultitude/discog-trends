@@ -6,12 +6,14 @@ export default class Results extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.title;
+    this.url;
   }
 
-  createTitleLinks(title, url) {
+  createTitleLinks() {
     return (
-      <a href={`${url}`} target="_blank">
-        {title}
+      <a href={`${this.url}`} target="_blank" rel="noopener noreferrer">
+        {this.title}
       </a>
     );
   }
@@ -19,13 +21,11 @@ export default class Results extends React.Component {
   createCells() {
     const { discogsData } = this.props;
     return discogsData.map((item, i) => {
+      this.title = item.title;
+      this.url = item.url;
       return (
         <tr key={`li-${i}`}>
-          {React.createElement(
-            'td',
-            {},
-            this.createTitleLinks(item.title, item.url)
-          )}
+          {React.createElement('td', {}, this.createTitleLinks())}
           {React.createElement('td', {}, item.demand)}
         </tr>
       );
@@ -41,6 +41,7 @@ export default class Results extends React.Component {
           if (key !== 'url') {
             return React.createElement('th', { key }, key);
           }
+          return false;
         })}
       </tr>
     );

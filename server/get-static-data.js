@@ -8,4 +8,4 @@ module.exports = function getStaticData(res) {
     const staticdataJSON = JSON.parse(staticdata);
     res.send(staticdataJSON);
   });
-}
+};

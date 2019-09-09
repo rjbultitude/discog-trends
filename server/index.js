@@ -5,9 +5,11 @@ const Discogs = require('disconnect').Client;
 const express = require('express');
 const Bundler = require('parcel-bundler');
 const bodyParser = require('body-parser');
+
 const app = express();
 // Local files
 const creds = require('./creds.js');
+
 const port = process.env.PORT || 8080;
 const db = new Discogs(creds).database();
 const configureCSP = require('./csp.js');

@@ -1,9 +1,28 @@
 const DISCOGS_URL_BASE = 'http://www.discogs.com';
 
+export function getDemand(release, mult = 2) {
+  if (release.community.want > release.community.have * mult) {
+    return 'High';
+  }
+  if (release.community.want > release.community.have) {
+    return 'Medium';
+  }
+  return 'Low';
+}
+
+export function getGenre(release) {
+  for (let index = 0; index < release.genre.length; index += 1) {
+    if (release.genre[index] === this) {
+      return release;
+    }
+  }
+  return false;
+}
+
 // Take search results data and filter it
 // using a callback function
 // getDemand is a dependency
-export function filterData(results, genreString, filterFn, getDemand) {
+export function filterData(results, genreString, filterFn) {
   const resultsGenreFiltered = results.filter(getGenre, genreString);
   const resultsFormatFiltered = resultsGenreFiltered.filter(filterFn);
   if (resultsFormatFiltered.length > 0) {
@@ -15,14 +34,17 @@ export function filterData(results, genreString, filterFn, getDemand) {
       };
     });
     return resultsFilteredTitles;
-  } else {
-    console.warn('no results');
   }
+  return false;
 }
 
 export function getCassettes(release) {
-  if (release.hasOwnProperty('format')) {
-    for (let index = 0; index < release.format.length; index++) {
+  const hasFormatProperty = Object.prototype.hasOwnProperty.call(
+    release,
+    'format'
+  );
+  if (hasFormatProperty) {
+    for (let index = 0; index < release.format.length; index += 1) {
       if (
         release.format[index] === 'Cassette' ||
         release.format[index] === 'Cass' ||
@@ -31,13 +53,12 @@ export function getCassettes(release) {
         return release;
       }
     }
-  } else {
-    throw new Error('no property release');
   }
+  throw new Error('no property release');
 }
 
 export function getVinyl(release) {
-  for (let index = 0; index < release.format.length; index++) {
+  for (let index = 0; index < release.format.length; index += 1) {
     if (
       release.format[index] === 'Vinyl' ||
       release.format[index] === '7"' ||
@@ -46,10 +67,11 @@ export function getVinyl(release) {
       return release;
     }
   }
+  return false;
 }
 
 export function getCD(release) {
-  for (let index = 0; index < release.format.length; index++) {
+  for (let index = 0; index < release.format.length; index += 1) {
     if (
       release.format[index] === 'CD' ||
       release.format[index] === 'Compact Disc'
@@ -57,31 +79,14 @@ export function getCD(release) {
       return release;
     }
   }
+  return false;
 }
 
 export function getStyle(release, styleTerm) {
-  for (let index = 0; index < release.style.length; index++) {
+  for (let index = 0; index < release.style.length; index += 1) {
     if (release.style[index] === styleTerm) {
       return release;
     }
   }
-}
-
-export function getGenre(release) {
-  for (let index = 0; index < release.genre.length; index++) {
-    if (release.genre[index] === this) {
-      return release;
-    }
-  }
-}
-
-//@ts-check
-export function getDemand(release, mult = 2) {
-  if (release.community.want > release.community.have * mult) {
-    return 'High';
-  } else if (release.community.want > release.community.have) {
-    return 'Medium';
-  } else {
-    return 'Low';
-  }
+  return false;
 }

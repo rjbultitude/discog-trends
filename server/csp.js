@@ -1,6 +1,6 @@
 const csp = require('helmet-csp');
 
-module.exports = function(app) {
+module.exports = function cspConfig(app) {
   // Setup CSP
   app.use(
     csp({
@@ -8,9 +8,15 @@ module.exports = function(app) {
       directives: {
         defaultSrc: ["'self'", 'http://localhost', '*.discogs.com'],
         scriptSrc: ["'self'", 'http://localhost', '*.discogs.com'],
-        styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'http://localhost', '*.discogs.com'],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          'fonts.googleapis.com',
+          'http://localhost',
+          '*.discogs.com',
+        ],
         fontSrc: ['fonts.gstatic.com'],
-      }
+      },
     })
   );
-}
+};

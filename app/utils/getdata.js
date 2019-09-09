@@ -7,15 +7,15 @@ const perPage = 100;
 // params
 const searchTerm = `genre=${genre}`;
 const params = {
-  sort: sort,
+  sort,
   sort_order: sortOrder,
-  page: page,
+  page,
   per_page: perPage,
 };
-//Request headers and body
+// Request headers and body
 const postBodyJSON = JSON.stringify({
-  params: params,
-  searchTerm: searchTerm,
+  params,
+  searchTerm,
 });
 const postHeader = {
   method: 'POST',
@@ -36,7 +36,7 @@ function getDiscogsData(callback) {
           callback(res.results);
         });
       } else {
-        throw err;
+        throw new Error('response was not ok');
       }
     })
     .catch(err => {

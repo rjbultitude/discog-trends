@@ -17,10 +17,15 @@ export default class Results extends React.Component {
   }
 
   createCells() {
-    return this.props.discogsData.map((item, i) => {
+    const { discogsData } = this.props;
+    return discogsData.map((item, i) => {
       return (
         <tr key={`li-${i}`}>
-          {React.createElement('td', {}, this.createTitleLinks(item.title, item.url))}
+          {React.createElement(
+            'td',
+            {},
+            this.createTitleLinks(item.title, item.url)
+          )}
           {React.createElement('td', {}, item.demand)}
         </tr>
       );
@@ -28,12 +33,13 @@ export default class Results extends React.Component {
   }
 
   createHeaders() {
-    const keys = Object.keys(this.props.discogsData[0]);
+    const { discogsData } = this.props;
+    const keys = Object.keys(discogsData[0]);
     return (
       <tr>
-        {keys.map((key) => {
+        {keys.map(key => {
           if (key !== 'url') {
-            return React.createElement('th', {key}, key);
+            return React.createElement('th', { key }, key);
           }
         })}
       </tr>
@@ -50,13 +56,14 @@ export default class Results extends React.Component {
   }
 
   render() {
-      return (
-        <React.Fragment>
-          {this.props.discogsData && Array.isArray(this.props.discogsData) ?
-            this.createTable()
-            : React.createElement('h2', {}, 'Loading...')}
-        </React.Fragment>
-      );
+    const { discogsData } = this.props;
+    return (
+      <>
+        {discogsData && Array.isArray(discogsData)
+          ? this.createTable()
+          : React.createElement('h2', {}, 'Loading...')}
+      </>
+    );
   }
 }
 

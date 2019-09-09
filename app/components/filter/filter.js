@@ -1,20 +1,20 @@
 import React from 'react';
-import { getDiscogsData } from '../../utils/getdata.js';
+// Styles
+import styled from 'styled-components';
+import { getDiscogsData } from '../../utils/getdata';
 import {
   filterData,
   getCassettes,
   getVinyl,
   getCD,
-  getDemand,
-} from '../../utils/filter-funcs.js';
-import Results from './results.js';
-// Styles
-import styled from 'styled-components';
-import { colours, padding } from '../../utils/theme.js';
+} from '../../utils/filter-funcs';
+import Results from './results';
+
+import { padding } from '../../utils/theme';
 // Components
-import Label from '../label/label.js';
-import Select from '../select/select.js';
-import * as appConstants from '../../utils/constants.js';
+import Label from '../label/label';
+import Select from '../select/select';
+import * as appConstants from '../../utils/constants';
 
 const FilterWrapper = styled.div`
   padding: ${padding};
@@ -45,36 +45,23 @@ export default class Filter extends React.Component {
   }
 
   updateFilter() {
-    console.log('this.state.format', this.state.format);
-    console.log('this.state.genre', this.state.genre);
-    if (this.state.format === appConstants.CASS_STRING) {
-      return filterData(
-        this.state.originalData,
-        this.state.genre,
-        getCassettes,
-        getDemand
-      );
-    } else if (this.state.format === appConstants.VINYL_STRING) {
-      return filterData(
-        this.state.originalData,
-        this.state.genre,
-        getVinyl,
-        getDemand
-      );
-    } else if (this.state.format === appConstants.CD_STRING) {
-      return filterData(
-        this.state.originalData,
-        this.state.genre,
-        getCD,
-        getDemand
-      );
-    } else {
-      return [];
+    const { format, originalData, genre } = this.state;
+    console.log('format', format);
+    console.log('genre', genre);
+    if (format === appConstants.CASS_STRING) {
+      return filterData(originalData, genre, getCassettes);
     }
+    if (format === appConstants.VINYL_STRING) {
+      return filterData(originalData, genre, getVinyl);
+    }
+    if (format === appConstants.CD_STRING) {
+      return filterData(originalData, genre, getCD);
+    }
+    return [];
   }
 
   change() {
-    let newData = this.updateFilter();
+    const newData = this.updateFilter();
     console.log('newData', newData);
     this.setState({ discogsData: newData });
   }
@@ -94,6 +81,7 @@ export default class Filter extends React.Component {
   }
 
   render() {
+    const { discogsData } = this.state;
     return (
       <FilterWrapper>
         <FilterField>
@@ -113,8 +101,8 @@ export default class Filter extends React.Component {
             id={appConstants.FORMATS_STR}
           />
         </FilterField>
-        {this.state.discogsData && this.state.discogsData.length > 0 ? (
-          <Results discogsData={this.state.discogsData} />
+        {discogsData && discogsData.length > 0 ? (
+          <Results discogsData={discogsData} />
         ) : null}
       </FilterWrapper>
     );

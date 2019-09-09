@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
 import styled from 'styled-components';
-import {colours} from '../../utils/theme.js';
+import { colours } from '../../utils/theme';
 
 // Styles
 const Select = styled.select`
@@ -14,14 +15,20 @@ const Select = styled.select`
 
 function createOptions(optionsArr) {
   return optionsArr.map((item, i) => {
-    return React.createElement('option', {key: `opt-${i}`}, item);
+    return React.createElement('option', { key: `opt-${i}` }, item);
   });
 }
 
-export default (props) => {
+export default props => {
+  const { id, changeCB, selectOptions } = props;
   return (
-    <Select onChange={(e) => props.changeCB(e)} id={props.id}>
-      {createOptions(props.selectOptions)}
+    <Select onChange={e => changeCB(e)} id={id}>
+      {createOptions(selectOptions)}
     </Select>
   );
-}
+};
+
+Select.propTypes = {
+  changeCB: PropTypes.instanceOf(Object).isRequired,
+  selectOptions: PropTypes.instanceOf(Object).isRequired,
+};

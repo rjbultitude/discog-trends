@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
 import styled from 'styled-components';
-import {colours} from '../../utils/theme.js';
+import { colours } from '../../utils/theme';
 
 // Styles
 const Label = styled.label.attrs({
-  htmlFor: 'test'
+  htmlFor: 'test',
 })`
   display: inline-block;
   width: 70px;
@@ -15,10 +16,12 @@ const Label = styled.label.attrs({
   color: ${colours.deepPurple};
 `;
 
-export default (props) => {
-  return (
-    <Label htmlFor={props.forVal}>
-      {props.text}
-    </Label>
-  );
-}
+export default props => {
+  const { forVal, text } = props;
+  return <Label htmlFor={forVal}>{text}</Label>;
+};
+
+Label.propTypes = {
+  forVal: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Filter from './components/filter/filter.js';
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import Filter from './components/filter/filter';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -21,16 +21,16 @@ const GlobalStyle = createGlobalStyle`
   option,
   input {
     font-size: 1rem;
-  }`
+  }`;
 
 const App = () => {
   return (
-    <React.Fragment>
+    <>
       <GlobalStyle />
       <Filter />
-    </React.Fragment>
-    );
-  };
+    </>
+  );
+};
 
 const root = document.getElementById('root');
 ReactDOM.render(<App />, root);

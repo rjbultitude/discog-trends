@@ -1,5 +1,3 @@
-import { release } from "os";
-
 const DISCOGS_URL_BASE = 'http://www.discogs.com';
 
 // Take search results data and filter it
@@ -9,11 +7,11 @@ export function filterData(results, genreString, filterFn, getDemand) {
   const resultsGenreFiltered = results.filter(getGenre, genreString);
   const resultsFormatFiltered = resultsGenreFiltered.filter(filterFn);
   if (resultsFormatFiltered.length > 0) {
-    const resultsFilteredTitles = resultsFormatFiltered.map((release) => {
+    const resultsFilteredTitles = resultsFormatFiltered.map(release => {
       return {
         title: release.title,
         url: `${DISCOGS_URL_BASE}${release.uri}`,
-        demand: getDemand(release)
+        demand: getDemand(release),
       };
     });
     return resultsFilteredTitles;
@@ -24,7 +22,11 @@ export function filterData(results, genreString, filterFn, getDemand) {
 
 export function getCassettes(release) {
   for (let index = 0; index < release.format.length; index++) {
-    if (release.format[index] === 'Cassette' || release.format[index] === 'Cass' || release.format[index] === 'MC') {
+    if (
+      release.format[index] === 'Cassette' ||
+      release.format[index] === 'Cass' ||
+      release.format[index] === 'MC'
+    ) {
       return release;
     }
   }
@@ -32,7 +34,11 @@ export function getCassettes(release) {
 
 export function getVinyl(release) {
   for (let index = 0; index < release.format.length; index++) {
-    if (release.format[index] === 'Vinyl' || release.format[index] === '7\"' || release.format[index] === '45 RPM') {
+    if (
+      release.format[index] === 'Vinyl' ||
+      release.format[index] === '7"' ||
+      release.format[index] === '45 RPM'
+    ) {
       return release;
     }
   }
@@ -40,7 +46,10 @@ export function getVinyl(release) {
 
 export function getCD(release) {
   for (let index = 0; index < release.format.length; index++) {
-    if (release.format[index] === 'CD' || release.format[index] === 'Compact Disc') {
+    if (
+      release.format[index] === 'CD' ||
+      release.format[index] === 'Compact Disc'
+    ) {
       return release;
     }
   }
@@ -66,10 +75,9 @@ export function getGenre(release) {
 export function getDemand(release, mult = 2) {
   if (release.community.want > release.community.have * mult) {
     return 'High';
-  }
-  else if (release.community.want > release.community.have) {
+  } else if (release.community.want > release.community.have) {
     return 'Medium';
   } else {
-    return 'Low'
+    return 'Low';
   }
 }

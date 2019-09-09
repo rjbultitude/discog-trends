@@ -1,13 +1,14 @@
 # Discogs Trends
 
 ## Project Introduction
+
 Gain insight into the commercial world of hard format records
 
 ## Installation
 
-*Run (in this directory):*
+_Run (in this directory):_
 
-  `npm install`
+`npm install`
 
 This ensures the all the node packages are installed. Follow the [NPM guide](https://docs.npmjs.com/cli/install) to install new packages.
 
@@ -25,16 +26,19 @@ For production mode run `npm run build`
 [React](https://reactjs.com)
 
 #### Pending Functionality
-* Show demand (_want_ vs _have_)
-* Show rarity (Position in Range of _have_)
-* Show change over time (if possible)
+
+- Show demand (_want_ vs _have_)
+- Show rarity (Position in Range of _have_)
+- Show change over time (if possible)
 
 Add fields for `year` and `genre`
 
 #### Approach
-* Use node proxy to securly handle requests to discogs
-* Use styled components for encapsulation
+
+- Use node proxy to securly handle requests to discogs
+- Use styled components for encapsulation
 
 #### TODO
-* Create watch task for middleware
-* Crunch big data using Python
+
+- Create watch task for middleware
+- Crunch big data using Python

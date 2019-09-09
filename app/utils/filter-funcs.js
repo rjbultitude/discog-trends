@@ -21,14 +21,18 @@ export function filterData(results, genreString, filterFn, getDemand) {
 }
 
 export function getCassettes(release) {
-  for (let index = 0; index < release.format.length; index++) {
-    if (
-      release.format[index] === 'Cassette' ||
-      release.format[index] === 'Cass' ||
-      release.format[index] === 'MC'
-    ) {
-      return release;
+  if (release.hasOwnProperty('format')) {
+    for (let index = 0; index < release.format.length; index++) {
+      if (
+        release.format[index] === 'Cassette' ||
+        release.format[index] === 'Cass' ||
+        release.format[index] === 'MC'
+      ) {
+        return release;
+      }
     }
+  } else {
+    throw new Error('no property release');
   }
 }
 

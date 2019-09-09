@@ -52,6 +52,7 @@ export function getCassettes(release) {
       ) {
         return release;
       }
+      return false;
     }
   }
   throw new Error('no property release');

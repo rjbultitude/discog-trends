@@ -5,6 +5,7 @@
     "mocha": true,
     "serviceworker": true
   },
+  "parser": "babel-eslint",
   "rules": {
     "prettier/prettier": ["error"]
   }

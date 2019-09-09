@@ -59,10 +59,16 @@ const releaseMC = {
   id: 277852,
 };
 
-test('getCassettes', () => {
-  expect(getCassettes(releaseVinyl)).toBeFalsy();
-  expect(getCassettes(releaseMC)).toBeTruthy();
-  expect(() => {
-    getCassettes({});
-  }).toThrow();
+describe('getCassettes', () => {
+  it('should be falsy when format is not cassette or similar', () => {
+    expect(getCassettes(releaseVinyl)).toBeFalsy();
+  });
+  it('should be true when format is cassette or similar', () => {
+    expect(getCassettes(releaseMC)).toBeTruthy();
+  });
+  it('should throw an error when there is no format property', () => {
+    expect(() => {
+      getCassettes({});
+    }).toThrow();
+  });
 });

@@ -9,6 +9,24 @@ function createTitleLinks(title, url) {
   );
 }
 
+function getKeyFromRelease(release) {
+  let uKey;
+  let catno;
+  let releaseURL;
+  const hasCatNoProperty = Object.prototype.hasOwnProperty.call(
+    release,
+    'catno'
+  );
+  if (hasCatNoProperty) {
+    catNo = release.catno.replace(/\s/g, '');
+    uKey = catno;
+  } else {
+    releaseURL = release.url.split('http://www.discogs.com/')[1];
+    uKey = releaseURL;
+  }
+  return uKey;
+}
+
 // Could be a functional component
 export default class Results extends React.Component {
   constructor(props) {
@@ -19,9 +37,9 @@ export default class Results extends React.Component {
   createCells() {
     const { discogsData } = this.props;
     return discogsData.map(item => {
-      const catNo = item.catno.replace(/\s/g, '');
+      const uKey = getKeyFromRelease(item);
       return (
-        <tr key={`li-${catNo}`}>
+        <tr key={`li-${uKey}`}>
           {React.createElement(
             'td',
             {},

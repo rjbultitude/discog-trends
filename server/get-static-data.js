@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 module.exports = function getStaticData(res) {
-  fs.readFile('./data.json', 'utf8', (err, staticdata) => {
+  fs.readFile('./server/data.json', 'utf8', (err, staticdata) => {
     if (err) {
       throw err;
     }

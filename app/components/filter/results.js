@@ -1,6 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Styles
+import styled from 'styled-components';
+import { colours } from '../../utils/theme';
+
+const TableRow = styled.tr`
+  padding: 6px;
+  background-color: ${colours.paleBlue};
+`;
+
+const Results = styled.table`
+  margin: 0;
+`;
+
 function createTitleLinks(title, url) {
   return (
     <a href={`${url}`} target="_blank" rel="noopener noreferrer">
@@ -27,66 +40,54 @@ function getKeyFromRelease(release) {
   return uKey;
 }
 
-// Could be a functional component
-export default class Results extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  createCells() {
-    const { discogsData } = this.props;
-    return discogsData.map(item => {
-      const uKey = getKeyFromRelease(item);
-      return (
-        <tr key={`li-${uKey}`}>
-          {React.createElement(
-            'td',
-            {},
-            createTitleLinks(item.title, item.url)
-          )}
-          {React.createElement('td', {}, item.demand)}
-        </tr>
-      );
-    });
-  }
-
-  createHeaders() {
-    const { discogsData } = this.props;
-    const keys = Object.keys(discogsData[0]);
+function createCells(discogsData) {
+  return discogsData.map(item => {
+    const uKey = getKeyFromRelease(item);
     return (
-      <tr>
-        {keys.map(key => {
-          if (key !== 'url') {
-            return React.createElement('th', { key }, key);
-          }
-          return false;
-        })}
+      <tr key={`li-${uKey}`}>
+        {React.createElement('td', {}, createTitleLinks(item.title, item.url))}
+        {React.createElement('td', {}, item.demand)}
       </tr>
     );
-  }
-
-  createTable() {
-    return (
-      <table>
-        {React.createElement('thead', {}, this.createHeaders())}
-        {React.createElement('tbody', {}, this.createCells())}
-      </table>
-    );
-  }
-
-  render() {
-    const { discogsData } = this.props;
-    return (
-      <>
-        {discogsData && Array.isArray(discogsData)
-          ? this.createTable()
-          : React.createElement('h2', {}, 'Loading...')}
-      </>
-    );
-  }
+  });
 }
 
+function createHeaders(discogsData) {
+  const keys = Object.keys(discogsData[0]);
+  return (
+    <tr>
+      {keys.map(key => {
+        if (key !== 'url') {
+          return React.createElement('th', { key }, key);
+        }
+        return false;
+      })}
+    </tr>
+  );
+}
+
+function createTable(discogsData) {
+  return (
+    <>
+      {React.createElement('thead', {}, createHeaders(discogsData))}
+      {React.createElement('tbody', {}, createCells(discogsData))}
+    </>
+  );
+}
+
+export default props => {
+  const { discogsData } = props;
+  console.log('props', props);
+  console.log('discogsData', discogsData);
+  return (
+    <Results>
+      {discogsData && Array.isArray(discogsData)
+        ? createTable(discogsData)
+        : React.createElement('h2', {}, 'Loading...')}
+    </Results>
+  );
+};
+
 Results.propTypes = {
-  discogsData: PropTypes.arrayOf(PropTypes.instanceOf(Object)).isRequired,
+  discogsData: PropTypes.arrayOf(PropTypes.instanceOf(Object)),
 };

@@ -8,6 +8,20 @@ import { colours } from '../../utils/theme';
 const TableRow = styled.tr`
   padding: 6px;
   background-color: ${colours.paleBlue};
+
+  &:nth-child(odd) {
+    background-color: ${colours.palePink};
+  }
+
+  a {
+    color: ${colours.deepPurple};
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+  }
 `;
 
 const Results = styled.table`
@@ -44,10 +58,10 @@ function createCells(discogsData) {
   return discogsData.map(item => {
     const uKey = getKeyFromRelease(item);
     return (
-      <tr key={`li-${uKey}`}>
+      <TableRow key={`li-${uKey}`}>
         {React.createElement('td', {}, createTitleLinks(item.title, item.url))}
         {React.createElement('td', {}, item.demand)}
-      </tr>
+      </TableRow>
     );
   });
 }

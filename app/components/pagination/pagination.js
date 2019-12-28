@@ -22,6 +22,7 @@ export default props => {
           prevResults();
         }}
         id="prev"
+        type="button"
       >
         Previous
       </button>
@@ -30,9 +31,15 @@ export default props => {
           nextResults();
         }}
         id="next"
+        type="button"
       >
         Next
       </button>
     </Pagination>
   );
+};
+
+Pagination.propTypes = {
+  prevResults: PropTypes.instanceOf(Object),
+  nextResults: PropTypes.instanceOf(Object),
 };

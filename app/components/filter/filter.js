@@ -82,7 +82,7 @@ export default class Filter extends React.Component {
   }
 
   prevResults() {
-    if (this.page < this.pagination.pages) {
+    if (this.page < this.state.pages) {
       this.page += 1;
       getDiscogsData(data => {
         this.setState({ originalData: data });

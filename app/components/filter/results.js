@@ -39,7 +39,6 @@ function createTitleLinks(title, url) {
 function getKeyFromRelease(release) {
   let uKey;
   let catNo;
-  let releaseURL;
   const hasCatNoProperty = Object.prototype.hasOwnProperty.call(
     release,
     'catno'
@@ -48,7 +47,7 @@ function getKeyFromRelease(release) {
     catNo = release.catno.replace(/\s/g, '');
     uKey = catNo;
   } else {
-    const [baseURL, releaseURL] = release.url.split('http://www.discogs.com/');
+    const [, releaseURL] = release.url.split('http://www.discogs.com/');
     uKey = releaseURL;
   }
   return uKey;

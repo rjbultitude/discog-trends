@@ -82,8 +82,8 @@ export default class Filter extends React.Component {
   }
 
   prevResults() {
-    const { totalPages } = this.state;
-    if (this.page < totalPages) {
+    const { pages } = this.state;
+    if (this.page < pages) {
       this.page += 1;
       getDiscogsData(data => {
         this.setState({ originalData: data });

@@ -48,7 +48,7 @@ function getKeyFromRelease(release) {
     catNo = release.catno.replace(/\s/g, '');
     uKey = catNo;
   } else {
-    releaseURL[1] = release.url.split('http://www.discogs.com/');
+    const [baseURL, releaseURL] = release.url.split('http://www.discogs.com/');
     uKey = releaseURL;
   }
   return uKey;

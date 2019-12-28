@@ -14,6 +14,7 @@ import { padding } from '../../utils/theme';
 // Components
 import Label from '../label/label';
 import Select from '../select/select';
+import Pagination from '../pagination/pagination';
 import * as appConstants from '../../utils/constants';
 
 const FilterWrapper = styled.div`
@@ -31,23 +32,25 @@ export default class Filter extends React.Component {
       originalData: [],
       genre: '',
       format: '',
+      pages: null,
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
     this.change = this.change.bind(this);
+    this.prevResults = this.prevResults.bind(this);
+    this.nextResults = this.prevResults.bind(this);
+    this.page = 0;
   }
 
   componentDidMount() {
+    const startingPage = 1;
     getDiscogsData(data => {
       this.setState({ originalData: data });
-      console.log(this.state);
-    });
+    }, startingPage);
   }
 
   updateFilter() {
     const { format, originalData, genre } = this.state;
-    console.log('format', format);
-    console.log('genre', genre);
     if (format === appConstants.CASS_STRING) {
       return filterData(originalData, genre, getCassettes);
     }
@@ -68,16 +71,33 @@ export default class Filter extends React.Component {
 
   changeGenre(e) {
     this.setState({ genre: e.target.value }, () => {
-      console.log('this.state', this.state);
       this.change();
     });
   }
 
   changeFormat(e) {
     this.setState({ format: e.target.value }, () => {
-      console.log('this.state', this.state);
       this.change();
     });
+  }
+
+  prevResults() {
+    if (this.page < this.pagination.pages) {
+      this.page += 1;
+      getDiscogsData(data => {
+        this.setState({ originalData: data });
+      }, this.page);
+      this.change();
+    }
+  }
+
+  nextResults() {
+    if (this.page > 0) {
+      this.page -= 1;
+      getDiscogsData(data => {
+        this.setState({ originalData: data });
+      }, this.page);
+    }
   }
 
   render() {
@@ -102,7 +122,13 @@ export default class Filter extends React.Component {
           />
         </FilterField>
         {discogsData && discogsData.length > 0 ? (
-          <Results discogsData={discogsData} />
+          <>
+            <Results discogsData={discogsData} />
+            <Pagination
+              prevResults={this.prevResults}
+              nextResults={this.nextResults}
+            />
+          </>
         ) : null}
       </FilterWrapper>
     );

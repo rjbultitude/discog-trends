@@ -39,11 +39,12 @@ function getDiscogsPostHeader(page) {
 
 function getDiscogsData(callback, page) {
   const postHeader = getDiscogsPostHeader(page);
+  console.log('postheader', postHeader);
   return fetch(`http://localhost:8080/api/search`, postHeader)
     .then(response => {
       if (response.ok) {
         response.json().then(res => {
-          callback(res.results);
+          callback(res);
         });
       } else {
         throw new Error('response was not ok');

@@ -30,24 +30,33 @@ export default class Filter extends React.Component {
     this.state = {
       discogsData: [],
       originalData: [],
+      pagination: null,
       genre: '',
       format: '',
-      pages: null,
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
     this.change = this.change.bind(this);
     this.prevResults = this.prevResults.bind(this);
     this.nextResults = this.prevResults.bind(this);
-    this.page = 0;
+    this.page = 1;
+  }
+
+  getNewData(page, isUpdate) {
+    getDiscogsData(data => {
+      this.setState({
+        originalData: data.results,
+        pagination: data.pagination,
+      });
+      console.log('new data state', this.state);
+      if (isUpdate) {
+        this.change();
+      }
+    }, page);
   }
 
   componentDidMount() {
-    const startingPage = 1;
-    getDiscogsData(data => {
-      this.setState({ originalData: data });
-      console.log('componentDidMount state', this.state);
-    }, startingPage);
+    this.getNewData(this.page);
   }
 
   updateFilter() {
@@ -83,22 +92,17 @@ export default class Filter extends React.Component {
   }
 
   prevResults() {
-    const { originalData } = this.state;
-    if (this.page < originalData.pagination.pages) {
-      this.page += 1;
-      getDiscogsData(data => {
-        this.setState({ originalData: data });
-      }, this.page);
-      this.change();
+    if (this.page > 1) {
+      this.page -= 1;
+      this.getNewData(this.page, true);
     }
   }
 
   nextResults() {
-    if (this.page > 0) {
-      this.page -= 1;
-      getDiscogsData(data => {
-        this.setState({ originalData: data });
-      }, this.page);
+    const { pagination } = this.state;
+    if (this.page < pagination.pages) {
+      this.page += 1;
+      this.getNewData(this.page, true);
     }
   }
 

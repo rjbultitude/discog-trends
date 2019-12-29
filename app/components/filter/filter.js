@@ -46,6 +46,7 @@ export default class Filter extends React.Component {
     const startingPage = 1;
     getDiscogsData(data => {
       this.setState({ originalData: data });
+      console.log('componentDidMount state', this.state);
     }, startingPage);
   }
 
@@ -82,8 +83,8 @@ export default class Filter extends React.Component {
   }
 
   prevResults() {
-    const { pages } = this.state;
-    if (this.page < pages) {
+    const { originalData } = this.state;
+    if (this.page < originalData.pagination.pages) {
       this.page += 1;
       getDiscogsData(data => {
         this.setState({ originalData: data });

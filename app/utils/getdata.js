@@ -50,7 +50,7 @@ function getDiscogsData(callback, page) {
       }
     })
     .catch(err => {
-      console.warn(err);
+      console.warn('discogs request error', err);
     });
 }
 

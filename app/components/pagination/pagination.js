@@ -7,17 +7,23 @@ import { colours } from '../../utils/theme';
 
 // Styles
 const Pagination = styled.nav`
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   font-size: 1rem;
   text-align: center;
   color: ${colours.deepPurple};
+`;
+
+const Button = styled.button`
+  padding: 1rem;
+  font-size: 1rem;
 `;
 
 export default props => {
   const { prevResults, nextResults } = props;
   return (
     <Pagination>
-      <button
+      <Button
         onClick={() => {
           prevResults();
         }}
@@ -25,8 +31,8 @@ export default props => {
         type="button"
       >
         Previous
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           nextResults();
         }}
@@ -34,7 +40,7 @@ export default props => {
         type="button"
       >
         Next
-      </button>
+      </Button>
     </Pagination>
   );
 };

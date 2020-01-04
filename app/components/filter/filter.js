@@ -81,6 +81,7 @@ export default class Filter extends React.Component {
 
   render() {
     const { releaseData } = this.state;
+    const { pagination } = this.state;
     return (
       <FilterWrapper>
         <FilterField>
@@ -107,9 +108,7 @@ export default class Filter extends React.Component {
               prevResults={this.prevResults}
               nextResults={this.nextResults}
               prevDisabled={this.page === 1}
-              nextDisabled={
-                this.page === this.state.pagination.pages ? true : false
-              }
+              nextDisabled={this.page === pagination.pages}
             />
           </>
         ) : null}

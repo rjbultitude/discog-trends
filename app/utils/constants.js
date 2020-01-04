@@ -7,10 +7,19 @@ export const FORMATS_STR = 'formats';
 export const FORMATS = ['--', CASS_STRING, VINYL_STRING, CD_STRING];
 export const GENRES = [
   '--',
-  'Electronic',
-  'Jazz',
-  'Stage & Screen',
   'Rock',
-  'Funk / Soul',
+  'Electronic',
   'Pop',
+  `Folk${encodeURIComponent(',')} World ${encodeURIComponent('&')} Country`,
+  'Jazz',
+  `Funk ${encodeURIComponent('/')} Soul`,
+  'Classical',
+  'Hip Hop',
+  'Latin',
+  'Reggae',
+  `Stage ${encodeURIComponent('&')} Screen`,
+  'Blues',
+  'Non-Music',
+  "Children's",
+  `Brass ${encodeURIComponent('&')} Military`,
 ];

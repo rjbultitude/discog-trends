@@ -26,7 +26,10 @@ const TableRow = styled.tr`
 
 const ResultsWrapper = styled.div`
   background-color: ${colours.warn};
-  color: white;
+
+  h2 {
+    color: white;
+  }
 `;
 
 const Results = styled.table`

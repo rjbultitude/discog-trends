@@ -51,8 +51,29 @@ export function getVinyl(release) {
   for (let index = 0; index < release.format.length; index += 1) {
     if (
       release.format[index] === 'Vinyl' ||
+      release.format[index] === 'Test Pressing' ||
+      release.format[index] === 'White Label' ||
       release.format[index] === '7"' ||
-      release.format[index] === '45 RPM'
+      release.format[index] === '10"' ||
+      release.format[index] === '12"' ||
+      release.format[index] === '33+⅓ RPM' ||
+      release.format[index] === '45 RPM' ||
+      release.format[index] === '78 RPM'
+    ) {
+      return release;
+    }
+  }
+  return false;
+}
+
+export function getDigital(release) {
+  for (let index = 0; index < release.format.length; index += 1) {
+    if (
+      release.format[index] === 'WAV' ||
+      release.format[index] === 'FLAC' ||
+      release.format[index] === 'MP3' ||
+      release.format[index] === 'AIFF' ||
+      release.format[index] === 'AAC'
     ) {
       return release;
     }
@@ -64,6 +85,8 @@ export function getCD(release) {
   for (let index = 0; index < release.format.length; index += 1) {
     if (
       release.format[index] === 'CD' ||
+      release.format[index] === 'CDr' ||
+      release.format[index] === 'CD-ROM' ||
       release.format[index] === 'Compact Disc'
     ) {
       return release;

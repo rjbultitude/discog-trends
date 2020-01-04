@@ -111,7 +111,9 @@ export default class Filter extends React.Component {
               nextDisabled={this.page === pagination.pages}
             />
           </>
-        ) : null}
+        ) : (
+          <h2>No results</h2>
+        )}
       </FilterWrapper>
     );
   }

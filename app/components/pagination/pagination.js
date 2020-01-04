@@ -20,7 +20,7 @@ const Button = styled.button`
 `;
 
 export default props => {
-  const { prevResults, nextResults } = props;
+  const { prevResults, nextResults, prevDisabled, nextDisabled } = props;
   return (
     <Pagination>
       <Button
@@ -29,6 +29,7 @@ export default props => {
         }}
         id="prev"
         type="button"
+        disabled={prevDisabled}
       >
         Previous
       </Button>
@@ -38,6 +39,7 @@ export default props => {
         }}
         id="next"
         type="button"
+        disabled={nextDisabled}
       >
         Next
       </Button>

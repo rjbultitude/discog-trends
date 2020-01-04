@@ -106,6 +106,10 @@ export default class Filter extends React.Component {
             <Pagination
               prevResults={this.prevResults}
               nextResults={this.nextResults}
+              prevDisabled={this.page === 1}
+              nextDisabled={
+                this.page === this.state.pagination.pages ? true : false
+              }
             />
           </>
         ) : null}

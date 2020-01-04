@@ -1,5 +1,4 @@
 // search data
-const genre = 'Electronic';
 const sort = 'year';
 const sortOrder = 'asc';
 const perPage = 20;

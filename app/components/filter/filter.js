@@ -35,7 +35,9 @@ export default class Filter extends React.Component {
   }
 
   getNewData() {
-    const query = `genre=${this.state.genre},format=${this.state.format}`;
+    const { genre } = this.state.genre;
+    const { format } = this.state.format;
+    const query = `genre=${genre},format=${format}`;
     getDiscogsData(
       data => {
         const processedData = processData(data.results);

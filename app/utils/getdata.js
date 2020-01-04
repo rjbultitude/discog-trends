@@ -2,9 +2,7 @@
 const genre = 'Electronic';
 const sort = 'year';
 const sortOrder = 'asc';
-const perPage = 100;
-// params
-const searchTerm = `genre=${genre}`;
+const perPage = 20;
 
 function params(page) {
   return {
@@ -17,14 +15,14 @@ function params(page) {
 
 // Request headers and body
 
-function postBodyJSON(page) {
+function postBodyJSON(query, page) {
   return JSON.stringify({
     params: params(page),
-    searchTerm,
+    searchTerm: query,
   });
 }
 
-function getDiscogsPostHeader(page) {
+function getDiscogsPostHeader(query, page) {
   return {
     method: 'POST',
     mode: 'same-origin',
@@ -33,12 +31,12 @@ function getDiscogsPostHeader(page) {
       Accept: 'application/json',
       'Content-type': 'application/json',
     },
-    body: postBodyJSON(page),
+    body: postBodyJSON(query, page),
   };
 }
 
-function getDiscogsData(callback, page) {
-  const postHeader = getDiscogsPostHeader(page);
+function getDiscogsData(callback, query, page) {
+  const postHeader = getDiscogsPostHeader(query, page);
   console.log('postheader', postHeader);
   return fetch(`http://localhost:8080/api/search`, postHeader)
     .then(response => {

@@ -2,14 +2,8 @@ import React from 'react';
 // Styles
 import styled from 'styled-components';
 import getDiscogsData from '../../utils/getdata';
-import {
-  filterData,
-  getCassettes,
-  getVinyl,
-  getCD,
-} from '../../utils/filter-funcs';
 import Results from './results';
-
+import { processData } from '../../utils/filter-funcs';
 import { padding } from '../../utils/theme';
 // Components
 import Label from '../label/label';
@@ -28,73 +22,50 @@ export default class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      discogsData: [],
-      originalData: [],
+      releaseData: [],
       pagination: null,
       genre: '',
       format: '',
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
-    this.change = this.change.bind(this);
     this.prevResults = this.prevResults.bind(this);
-    this.nextResults = this.prevResults.bind(this);
+    this.nextResults = this.nextResults.bind(this);
     this.page = 1;
   }
 
-  getNewData(page, isUpdate) {
-    getDiscogsData(data => {
-      this.setState({
-        originalData: data.results,
-        pagination: data.pagination,
-      });
-      console.log('new data state', this.state);
-      if (isUpdate) {
-        this.change();
-      }
-    }, page);
-  }
-
-  componentDidMount() {
-    this.getNewData(this.page);
-  }
-
-  updateFilter() {
-    const { format, originalData, genre } = this.state;
-    if (format === appConstants.CASS_STRING) {
-      return filterData(originalData, genre, getCassettes);
-    }
-    if (format === appConstants.VINYL_STRING) {
-      return filterData(originalData, genre, getVinyl);
-    }
-    if (format === appConstants.CD_STRING) {
-      return filterData(originalData, genre, getCD);
-    }
-    return [];
-  }
-
-  change() {
-    const newData = this.updateFilter();
-    console.log('newData', newData);
-    this.setState({ discogsData: newData });
+  getNewData() {
+    const query = `genre=${this.state.genre},format=${this.state.format}`;
+    getDiscogsData(
+      data => {
+        const processedData = processData(data.results);
+        this.setState({
+          releaseData: processedData,
+          pagination: data.pagination,
+        });
+        console.log('state after req', this.state);
+      },
+      query,
+      this.page
+    );
   }
 
   changeGenre(e) {
     this.setState({ genre: e.target.value }, () => {
-      this.change();
+      this.getNewData();
     });
   }
 
   changeFormat(e) {
     this.setState({ format: e.target.value }, () => {
-      this.change();
+      this.getNewData();
     });
   }
 
   prevResults() {
     if (this.page > 1) {
       this.page -= 1;
-      this.getNewData(this.page, true);
+      this.getNewData();
     }
   }
 
@@ -102,12 +73,12 @@ export default class Filter extends React.Component {
     const { pagination } = this.state;
     if (this.page < pagination.pages) {
       this.page += 1;
-      this.getNewData(this.page, true);
+      this.getNewData();
     }
   }
 
   render() {
-    const { discogsData } = this.state;
+    const { releaseData } = this.state;
     return (
       <FilterWrapper>
         <FilterField>
@@ -127,9 +98,9 @@ export default class Filter extends React.Component {
             id={appConstants.FORMATS_STR}
           />
         </FilterField>
-        {discogsData && discogsData.length > 0 ? (
+        {releaseData && releaseData.length > 0 ? (
           <>
-            <Results discogsData={discogsData} />
+            <Results releaseData={releaseData} />
             <Pagination
               prevResults={this.prevResults}
               nextResults={this.nextResults}

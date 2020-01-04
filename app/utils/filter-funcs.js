@@ -10,23 +10,12 @@ export function getDemand(release, mult = 2) {
   return 'Low';
 }
 
-export function getGenre(release) {
-  for (let index = 0; index < release.genre.length; index += 1) {
-    if (release.genre[index] === this) {
-      return release;
-    }
-  }
-  return false;
-}
-
 // Take search results data and filter it
 // using a callback function
 // getDemand is a dependency
-export function filterData(results, genreString, filterFn) {
-  const resultsGenreFiltered = results.filter(getGenre, genreString);
-  const resultsFormatFiltered = resultsGenreFiltered.filter(filterFn);
-  if (resultsFormatFiltered.length > 0) {
-    const resultsFilteredTitles = resultsFormatFiltered.map(release => {
+export function processData(results) {
+  if (results.length > 0) {
+    const resultsFilteredTitles = results.map(release => {
       return {
         title: release.title,
         url: `${DISCOGS_URL_BASE}${release.uri}`,
@@ -35,7 +24,7 @@ export function filterData(results, genreString, filterFn) {
     });
     return resultsFilteredTitles;
   }
-  return false;
+  return [];
 }
 
 export function getCassettes(release) {

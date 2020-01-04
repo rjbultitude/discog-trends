@@ -24,6 +24,11 @@ const TableRow = styled.tr`
   }
 `;
 
+const ResultsWrapper = styled.div`
+  background-color: ${colours.warn};
+  color: white;
+`;
+
 const Results = styled.table`
   margin: 0;
 `;
@@ -53,8 +58,8 @@ function getKeyFromRelease(release) {
   return uKey;
 }
 
-function createCells(discogsData) {
-  return discogsData.map(item => {
+function createCells(data) {
+  return data.map(item => {
     const uKey = getKeyFromRelease(item);
     return (
       <TableRow key={`li-${uKey}`}>
@@ -65,8 +70,8 @@ function createCells(discogsData) {
   });
 }
 
-function createHeaders(discogsData) {
-  const keys = Object.keys(discogsData[0]);
+function createHeaders(data) {
+  const keys = Object.keys(data[0]);
   return (
     <tr>
       {keys.map(key => {
@@ -79,28 +84,26 @@ function createHeaders(discogsData) {
   );
 }
 
-function createTable(discogsData) {
+function createTable(data) {
   return (
-    <>
-      {React.createElement('thead', {}, createHeaders(discogsData))}
-      {React.createElement('tbody', {}, createCells(discogsData))}
-    </>
+    <Results>
+      {React.createElement('thead', {}, createHeaders(data))}
+      {React.createElement('tbody', {}, createCells(data))}
+    </Results>
   );
 }
 
 export default props => {
-  const { discogsData } = props;
-  console.log('props', props);
-  console.log('discogsData', discogsData);
+  const { releaseData } = props;
   return (
-    <Results>
-      {discogsData && Array.isArray(discogsData)
-        ? createTable(discogsData)
+    <ResultsWrapper>
+      {releaseData && Array.isArray(releaseData)
+        ? createTable(releaseData)
         : React.createElement('h2', {}, 'Loading...')}
-    </Results>
+    </ResultsWrapper>
   );
 };
 
 Results.propTypes = {
-  discogsData: PropTypes.arrayOf(PropTypes.instanceOf(Object)),
+  releaseData: PropTypes.arrayOf(PropTypes.instanceOf(Object)),
 };

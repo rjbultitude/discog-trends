@@ -68,6 +68,7 @@ function createCells(data) {
       <TableRow key={`li-${uKey}`}>
         {React.createElement('td', {}, createTitleLinks(item.title, item.url))}
         {React.createElement('td', {}, item.demand)}
+        {React.createElement('td', {}, item.scarcity)}
       </TableRow>
     );
   });

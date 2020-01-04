@@ -1,13 +1,38 @@
 const DISCOGS_URL_BASE = 'http://www.discogs.com';
 
 export function getDemand(release, mult = 2) {
+  if (release.community.want > release.community.have * 10) {
+    return 'Extremely high';
+  }
+  if (release.community.want > release.community.have * 5) {
+    return 'Very high';
+  }
   if (release.community.want > release.community.have * mult) {
     return 'High';
   }
   if (release.community.want > release.community.have) {
-    return 'Medium';
+    return 'Low';
   }
-  return 'Low';
+  if (release.community.want === release.community.have) {
+    return 'None';
+  }
+  if (release.community.want < release.community.have) {
+    return 'Negative';
+  }
+  return 'Unknown';
+}
+
+export function getScarcity(release) {
+  if (release.community.have > 2) {
+    return 'Extremely rare';
+  }
+  if (release.community.have > 10) {
+    return 'Very rare';
+  }
+  if (release.community.have > 20) {
+    return 'Rare';
+  }
+  return 'Common';
 }
 
 // Take search results data and filter it
@@ -20,6 +45,7 @@ export function processData(results) {
         title: release.title,
         url: `${DISCOGS_URL_BASE}${release.uri}`,
         demand: getDemand(release),
+        scarcity: getScarcity(release),
       };
     });
     return resultsFilteredTitles;

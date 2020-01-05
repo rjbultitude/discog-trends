@@ -41,7 +41,7 @@ export default class Filter extends React.Component {
     this.getNewData();
   }
 
-  getNewData() {
+  buildQuery() {
     const { genre, format, country } = this.state;
     let query = '';
     if (genre && genre !== '--') {
@@ -53,6 +53,11 @@ export default class Filter extends React.Component {
     if (country && country !== '--') {
       query += `country=${country},`;
     }
+    return query;
+  }
+
+  getNewData() {
+    const query = this.buildQuery();
     getDiscogsData(
       data => {
         const processedData = processData(data.results);

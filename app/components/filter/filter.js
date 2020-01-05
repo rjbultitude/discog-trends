@@ -41,21 +41,6 @@ export default class Filter extends React.Component {
     this.getNewData();
   }
 
-  buildQuery() {
-    const { genre, format, country } = this.state;
-    let query = '';
-    if (genre && genre !== '--') {
-      query += `genre=${genre},`;
-    }
-    if (format && format !== '--') {
-      query += `format=${format},`;
-    }
-    if (country && country !== '--') {
-      query += `country=${country},`;
-    }
-    return query;
-  }
-
   getNewData() {
     const query = this.buildQuery();
     getDiscogsData(
@@ -71,6 +56,21 @@ export default class Filter extends React.Component {
       query,
       this.page
     );
+  }
+
+  buildQuery() {
+    const { genre, format, country } = this.state;
+    let query = '';
+    if (genre && genre !== '--') {
+      query += `genre=${genre},`;
+    }
+    if (format && format !== '--') {
+      query += `format=${format},`;
+    }
+    if (country && country !== '--') {
+      query += `country=${country},`;
+    }
+    return query;
   }
 
   changeGenre(e) {

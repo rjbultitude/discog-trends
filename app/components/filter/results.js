@@ -34,6 +34,12 @@ const ResultsWrapper = styled.div`
 
 const Results = styled.table`
   margin: 0;
+  width: 100%;
+
+  th {
+    text-transform: capitalize;
+    padding: 1rem;
+  }
 `;
 
 function createTitleLinks(title, url) {

@@ -12,10 +12,32 @@ import Pagination from '../pagination/pagination';
 import * as appConstants from '../../utils/constants';
 
 const FilterWrapper = styled.div`
+  align-items: flex-start;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
   padding: ${padding};
+
+  h2 {
+    flex-basis: 100%;
+    margin: 0;
+  }
+`;
+const ResultsWrapper = styled.div`
+  margin-top: ${padding};
 `;
 const FilterField = styled.div`
+  box-sizing: border-box;
+  flex-basis: 30%;
   padding: ${padding};
+  margin: 0 auto;
+
+  select {
+    min-width: 200px;
+  }
 `;
 
 export default class Filter extends React.Component {
@@ -110,46 +132,50 @@ export default class Filter extends React.Component {
     const { releaseData } = this.state;
     const { pagination } = this.state;
     return (
-      <FilterWrapper>
-        <FilterField>
+      <>
+        <FilterWrapper>
           <h2>Filter</h2>
-          <Label text="Genre" forVal={appConstants.GENRES_STR} />
-          <Select
-            selectOptions={appConstants.GENRES}
-            changeCB={this.changeGenre}
-            id={appConstants.GENRES_STR}
-          />
-        </FilterField>
-        <FilterField>
-          <Label text="Format" forVal={appConstants.FORMATS_STR} />
-          <Select
-            selectOptions={appConstants.FORMATS}
-            changeCB={this.changeFormat}
-            id={appConstants.FORMATS_STR}
-          />
-        </FilterField>
-        <FilterField>
-          <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
-          <Select
-            selectOptions={appConstants.COUNTRIES}
-            changeCB={this.changeCountry}
-            id={appConstants.COUNTRIES_STR}
-          />
-        </FilterField>
-        {releaseData && releaseData.length > 0 ? (
-          <>
-            <Results releaseData={releaseData} />
-            <Pagination
-              prevResults={this.prevResults}
-              nextResults={this.nextResults}
-              prevDisabled={this.page === 1}
-              nextDisabled={this.page === pagination.pages}
+          <FilterField>
+            <Label text="Genre" forVal={appConstants.GENRES_STR} />
+            <Select
+              selectOptions={appConstants.GENRES}
+              changeCB={this.changeGenre}
+              id={appConstants.GENRES_STR}
             />
-          </>
-        ) : (
-          <h2>No results</h2>
-        )}
-      </FilterWrapper>
+          </FilterField>
+          <FilterField>
+            <Label text="Format" forVal={appConstants.FORMATS_STR} />
+            <Select
+              selectOptions={appConstants.FORMATS}
+              changeCB={this.changeFormat}
+              id={appConstants.FORMATS_STR}
+            />
+          </FilterField>
+          <FilterField>
+            <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
+            <Select
+              selectOptions={appConstants.COUNTRIES}
+              changeCB={this.changeCountry}
+              id={appConstants.COUNTRIES_STR}
+            />
+          </FilterField>
+        </FilterWrapper>
+        <ResultsWrapper>
+          {releaseData && releaseData.length > 0 ? (
+            <>
+              <Results releaseData={releaseData} />
+              <Pagination
+                prevResults={this.prevResults}
+                nextResults={this.nextResults}
+                prevDisabled={this.page === 1}
+                nextDisabled={this.page === pagination.pages}
+              />
+            </>
+          ) : (
+            <h2>No results</h2>
+          )}
+        </ResultsWrapper>
+      </>
     );
   }
 }

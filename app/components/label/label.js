@@ -9,11 +9,12 @@ import { colours } from '../../utils/theme';
 const Label = styled.label.attrs({
   htmlFor: 'test',
 })`
-  display: inline-block;
-  width: 70px;
-  font-size: 1rem;
-  text-align: center;
   color: ${colours.deepPurple};
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px auto;
+  text-align: left;
+  width: 70px;
 `;
 
 export default props => {

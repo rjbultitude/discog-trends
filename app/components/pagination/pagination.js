@@ -7,15 +7,16 @@ import { colours } from '../../utils/theme';
 
 // Styles
 const Pagination = styled.nav`
+  color: ${colours.deepPurple};
   display: flex;
   flex-direction: row;
   font-size: 1rem;
+  justify-content: space-between;
   text-align: center;
-  color: ${colours.deepPurple};
 `;
 
 const Button = styled.button`
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1rem;
 `;
 

@@ -1,4 +1,4 @@
-import { getCassettes } from './filter-funcs.js';
+import { getDemand } from './filter-funcs.js';
 
 // mocks
 const releaseVinyl = {
@@ -46,8 +46,8 @@ const releaseMC = {
   genre: ['Electronic'],
   catno: 'CND 15-16',
   community: {
-    want: 121,
-    have: 49,
+    want: 150,
+    have: 5,
   },
   year: '1958',
   cover_image:
@@ -59,16 +59,11 @@ const releaseMC = {
   id: 277852,
 };
 
-describe('getCassettes', () => {
-  it('should be falsy when format is not cassette or similar', () => {
-    expect(getCassettes(releaseVinyl)).toBeFalsy();
-  });
-  it('should be true when format is cassette or similar', () => {
-    expect(getCassettes(releaseMC)).toBeTruthy();
-  });
-  it('should throw an error when there is no format property', () => {
-    expect(() => {
-      getCassettes({});
-    }).toThrow();
+describe('getDemand', () => {
+  it("should return an object with 'rank' property value of 5 when 'have' is over ten times want", () => {
+    expect(getDemand(releaseMC)).toEqual({
+      text: 'Extremely high',
+      rank: 5,
+    });
   });
 });

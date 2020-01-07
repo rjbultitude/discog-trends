@@ -1,19 +1,19 @@
 const DISCOGS_URL_BASE = 'http://www.discogs.com';
 
 export function getDemand(release, mult = 2) {
-  if (release.community.want > release.community.have * 10) {
+  if (release.community.want >= release.community.have * 10) {
     return {
       text: 'Extremely high',
       rank: 5,
     };
   }
-  if (release.community.want > release.community.have * 5) {
+  if (release.community.want >= release.community.have * 5) {
     return {
       text: 'Very high',
       rank: 4,
     };
   }
-  if (release.community.want > release.community.have * mult) {
+  if (release.community.want >= release.community.have * mult) {
     return {
       text: 'High',
       rank: 3,

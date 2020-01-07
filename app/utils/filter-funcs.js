@@ -83,12 +83,12 @@ export function processData(results) {
   return [];
 }
 
-function compareNumbers(a, b) {
-  return a.rank - b.rank;
-}
+export function sortByRank(releases, key) {
+  function compareNumbers(a, b) {
+    return a[key].rank - b[key].rank;
+  }
 
-export function sortByRank(releases) {
-  return releases.sort(compareNumbers);
+  return releases.concat().sort(compareNumbers);
 }
 
 export function getStyle(release, styleTerm) {

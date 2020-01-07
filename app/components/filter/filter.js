@@ -3,11 +3,12 @@ import React from 'react';
 import styled from 'styled-components';
 import getDiscogsData from '../../utils/getdata';
 import Results from './results';
-import { processData } from '../../utils/filter-funcs';
+import { processData, sortByRank } from '../../utils/filter-funcs';
 import { padding } from '../../utils/theme';
 // Components
 import Label from '../label/label';
 import Select from '../select/select';
+import Sort from '../sort/sort';
 import Pagination from '../pagination/pagination';
 import * as appConstants from '../../utils/constants';
 
@@ -54,6 +55,8 @@ export default class Filter extends React.Component {
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
     this.changeCountry = this.changeCountry.bind(this);
+    this.toggleDemand = this.toggleDemand.bind(this);
+    this.toggleScarcity = this.toggleScarcity.bind(this);
     this.prevResults = this.prevResults.bind(this);
     this.nextResults = this.nextResults.bind(this);
     this.page = 1;
@@ -113,6 +116,18 @@ export default class Filter extends React.Component {
     });
   }
 
+  toggleDemand() {
+    const { releaseData } = this.state;
+    const sortedByDemand = sortByRank(releaseData, 'demand');
+    this.setState({ releaseData: sortedByDemand });
+  }
+
+  toggleScarcity() {
+    const { releaseData } = this.state;
+    const sortedByScarcity = sortByRank(releaseData, 'scarcity');
+    this.setState({ releaseData: sortedByScarcity });
+  }
+
   prevResults() {
     if (this.page > 1) {
       this.page -= 1;
@@ -163,6 +178,10 @@ export default class Filter extends React.Component {
         <ResultsWrapper>
           {releaseData && releaseData.length > 0 ? (
             <>
+              <Sort
+                toggleScarcityCB={this.toggleScarcity}
+                toggleDemandCB={this.toggleDemand}
+              />
               <Results releaseData={releaseData} />
               <Pagination
                 prevResults={this.prevResults}

@@ -11,11 +11,15 @@ const Sort = styled.div`
 `;
 
 export default props => {
-  const { id, toggleScarcityCB, toggleDemandCB } = props;
+  const { toggleScarcityCB, toggleDemandCB } = props;
   return (
     <Sort>
-      <button onClick={e => toggleScarcityCB(e)}>Toggle Scarcity</button>
-      <button onClick={e => toggleDemandCB(e)}>Toggle Demand</button>
+      <button onClick={e => toggleScarcityCB(e)} type="button">
+        Toggle Scarcity
+      </button>
+      <button onClick={e => toggleDemandCB(e)} type="button">
+        Toggle Demand
+      </button>
     </Sort>
   );
 };

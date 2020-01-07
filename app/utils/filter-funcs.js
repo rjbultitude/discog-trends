@@ -2,37 +2,67 @@ const DISCOGS_URL_BASE = 'http://www.discogs.com';
 
 export function getDemand(release, mult = 2) {
   if (release.community.want > release.community.have * 10) {
-    return 'Extremely high';
+    return {
+      text: 'Extremely high',
+      rank: 5,
+    };
   }
   if (release.community.want > release.community.have * 5) {
-    return 'Very high';
+    return {
+      text: 'Very high',
+      rank: 4,
+    };
   }
   if (release.community.want > release.community.have * mult) {
-    return 'High';
+    return {
+      text: 'High',
+      rank: 3,
+    };
   }
   if (release.community.want > release.community.have) {
-    return 'Low';
+    return {
+      text: 'Low',
+      rank: 2,
+    };
   }
   if (release.community.want === release.community.have) {
-    return 'None';
+    return {
+      text: 'None',
+      rank: 1,
+    };
   }
   if (release.community.want < release.community.have) {
-    return 'Negative';
+    return {
+      text: 'Negative',
+      rank: 0,
+    };
   }
   return 'Unknown';
 }
 
 export function getScarcity(release) {
   if (release.community.have > 2) {
-    return 'Extremely rare';
+    return {
+      text: 'Extremely rare',
+      rank: 3,
+    };
   }
   if (release.community.have > 10) {
-    return 'Very rare';
+    return {
+      text: 'Very rare',
+      rank: 2,
+    };
   }
   if (release.community.have > 20) {
-    return 'Rare';
+    return {
+      text: 'Rare',
+      rank: 1,
+    };
   }
-  return 'Common';
+  return {
+    text: 'Common',
+    rank: 0,
+  };
 }
 
 // Take search results data and filter it
@@ -53,72 +83,12 @@ export function processData(results) {
   return [];
 }
 
-export function getCassettes(release) {
-  const hasFormatProperty = Object.prototype.hasOwnProperty.call(
-    release,
-    'format'
-  );
-  if (hasFormatProperty) {
-    for (let index = 0; index < release.format.length; index += 1) {
-      if (
-        release.format[index] === 'Cassette' ||
-        release.format[index] === 'Cass' ||
-        release.format[index] === 'MC'
-      ) {
-        return release;
-      }
-      return false;
-    }
-  }
-  throw new Error('no property release');
+function compareNumbers(a, b) {
+  return a.rank - b.rank;
 }
 
-export function getVinyl(release) {
-  for (let index = 0; index < release.format.length; index += 1) {
-    if (
-      release.format[index] === 'Vinyl' ||
-      release.format[index] === 'Test Pressing' ||
-      release.format[index] === 'White Label' ||
-      release.format[index] === '7"' ||
-      release.format[index] === '10"' ||
-      release.format[index] === '12"' ||
-      release.format[index] === '33+⅓ RPM' ||
-      release.format[index] === '45 RPM' ||
-      release.format[index] === '78 RPM'
-    ) {
-      return release;
-    }
-  }
-  return false;
-}
-
-export function getDigital(release) {
-  for (let index = 0; index < release.format.length; index += 1) {
-    if (
-      release.format[index] === 'WAV' ||
-      release.format[index] === 'FLAC' ||
-      release.format[index] === 'MP3' ||
-      release.format[index] === 'AIFF' ||
-      release.format[index] === 'AAC'
-    ) {
-      return release;
-    }
-  }
-  return false;
-}
-
-export function getCD(release) {
-  for (let index = 0; index < release.format.length; index += 1) {
-    if (
-      release.format[index] === 'CD' ||
-      release.format[index] === 'CDr' ||
-      release.format[index] === 'CD-ROM' ||
-      release.format[index] === 'Compact Disc'
-    ) {
-      return release;
-    }
-  }
-  return false;
+export function sortByRank(releases) {
+  return releases.sort(compareNumbers);
 }
 
 export function getStyle(release, styleTerm) {

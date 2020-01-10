@@ -93,9 +93,8 @@ export function sortByRank(releases, key, order) {
   }
   if (order === 'desc' || order === '') {
     return releasesCopy.sort(compareNumsAsc);
-  } else {
-    return releasesCopy.sort(compareNumsDesc);
   }
+  return releasesCopy.sort(compareNumsDesc);
 }
 
 export function getStyle(release, styleTerm) {

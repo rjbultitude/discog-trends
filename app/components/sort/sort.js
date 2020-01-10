@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 
 // Styles
 import styled from 'styled-components';
@@ -15,7 +15,9 @@ export default props => {
   return (
     <Sort>
       <button onClick={e => toggleCB(e)} type="button">
-        Toggle {name} {currentOrder}
+        Toggle
+        {name}
+        {currentOrder}
       </button>
     </Sort>
   );

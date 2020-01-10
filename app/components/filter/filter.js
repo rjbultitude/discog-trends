@@ -162,7 +162,14 @@ export default class Filter extends React.Component {
   }
 
   render() {
-    const { releaseData, pagination, error } = this.state;
+    const {
+      releaseData,
+      pagination,
+      error,
+      sortOrderScarcity,
+      sortOrderDemand,
+    } = this.state;
+
     return (
       <>
         {error === true ? (
@@ -202,9 +209,9 @@ export default class Filter extends React.Component {
                   <Results
                     releaseData={releaseData}
                     toggleScarcityCB={this.toggleScarcity}
-                    scarcityOrder={this.state.sortOrderScarcity}
+                    scarcityOrder={sortOrderScarcity}
                     toggleDemandCB={this.toggleDemand}
-                    demandOrder={this.state.sortOrderDemand}
+                    demandOrder={sortOrderDemand}
                   />
                   <Pagination
                     prevResults={this.prevResults}

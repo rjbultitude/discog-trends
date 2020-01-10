@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 // Components
 import Sort from '../sort/sort';
 
 // Styles
-import styled from 'styled-components';
 import { colours } from '../../utils/theme';
 
 const TableRow = styled.tr`

@@ -8,7 +8,6 @@ import { padding } from '../../utils/theme';
 // Components
 import Label from '../label/label';
 import Select from '../select/select';
-import Sort from '../sort/sort';
 import Pagination from '../pagination/pagination';
 import * as appConstants from '../../utils/constants';
 
@@ -192,13 +191,14 @@ export default class Filter extends React.Component {
         <ResultsWrapper>
           {releaseData && releaseData.length > 0 ? (
             <>
-              <Sort
+              <Results
+                releaseData={releaseData}
                 toggleScarcityCB={this.toggleScarcity}
                 scarcityOrder={this.state.sortOrderScarcity}
                 toggleDemandCB={this.toggleDemand}
                 demandOrder={this.state.sortOrderDemand}
               />
-              <Results releaseData={releaseData} />
+              />
               <Pagination
                 prevResults={this.prevResults}
                 nextResults={this.nextResults}

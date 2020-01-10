@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 
 // Styles
 import styled from 'styled-components';
@@ -11,24 +11,17 @@ const Sort = styled.div`
 `;
 
 export default props => {
-  const {
-    toggleScarcityCB,
-    scarcityOrder,
-    toggleDemandCB,
-    demandOrder,
-  } = props;
+  const { name, toggleCB, currentOrder } = props;
   return (
     <Sort>
-      <button onClick={e => toggleScarcityCB(e)} type="button">
-        Toggle Scarcity {scarcityOrder}
-      </button>
-      <button onClick={e => toggleDemandCB(e)} type="button">
-        Toggle Demand {demandOrder}
+      <button onClick={e => toggleCB(e)} type="button">
+        Toggle {name} {currentOrder}
       </button>
     </Sort>
   );
 };
 
 Sort.propTypes = {
+  name: PropTypes.string,
   changeCB: PropTypes.instanceOf(Object),
 };

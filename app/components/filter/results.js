@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components
+import Sort from '../sort/sort';
+
 // Styles
 import styled from 'styled-components';
 import { colours } from '../../utils/theme';
@@ -80,13 +83,48 @@ function createCells(data) {
   });
 }
 
-function createHeaders(data) {
-  const keys = Object.keys(data[0]);
+function createHeaderContent(key, props) {
+  const {
+    toggleDemandCB,
+    demandOrder,
+    toggleScarcityCB,
+    scarcityOrder,
+  } = props;
+  if (key === 'title') {
+    return key;
+  }
+  return (
+    <>
+      <span>{key}</span>
+      {key === 'demand' ? (
+        <Sort
+          name="demand"
+          toggleCB={toggleDemandCB}
+          currentOrder={demandOrder}
+        />
+      ) : (
+        <Sort
+          name="scarcity"
+          toggleCB={toggleScarcityCB}
+          currentOrder={scarcityOrder}
+        />
+      )}
+    </>
+  );
+}
+
+function createHeaders(props) {
+  const { releaseData } = props;
+  const keys = Object.keys(releaseData[0]);
   return (
     <tr>
       {keys.map(key => {
         if (key !== 'url') {
-          return React.createElement('th', { key }, key);
+          return React.createElement(
+            'th',
+            { key },
+            createHeaderContent(key, props)
+          );
         }
         return false;
       })}
@@ -94,11 +132,12 @@ function createHeaders(data) {
   );
 }
 
-function createTable(data) {
+function createTable(props) {
+  const { releaseData } = props;
   return (
     <Results>
-      {React.createElement('thead', {}, createHeaders(data))}
-      {React.createElement('tbody', {}, createCells(data))}
+      {React.createElement('thead', {}, createHeaders(props))}
+      {React.createElement('tbody', {}, createCells(releaseData))}
     </Results>
   );
 }
@@ -108,7 +147,7 @@ export default props => {
   return (
     <ResultsWrapper>
       {releaseData && Array.isArray(releaseData)
-        ? createTable(releaseData)
+        ? createTable(props)
         : React.createElement('h2', {}, 'Loading...')}
     </ResultsWrapper>
   );

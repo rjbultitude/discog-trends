@@ -49,6 +49,7 @@ function getDiscogsData(callback, query, page) {
     })
     .catch(err => {
       console.warn('discogs request error', err);
+      callback('error');
     });
 }
 

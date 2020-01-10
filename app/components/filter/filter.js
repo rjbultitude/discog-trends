@@ -52,6 +52,7 @@ export default class Filter extends React.Component {
       genre: '',
       format: '',
       country: '',
+      error: false,
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
@@ -71,6 +72,10 @@ export default class Filter extends React.Component {
     const query = this.buildQuery();
     getDiscogsData(
       data => {
+        if (data === 'error') {
+          this.setState({ error: true });
+          return;
+        }
         const processedData = processData(data.results);
         this.setState({
           originalData: data.results,
@@ -157,59 +162,64 @@ export default class Filter extends React.Component {
   }
 
   render() {
-    const { releaseData } = this.state;
-    const { pagination } = this.state;
+    const { releaseData, pagination, error } = this.state;
     return (
       <>
-        <FilterWrapper>
-          <h2>Filter</h2>
-          <FilterField>
-            <Label text="Genre" forVal={appConstants.GENRES_STR} />
-            <Select
-              selectOptions={appConstants.GENRES}
-              changeCB={this.changeGenre}
-              id={appConstants.GENRES_STR}
-            />
-          </FilterField>
-          <FilterField>
-            <Label text="Format" forVal={appConstants.FORMATS_STR} />
-            <Select
-              selectOptions={appConstants.FORMATS}
-              changeCB={this.changeFormat}
-              id={appConstants.FORMATS_STR}
-            />
-          </FilterField>
-          <FilterField>
-            <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
-            <Select
-              selectOptions={appConstants.COUNTRIES}
-              changeCB={this.changeCountry}
-              id={appConstants.COUNTRIES_STR}
-            />
-          </FilterField>
-        </FilterWrapper>
-        <ResultsWrapper>
-          {releaseData && releaseData.length > 0 ? (
-            <>
-              <Results
-                releaseData={releaseData}
-                toggleScarcityCB={this.toggleScarcity}
-                scarcityOrder={this.state.sortOrderScarcity}
-                toggleDemandCB={this.toggleDemand}
-                demandOrder={this.state.sortOrderDemand}
-              />
-              />
-              <Pagination
-                prevResults={this.prevResults}
-                nextResults={this.nextResults}
-                prevDisabled={this.page === 1}
-                nextDisabled={this.page === pagination.pages}
-              />
-            </>
-          ) : (
-            <h2>No results</h2>
-          )}
-        </ResultsWrapper>
+        {error === true ? (
+          <h2>No data. Bad connection</h2>
+        ) : (
+          <>
+            <FilterWrapper>
+              <h2>Filter</h2>
+              <FilterField>
+                <Label text="Genre" forVal={appConstants.GENRES_STR} />
+                <Select
+                  selectOptions={appConstants.GENRES}
+                  changeCB={this.changeGenre}
+                  id={appConstants.GENRES_STR}
+                />
+              </FilterField>
+              <FilterField>
+                <Label text="Format" forVal={appConstants.FORMATS_STR} />
+                <Select
+                  selectOptions={appConstants.FORMATS}
+                  changeCB={this.changeFormat}
+                  id={appConstants.FORMATS_STR}
+                />
+              </FilterField>
+              <FilterField>
+                <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
+                <Select
+                  selectOptions={appConstants.COUNTRIES}
+                  changeCB={this.changeCountry}
+                  id={appConstants.COUNTRIES_STR}
+                />
+              </FilterField>
+            </FilterWrapper>
+            <ResultsWrapper>
+              {releaseData && releaseData.length > 0 ? (
+                <>
+                  <Results
+                    releaseData={releaseData}
+                    toggleScarcityCB={this.toggleScarcity}
+                    scarcityOrder={this.state.sortOrderScarcity}
+                    toggleDemandCB={this.toggleDemand}
+                    demandOrder={this.state.sortOrderDemand}
+                  />
+                  />
+                  <Pagination
+                    prevResults={this.prevResults}
+                    nextResults={this.nextResults}
+                    prevDisabled={this.page === 1}
+                    nextDisabled={this.page === pagination.pages}
+                  />
+                </>
+              ) : (
+                <h2>No results</h2>
+              )}
+            </ResultsWrapper>
+          </>
+        )}
       </>
     );
   }

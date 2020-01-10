@@ -83,12 +83,19 @@ export function processData(results) {
   return [];
 }
 
-export function sortByRank(releases, key) {
-  function compareNumbers(a, b) {
+export function sortByRank(releases, key, order) {
+  const releasesCopy = releases.concat();
+  function compareNumsAsc(a, b) {
     return a[key].rank - b[key].rank;
   }
-
-  return releases.concat().sort(compareNumbers);
+  function compareNumsDesc(a, b) {
+    return b[key].rank - a[key].rank;
+  }
+  if (order === 'desc' || order === '') {
+    return releasesCopy.sort(compareNumsAsc);
+  } else {
+    return releasesCopy.sort(compareNumsDesc);
+  }
 }
 
 export function getStyle(release, styleTerm) {

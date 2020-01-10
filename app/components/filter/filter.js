@@ -48,6 +48,8 @@ export default class Filter extends React.Component {
       originalData: [],
       releaseData: [],
       pagination: null,
+      sortOrderDemand: '',
+      sortOrderScarcity: '',
       genre: '',
       format: '',
       country: '',
@@ -117,15 +119,27 @@ export default class Filter extends React.Component {
   }
 
   toggleDemand() {
-    const { releaseData } = this.state;
-    const sortedByDemand = sortByRank(releaseData, 'demand');
-    this.setState({ releaseData: sortedByDemand });
+    const { releaseData, sortOrderDemand } = this.state;
+    let order;
+    if (sortOrderDemand === 'asc') {
+      order = 'desc';
+    } else {
+      order = 'asc';
+    }
+    const sortedByDemand = sortByRank(releaseData, 'demand', order);
+    this.setState({ releaseData: sortedByDemand, sortOrderDemand: order });
   }
 
   toggleScarcity() {
-    const { releaseData } = this.state;
-    const sortedByScarcity = sortByRank(releaseData, 'scarcity');
-    this.setState({ releaseData: sortedByScarcity });
+    const { releaseData, sortOrderScarcity } = this.state;
+    let order;
+    if (sortOrderScarcity === 'asc') {
+      order = 'desc';
+    } else {
+      order = 'asc';
+    }
+    const sortedByScarcity = sortByRank(releaseData, 'scarcity', order);
+    this.setState({ releaseData: sortedByScarcity, sortOrderScarcity: order });
   }
 
   prevResults() {
@@ -180,7 +194,9 @@ export default class Filter extends React.Component {
             <>
               <Sort
                 toggleScarcityCB={this.toggleScarcity}
+                scarcityOrder={this.state.sortOrderScarcity}
                 toggleDemandCB={this.toggleDemand}
+                demandOrder={this.state.sortOrderDemand}
               />
               <Results releaseData={releaseData} />
               <Pagination

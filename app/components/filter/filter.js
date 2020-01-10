@@ -206,7 +206,6 @@ export default class Filter extends React.Component {
                     toggleDemandCB={this.toggleDemand}
                     demandOrder={this.state.sortOrderDemand}
                   />
-                  />
                   <Pagination
                     prevResults={this.prevResults}
                     nextResults={this.nextResults}

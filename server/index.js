@@ -49,7 +49,10 @@ app.post('/api/search', corsOptions, function(req, res) {
   db.search(req.body.searchTerm, req.body.params, (err, data) => {
     if (err !== null) {
       console.warn('error running search', err);
-      getStaticData(res);
+      if (process.env.NODE_ENV !== 'production') {
+        getStaticData(res);
+      }
+      res.send('error');
       return;
     }
     // console.log('post data', data);

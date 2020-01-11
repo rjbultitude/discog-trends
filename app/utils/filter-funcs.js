@@ -41,19 +41,19 @@ export function getDemand(release, mult = 2) {
 }
 
 export function getScarcity(release) {
-  if (release.community.have > 2) {
+  if (release.community.have <= 2) {
     return {
       text: 'Extremely rare',
       rank: 3,
     };
   }
-  if (release.community.have > 10) {
+  if (release.community.have <= 10) {
     return {
       text: 'Very rare',
       rank: 2,
     };
   }
-  if (release.community.have > 20) {
+  if (release.community.have <= 20) {
     return {
       text: 'Rare',
       rank: 1,

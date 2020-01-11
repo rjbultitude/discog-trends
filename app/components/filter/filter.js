@@ -74,6 +74,7 @@ export default class Filter extends React.Component {
       data => {
         if (data === 'error') {
           this.setState({ error: true });
+          console.log('state after req', this.state);
           return;
         }
         const processedData = processData(data.results);

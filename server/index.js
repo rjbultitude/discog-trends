@@ -50,9 +50,11 @@ app.post('/api/search', corsOptions, function(req, res) {
     if (err !== null) {
       console.warn('error running search', err);
       if (process.env.NODE_ENV !== 'production') {
+        console.log('getting static data');
         getStaticData(res);
+        return;
       }
-      res.send('error');
+      res.sendStatus(500);
       return;
     }
     // console.log('post data', data);

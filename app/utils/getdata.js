@@ -1,14 +1,10 @@
 // search data
-const sort = 'year';
-const sortOrder = 'asc';
-const perPage = 20;
-
-function params(page) {
+function params(page, sort, sortOrder, perPage) {
   return {
     page: page || 1,
-    sort,
-    sort_order: sortOrder,
-    per_page: perPage,
+    sort: sort || 'year',
+    sort_order: sortOrder || 'asc',
+    per_page: perPage || 20,
   };
 }
 

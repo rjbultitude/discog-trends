@@ -30,23 +30,22 @@ function getDiscogsPostHeader(query, page) {
   };
 }
 
-function getDiscogsData(callback, query, page) {
+export default async function getDiscogsData(callback, query, page) {
   const postHeader = getDiscogsPostHeader(query, page);
   console.log('postheader', postHeader);
-  return fetch(`http://localhost:8080/api/search`, postHeader)
-    .then(response => {
-      if (response.ok) {
-        response.json().then(res => {
-          callback(res);
-        });
-      } else {
-        throw new Error('response was not ok');
-      }
-    })
-    .catch(err => {
-      console.warn('discogs request error', err);
-      callback('error');
-    });
+  try {
+    let response = await fetch(`http://localhost:8080/api/search`, postHeader);
+    let res;
+    if (response.ok) {
+      res = await response.json();
+      callback(res);
+      return res;
+    } else {
+      throw new Error('response was not ok');
+    }
+  } catch (err) {
+    console.warn('discogs request error', err);
+    callback('error');
+    return;
+  }
 }
-
-export default getDiscogsData;

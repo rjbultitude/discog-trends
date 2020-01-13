@@ -34,18 +34,19 @@ export default async function getDiscogsData(callback, query, page) {
   const postHeader = getDiscogsPostHeader(query, page);
   console.log('postheader', postHeader);
   try {
-    let response = await fetch(`http://localhost:8080/api/search`, postHeader);
+    const response = await fetch(
+      `http://localhost:8080/api/search`,
+      postHeader
+    );
     let res;
     if (response.ok) {
       res = await response.json();
       callback(res);
-      return res;
     } else {
       throw new Error('response was not ok');
     }
   } catch (err) {
     console.warn('discogs request error', err);
     callback('error');
-    return;
   }
 }

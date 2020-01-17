@@ -15,7 +15,7 @@ const TextInput = styled.input`
 let numStrokes = 0;
 
 function keyPress(e, changeCB) {
-  const value = e.target.value;
+  const { value } = e.target;
   const pattern = /^[A-Za-z0-9 ]*$/;
   const charCode = e.keyCode;
   const charStr = String.fromCharCode(charCode);

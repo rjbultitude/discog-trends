@@ -14,24 +14,32 @@ const TextInput = styled.input`
 
 let numStrokes = 0;
 
-function keyDown(e, changeCB) {
-  if (numStrokes > 3) {
-    changeCB(e.target.value);
-    console.log('searching');
+function keyPress(e, changeCB) {
+  const value = e.target.value;
+  const pattern = /^[A-Za-z0-9 ]*$/;
+  const charCode = e.keyCode;
+  const charStr = String.fromCharCode(charCode);
+  if (value === '') {
+    numStrokes = 0;
+    return;
   }
-  numStrokes += 1;
+  if (pattern.test(value) !== true) {
+    changeCB(null);
+    return;
+  }
+  if (pattern.test(charStr)) {
+    if (numStrokes > 3) {
+      changeCB(e.target.value);
+      console.log('searching');
+    }
+    numStrokes += 1;
+    console.log('numStrokes', numStrokes);
+  }
 }
 
 export default props => {
   const { id, changeCB } = props;
-  return (
-    <TextInput
-      onKeyDown={e => keyDown(e, changeCB)}
-      id={id}
-      type="text"
-      pattern="[A-Za-z0-9]"
-    />
-  );
+  return <TextInput onKeyUp={e => keyPress(e, changeCB)} id={id} type="text" />;
 };
 
 TextInput.propTypes = {

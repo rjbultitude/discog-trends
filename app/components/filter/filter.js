@@ -55,6 +55,7 @@ export default class Filter extends React.Component {
       country: '',
       title: '',
       error: false,
+      invalidSearch: null,
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
@@ -112,9 +113,13 @@ export default class Filter extends React.Component {
   }
 
   titleSearch(title) {
-    this.setState({ title }, () => {
-      this.getNewData();
-    });
+    if (title) {
+      this.setState({ title }, () => {
+        this.getNewData();
+      });
+    } else {
+      this.setState({ invalidSearch: true });
+    }
   }
 
   changeGenre(e) {
@@ -179,6 +184,7 @@ export default class Filter extends React.Component {
       releaseData,
       pagination,
       error,
+      invalidSearch,
       sortOrderScarcity,
       sortOrderDemand,
     } = this.state;
@@ -217,7 +223,9 @@ export default class Filter extends React.Component {
               </FilterField>
             </FilterWrapper>
             <FilterWrapper>
+              <Label text="Title" forVal="titleSearch" />
               <Search id="search" changeCB={this.titleSearch} />
+              {invalidSearch === true ? <p>Bad character</p> : null}
             </FilterWrapper>
             <ResultsWrapper>
               {releaseData && releaseData.length > 0 ? (

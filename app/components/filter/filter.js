@@ -9,6 +9,7 @@ import { padding } from '../../utils/theme';
 import Label from '../label/label';
 import Select from '../select/select';
 import Pagination from '../pagination/pagination';
+import Search from '../search/search';
 import * as appConstants from '../../utils/constants';
 
 const FilterWrapper = styled.div`
@@ -52,11 +53,13 @@ export default class Filter extends React.Component {
       genre: '',
       format: '',
       country: '',
+      title: '',
       error: false,
     };
     this.changeGenre = this.changeGenre.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
     this.changeCountry = this.changeCountry.bind(this);
+    this.titleSearch = this.titleSearch.bind(this);
     this.toggleDemand = this.toggleDemand.bind(this);
     this.toggleScarcity = this.toggleScarcity.bind(this);
     this.prevResults = this.prevResults.bind(this);
@@ -91,7 +94,7 @@ export default class Filter extends React.Component {
   }
 
   buildQuery() {
-    const { genre, format, country } = this.state;
+    const { genre, format, country, title } = this.state;
     let query = '';
     if (genre && genre !== '--') {
       query += `genre=${genre},`;
@@ -102,7 +105,16 @@ export default class Filter extends React.Component {
     if (country && country !== '--') {
       query += `country=${country},`;
     }
+    if (title) {
+      query += `title=${title}`;
+    }
     return query;
+  }
+
+  titleSearch(title) {
+    this.setState({ title }, () => {
+      this.getNewData();
+    });
   }
 
   changeGenre(e) {
@@ -203,6 +215,9 @@ export default class Filter extends React.Component {
                   id={appConstants.COUNTRIES_STR}
                 />
               </FilterField>
+            </FilterWrapper>
+            <FilterWrapper>
+              <Search id={'search'} changeCB={this.titleSearch} />
             </FilterWrapper>
             <ResultsWrapper>
               {releaseData && releaseData.length > 0 ? (

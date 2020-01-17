@@ -217,7 +217,7 @@ export default class Filter extends React.Component {
               </FilterField>
             </FilterWrapper>
             <FilterWrapper>
-              <Search id={'search'} changeCB={this.titleSearch} />
+              <Search id="search" changeCB={this.titleSearch} />
             </FilterWrapper>
             <ResultsWrapper>
               {releaseData && releaseData.length > 0 ? (

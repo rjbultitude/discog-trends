@@ -14,11 +14,20 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Franklin Gothic', sans-serif;
   }
 
+  #root {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
   h1 {
     font-family: 'Saira Extra Condensed', sans-serif;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 2.2rem;
+  }
+
+  h2 {
+    font-weight: 200;
   }
 
   select,
@@ -32,6 +41,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      <h1>Discogs Trends</h1>
       <Filter />
     </>
   );

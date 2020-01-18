@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 // Styles
 const Sort = styled.div`
-  border: 1px solid black;
   display: inline-block;
 `;
 

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Sort from '../sort/sort';
 
 // Styles
-import { colours } from '../../utils/theme';
+import { colours, paddingTight } from '../../utils/theme';
 
 const TableRow = styled.tr`
   padding: 6px;
@@ -25,6 +25,10 @@ const TableRow = styled.tr`
   a:focus {
     text-decoration: none;
   }
+
+  td {
+    padding: ${paddingTight}px;
+  }
 `;
 
 const ResultsWrapper = styled.div`
@@ -40,8 +44,15 @@ const Results = styled.table`
   width: 100%;
 
   th {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 200;
     text-transform: capitalize;
     padding: 1rem;
+  }
+
+  button {
+    border: 0 none;
   }
 `;
 

@@ -20,6 +20,7 @@ const FilterWrapper = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: ${padding};
   padding: ${padding};
 
   h2 {
@@ -223,6 +224,7 @@ export default class Filter extends React.Component {
               </FilterField>
             </FilterWrapper>
             <FilterWrapper>
+              <h2>Search</h2>
               <Label text="Title" forVal="titleSearch" />
               <Search id="search" changeCB={this.titleSearch} />
               {invalidSearch === true ? <p>Bad character</p> : null}

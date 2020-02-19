@@ -158,6 +158,7 @@ const useFilter = () => {
   // componentDidMount
   useEffect(() => {
     getNewData();
+    setOriginalData(originalData);
   });
 
   return (

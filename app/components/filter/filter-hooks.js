@@ -52,11 +52,11 @@ const useFilter = () => {
   const [originalData, setOriginalData] = useState([]);
   const [releaseData, setReleaseData] = useState([]);
   const [pagination, setPagination] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
   const [sortOrderDemand, setSortOrderDemand] = useState('');
   const [sortOrderScarcity, setSortOrderScarcity] = useState('');
   const [error, setError] = useState(false);
   const [invalidSearch, setInvalidSearch] = useState(null);
+  let currentPage = 1;
 
   function buildQuery() {
     let query = '';
@@ -108,9 +108,9 @@ const useFilter = () => {
     getNewData();
   };
 
-  function titleSearch(title) {
-    if (title) {
-      setTitle(title);
+  function titleSearch(titleStr) {
+    if (titleStr) {
+      setTitle(titleStr);
       getNewData();
     } else {
       setInvalidSearch(true);
@@ -157,7 +157,7 @@ const useFilter = () => {
 
   // componentDidMount
   useEffect(() => {
-    originalData = getNewData();
+    getNewData();
   });
 
   return (

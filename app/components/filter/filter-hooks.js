@@ -143,14 +143,14 @@ const useFilter = () => {
 
   function prevResults() {
     if (currentPage > 1) {
-      setCurrentPage((currentPage -= 1));
+      currentPage -= 1;
       getNewData();
     }
   }
 
   function nextResults() {
     if (currentPage < pagination.pages) {
-      setCurrentPage((currentPage += 1));
+      currentPage += 1;
       getNewData();
     }
   }

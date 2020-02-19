@@ -1,5 +1,48 @@
 // filter hooks
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+
+// Styles
+import styled from 'styled-components';
+import getDiscogsData from '../../utils/getdata';
+import Results from './results';
+import { processData, sortByRank } from '../../utils/filter-funcs';
+import { padding } from '../../utils/theme';
+// Components
+import Label from '../label/label';
+import Select from '../select/select';
+import Pagination from '../pagination/pagination';
+import Search from '../search/search';
+import * as appConstants from '../../utils/constants';
+
+const FilterWrapper = styled.div`
+  align-items: flex-start;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: ${padding};
+  padding: ${padding};
+
+  h2 {
+    flex-basis: 100%;
+    margin: 0;
+  }
+`;
+const ResultsWrapper = styled.div`
+  margin-top: ${padding};
+`;
+const FilterField = styled.div`
+  box-sizing: border-box;
+  flex-basis: 30%;
+  padding: ${padding};
+  margin: 0 auto;
+
+  select {
+    min-width: 200px;
+  }
+`;
 
 const useFilter = () => {
   const [genre, setGenre] = useState('');
@@ -14,30 +57,6 @@ const useFilter = () => {
   const [sortOrderScarcity, setSortOrderScarcity] = useState('');
   const [error, setError] = useState(false);
   const [invalidSearch, setInvalidSearch] = useState(null);
-
-  const changeGenre = e => {
-    setGenre(e.target.value);
-    getNewData();
-  };
-
-  const changeFormat = e => {
-    setFormat(e.target.value);
-    getNewData();
-  };
-
-  const changeCountry = e => {
-    setCountry(e.target.value);
-    getNewData();
-  };
-
-  function titleSearch(title) {
-    if (title) {
-      setTitle(title);
-      getNewData();
-    } else {
-      setInvalidSearch(true);
-    }
-  }
 
   function buildQuery() {
     let query = '';
@@ -72,6 +91,30 @@ const useFilter = () => {
       query,
       currentPage
     );
+  }
+
+  const changeGenre = e => {
+    setGenre(e.target.value);
+    getNewData();
+  };
+
+  const changeFormat = e => {
+    setFormat(e.target.value);
+    getNewData();
+  };
+
+  const changeCountry = e => {
+    setCountry(e.target.value);
+    getNewData();
+  };
+
+  function titleSearch(title) {
+    if (title) {
+      setTitle(title);
+      getNewData();
+    } else {
+      setInvalidSearch(true);
+    }
   }
 
   function toggleDemand() {
@@ -114,7 +157,7 @@ const useFilter = () => {
 
   // componentDidMount
   useEffect(() => {
-    getNewData();
+    originalData = getNewData();
   });
 
   return (

@@ -49,7 +49,6 @@ const useFilter = () => {
   const [format, setFormat] = useState('');
   const [country, setCountry] = useState('');
   const [title, setTitle] = useState('');
-  const [originalData, setOriginalData] = useState([]);
   const [releaseData, setReleaseData] = useState([]);
   const [pagination, setPagination] = useState(null);
   const [sortOrderDemand, setSortOrderDemand] = useState('');
@@ -83,7 +82,6 @@ const useFilter = () => {
           setError(true);
           return;
         }
-        setOriginalData(data.results);
         const processedData = processData(data.results);
         setReleaseData(processedData);
         setPagination(data.pagination);

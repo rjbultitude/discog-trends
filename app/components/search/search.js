@@ -27,7 +27,7 @@ function keyPress(e, changeCB) {
     changeCB(null);
     return;
   }
-  if (pattern.test(charStr)) {
+  if (pattern.test(charStr) || charCode === 8) {
     if (numStrokes > 3) {
       changeCB(e.target.value);
       console.log('searching');

@@ -54,6 +54,7 @@ const useFilter = () => {
   const [sortOrderDemand, setSortOrderDemand] = useState('');
   const [sortOrderScarcity, setSortOrderScarcity] = useState('');
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [invalidSearch, setInvalidSearch] = useState(null);
   let currentPage = 1;
 
@@ -76,6 +77,7 @@ const useFilter = () => {
 
   function getNewData() {
     const query = buildQuery();
+    setLoading(true);
     getDiscogsData(
       data => {
         if (data === 'error') {
@@ -86,6 +88,7 @@ const useFilter = () => {
         const processedData = processData(data.results);
         setReleaseData(processedData);
         setPagination(data.pagination);
+        setLoading(false);
       },
       query,
       currentPage
@@ -197,6 +200,7 @@ const useFilter = () => {
           <ResultsWrapper>
             {releaseData && releaseData.length > 0 ? (
               <>
+                {loading === true ? <h2>Loading</h2> : null}
                 <Results
                   releaseData={releaseData}
                   toggleScarcityCB={toggleScarcity}

@@ -50,7 +50,7 @@ const useFilter = () => {
   const [country, setCountry] = useState('');
   const [title, setTitle] = useState('');
   const [releaseData, setReleaseData] = useState([]);
-  const [pagination, setPagination] = useState(null);
+  const [pagination, setPagination] = useState({ pages: 1 });
   const [sortOrderDemand, setSortOrderDemand] = useState('');
   const [sortOrderScarcity, setSortOrderScarcity] = useState('');
   const [error, setError] = useState(false);
@@ -82,6 +82,7 @@ const useFilter = () => {
           setError(true);
           return;
         }
+        console.log('data', data);
         const processedData = processData(data.results);
         setReleaseData(processedData);
         setPagination(data.pagination);
@@ -93,23 +94,19 @@ const useFilter = () => {
 
   const changeGenre = e => {
     setGenre(e.target.value);
-    getNewData();
   };
 
   const changeFormat = e => {
     setFormat(e.target.value);
-    getNewData();
   };
 
   const changeCountry = e => {
     setCountry(e.target.value);
-    getNewData();
   };
 
   function titleSearch(titleStr) {
     if (titleStr) {
       setTitle(titleStr);
-      getNewData();
     } else {
       setInvalidSearch(true);
     }
@@ -156,7 +153,7 @@ const useFilter = () => {
   // componentDidMount/componentDidUpdate
   useEffect(() => {
     getNewData();
-  }, []);
+  }, [genre, format, country, title]);
 
   return (
     <>
@@ -211,7 +208,7 @@ const useFilter = () => {
                   prevResults={prevResults}
                   nextResults={nextResults}
                   prevDisabled={currentPage === 1}
-                  nextDisabled={false}
+                  nextDisabled={currentPage === pagination.pages}
                 />
               </>
             ) : (

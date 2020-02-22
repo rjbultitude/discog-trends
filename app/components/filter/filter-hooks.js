@@ -83,8 +83,8 @@ const useFilter = () => {
           setError(true);
           return;
         }
-        const processedData = processData(data.results);
         setOriginalData(data.results);
+        const processedData = processData(data.results);
         setReleaseData(processedData);
         setPagination(data.pagination);
       },
@@ -155,11 +155,10 @@ const useFilter = () => {
     }
   }
 
-  // componentDidMount
+  // componentDidMount/componentDidUpdate
   useEffect(() => {
     getNewData();
-    setOriginalData(originalData);
-  });
+  }, []);
 
   return (
     <>
@@ -214,7 +213,7 @@ const useFilter = () => {
                   prevResults={prevResults}
                   nextResults={nextResults}
                   prevDisabled={currentPage === 1}
-                  nextDisabled={currentPage === pagination.pages}
+                  nextDisabled={false}
                 />
               </>
             ) : (

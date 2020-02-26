@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
-import Filter from './components/filter/filter-hooks';
+import Filter from './components/filter/filter';
 
 const GlobalStyle = createGlobalStyle`
   html {

@@ -24,21 +24,3 @@ For production mode run `npm run build`
 [express](https://expressjs.com/)
 
 [React](https://reactjs.com)
-
-#### Pending Functionality
-
-- Show demand (_want_ vs _have_)
-- Show rarity (Position in Range of _have_)
-- Show change over time (if possible)
-
-Add fields for `year` and `genre`
-
-#### Approach
-
-- Use node proxy to securly handle requests to discogs
-- Use styled components for encapsulation
-
-#### TODO
-
-- Create watch task for middleware
-- Crunch big data using Python

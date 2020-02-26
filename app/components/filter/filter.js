@@ -1,4 +1,6 @@
-import React from 'react';
+// filter hooks
+import React, { useState, useEffect } from 'react';
+
 // Styles
 import styled from 'styled-components';
 import getDiscogsData from '../../utils/getdata';
@@ -42,61 +44,21 @@ const FilterField = styled.div`
   }
 `;
 
-export default class Filter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      originalData: [],
-      releaseData: [],
-      pagination: null,
-      sortOrderDemand: '',
-      sortOrderScarcity: '',
-      genre: '',
-      format: '',
-      country: '',
-      title: '',
-      error: false,
-      invalidSearch: null,
-    };
-    this.changeGenre = this.changeGenre.bind(this);
-    this.changeFormat = this.changeFormat.bind(this);
-    this.changeCountry = this.changeCountry.bind(this);
-    this.titleSearch = this.titleSearch.bind(this);
-    this.toggleDemand = this.toggleDemand.bind(this);
-    this.toggleScarcity = this.toggleScarcity.bind(this);
-    this.prevResults = this.prevResults.bind(this);
-    this.nextResults = this.nextResults.bind(this);
-    this.page = 1;
-  }
+const useFilter = () => {
+  const [genre, setGenre] = useState('');
+  const [format, setFormat] = useState('');
+  const [country, setCountry] = useState('');
+  const [title, setTitle] = useState('');
+  const [releaseData, setReleaseData] = useState([]);
+  const [pagination, setPagination] = useState({ pages: 1 });
+  const [sortOrderDemand, setSortOrderDemand] = useState('');
+  const [sortOrderScarcity, setSortOrderScarcity] = useState('');
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [invalidSearch, setInvalidSearch] = useState(null);
+  let currentPage = 1;
 
-  componentDidMount() {
-    this.getNewData();
-  }
-
-  getNewData() {
-    const query = this.buildQuery();
-    getDiscogsData(
-      data => {
-        if (data === 'error') {
-          this.setState({ error: true });
-          console.log('state after req', this.state);
-          return;
-        }
-        const processedData = processData(data.results);
-        this.setState({
-          originalData: data.results,
-          releaseData: processedData,
-          pagination: data.pagination,
-        });
-        console.log('state after req', this.state);
-      },
-      query,
-      this.page
-    );
-  }
-
-  buildQuery() {
-    const { genre, format, country, title } = this.state;
+  function buildQuery() {
     let query = '';
     if (genre && genre !== '--') {
       query += `genre=${genre},`;
@@ -113,36 +75,47 @@ export default class Filter extends React.Component {
     return query;
   }
 
-  titleSearch(title) {
-    if (title) {
-      this.setState({ title }, () => {
-        this.getNewData();
-      });
+  function getNewData() {
+    const query = buildQuery();
+    setLoading(true);
+    getDiscogsData(
+      data => {
+        if (data === 'error') {
+          setError(true);
+          return;
+        }
+        console.log('data', data);
+        const processedData = processData(data.results);
+        setReleaseData(processedData);
+        setPagination(data.pagination);
+        setLoading(false);
+      },
+      query,
+      currentPage
+    );
+  }
+
+  const changeGenre = e => {
+    setGenre(e.target.value);
+  };
+
+  const changeFormat = e => {
+    setFormat(e.target.value);
+  };
+
+  const changeCountry = e => {
+    setCountry(e.target.value);
+  };
+
+  function titleSearch(titleStr) {
+    if (titleStr) {
+      setTitle(titleStr);
     } else {
-      this.setState({ invalidSearch: true });
+      setInvalidSearch(true);
     }
   }
 
-  changeGenre(e) {
-    this.setState({ genre: e.target.value }, () => {
-      this.getNewData();
-    });
-  }
-
-  changeFormat(e) {
-    this.setState({ format: e.target.value }, () => {
-      this.getNewData();
-    });
-  }
-
-  changeCountry(e) {
-    this.setState({ country: e.target.value }, () => {
-      this.getNewData();
-    });
-  }
-
-  toggleDemand() {
-    const { releaseData, sortOrderDemand } = this.state;
+  function toggleDemand() {
     let order;
     if (sortOrderDemand === 'asc') {
       order = 'desc';
@@ -150,11 +123,11 @@ export default class Filter extends React.Component {
       order = 'asc';
     }
     const sortedByDemand = sortByRank(releaseData, 'demand', order);
-    this.setState({ releaseData: sortedByDemand, sortOrderDemand: order });
+    setReleaseData(sortedByDemand);
+    setSortOrderDemand(order);
   }
 
-  toggleScarcity() {
-    const { releaseData, sortOrderScarcity } = this.state;
+  function toggleScarcity() {
     let order;
     if (sortOrderScarcity === 'asc') {
       order = 'desc';
@@ -162,97 +135,94 @@ export default class Filter extends React.Component {
       order = 'asc';
     }
     const sortedByScarcity = sortByRank(releaseData, 'scarcity', order);
-    this.setState({ releaseData: sortedByScarcity, sortOrderScarcity: order });
+    setReleaseData(sortedByScarcity);
+    setSortOrderScarcity(order);
   }
 
-  prevResults() {
-    if (this.page > 1) {
-      this.page -= 1;
-      this.getNewData();
+  function prevResults() {
+    if (currentPage > 1) {
+      currentPage -= 1;
+      getNewData();
     }
   }
 
-  nextResults() {
-    const { pagination } = this.state;
-    if (this.page < pagination.pages) {
-      this.page += 1;
-      this.getNewData();
+  function nextResults() {
+    if (currentPage < pagination.pages) {
+      currentPage += 1;
+      getNewData();
     }
   }
 
-  render() {
-    const {
-      releaseData,
-      pagination,
-      error,
-      invalidSearch,
-      sortOrderScarcity,
-      sortOrderDemand,
-    } = this.state;
+  // componentDidMount/componentDidUpdate
+  useEffect(() => {
+    getNewData();
+  }, [genre, format, country, title]);
 
-    return (
-      <>
-        {error === true ? (
-          <h2>No data. Bad connection</h2>
-        ) : (
-          <>
-            <FilterWrapper>
-              <h2>Filter</h2>
-              <FilterField>
-                <Label text="Genre" forVal={appConstants.GENRES_STR} />
-                <Select
-                  selectOptions={appConstants.GENRES}
-                  changeCB={this.changeGenre}
-                  id={appConstants.GENRES_STR}
+  return (
+    <>
+      {error === true ? (
+        <h2>No data. Bad connection</h2>
+      ) : (
+        <>
+          <FilterWrapper>
+            <h2>Filter</h2>
+            <FilterField>
+              <Label text="Genre" forVal={appConstants.GENRES_STR} />
+              <Select
+                selectOptions={appConstants.GENRES}
+                changeCB={changeGenre}
+                id={appConstants.GENRES_STR}
+              />
+            </FilterField>
+            <FilterField>
+              <Label text="Format" forVal={appConstants.FORMATS_STR} />
+              <Select
+                selectOptions={appConstants.FORMATS}
+                changeCB={changeFormat}
+                id={appConstants.FORMATS_STR}
+              />
+            </FilterField>
+            <FilterField>
+              <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
+              <Select
+                selectOptions={appConstants.COUNTRIES}
+                changeCB={changeCountry}
+                id={appConstants.COUNTRIES_STR}
+              />
+            </FilterField>
+          </FilterWrapper>
+          <FilterWrapper>
+            <h2>Search</h2>
+            <Label text="Title" forVal="titleSearch" />
+            <Search id="search" changeCB={titleSearch} />
+            {invalidSearch === true ? <p>Bad character</p> : null}
+          </FilterWrapper>
+          <ResultsWrapper>
+            {releaseData && releaseData.length > 0 ? (
+              <>
+                {loading === true ? <h2>Loading</h2> : null}
+                <Results
+                  releaseData={releaseData}
+                  toggleScarcityCB={toggleScarcity}
+                  scarcityOrder={sortOrderScarcity}
+                  toggleDemandCB={toggleDemand}
+                  demandOrder={sortOrderDemand}
                 />
-              </FilterField>
-              <FilterField>
-                <Label text="Format" forVal={appConstants.FORMATS_STR} />
-                <Select
-                  selectOptions={appConstants.FORMATS}
-                  changeCB={this.changeFormat}
-                  id={appConstants.FORMATS_STR}
+                <Pagination
+                  prevResults={prevResults}
+                  nextResults={nextResults}
+                  prevDisabled={currentPage === 1}
+                  nextDisabled={currentPage === pagination.pages}
                 />
-              </FilterField>
-              <FilterField>
-                <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
-                <Select
-                  selectOptions={appConstants.COUNTRIES}
-                  changeCB={this.changeCountry}
-                  id={appConstants.COUNTRIES_STR}
-                />
-              </FilterField>
-            </FilterWrapper>
-            <FilterWrapper>
-              <h2>Search</h2>
-              <Label text="Title" forVal="titleSearch" />
-              <Search id="search" changeCB={this.titleSearch} />
-              {invalidSearch === true ? <p>Bad character</p> : null}
-            </FilterWrapper>
-            <ResultsWrapper>
-              {releaseData && releaseData.length > 0 ? (
-                <>
-                  <Results
-                    releaseData={releaseData}
-                    toggleScarcityCB={this.toggleScarcity}
-                    scarcityOrder={sortOrderScarcity}
-                    toggleDemandCB={this.toggleDemand}
-                    demandOrder={sortOrderDemand}
-                  />
-                  <Pagination
-                    prevResults={this.prevResults}
-                    nextResults={this.nextResults}
-                    prevDisabled={this.page === 1}
-                    nextDisabled={this.page === pagination.pages}
-                  />
-                </>
-              ) : (
-                <h2>No results</h2>
-              )}
-            </ResultsWrapper>
-          </>
-        )}
-      </>
-    );
-  }
-}
+              </>
+            ) : (
+              <h2>No results</h2>
+            )}
+          </ResultsWrapper>
+        </>
+      )}
+    </>
+  );
+};
+
+export default useFilter;

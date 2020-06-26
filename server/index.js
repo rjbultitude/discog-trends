@@ -3,7 +3,7 @@
 // 3rd party dependencies
 const Discogs = require('disconnect').Client;
 const express = require('express');
-const Bundler = require('parcel-bundler');
+// const Bundler = require('parcel-bundler');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -63,14 +63,14 @@ app.post('/api/search', corsOptions, function(req, res) {
 });
 
 // Run app from root
-app.use(express.static('./'));
+app.use(express.static('./build/'));
 
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 // Configure Parcel middleware
 // to serve app in development mode
-const bundler = new Bundler('./app/index.html', options);
-app.use(bundler.middleware());
+// const bundler = new Bundler('./app/index.html', options);
+// app.use(bundler.middleware());
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);

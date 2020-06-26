@@ -1,4 +1,5 @@
 {
   "presets": ["@babel/preset-env"],
+  "extends": "@snowpack/app-scripts-react/babel.config.json",
   "plugins": ["@babel/plugin-transform-runtime"]
 }

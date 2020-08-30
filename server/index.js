@@ -16,24 +16,24 @@ const configureCSP = require('./csp.js');
 const configureCors = require('./cors.js');
 const getStaticData = require('./get-static-data.js');
 // Config
-const isProd = process.env.NODE_ENV === 'production';
-let options;
-if (isProd) {
-  options = {
-    production: true,
-    cache: false,
-    minify: true,
-    sourceMaps: false,
-    http: true,
-  };
-} else {
-  options = {
-    cache: true,
-    minify: false,
-    sourceMaps: true,
-    watch: true,
-  };
-}
+// const isProd = process.env.NODE_ENV === 'production';
+// let options;
+// if (isProd) {
+//   options = {
+//     production: true,
+//     cache: false,
+//     minify: true,
+//     sourceMaps: false,
+//     http: true,
+//   };
+// } else {
+//   options = {
+//     cache: true,
+//     minify: false,
+//     sourceMaps: true,
+//     watch: true,
+//   };
+// }
 
 // Security policy
 configureCSP(app);

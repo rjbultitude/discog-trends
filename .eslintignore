@@ -1,5 +1,6 @@
 # Dist
 dist/**/*.js
+build/
 
 # Webpack
 webpack.config.js
@@ -7,6 +8,7 @@ webpack/**/*.js
 
 # Unit tests
 app/**/*.spec.js
+src/**/*.spec.js
 
 # Assets
 img/

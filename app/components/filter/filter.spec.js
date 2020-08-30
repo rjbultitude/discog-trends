@@ -15,7 +15,7 @@ describe('Filter setError', () => {
     filterWrapper = Enzyme.shallow(<Filter />);
   });
 
-  it('should decrement current page', () => {
+  it.skip('should decrement current page', () => {
     filterWrapper.dive().instance().prevResults();
     expect(setPagination).toHaveBeenCalledWith({ pages: -1 });
   });

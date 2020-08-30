@@ -1,5 +1,9 @@
 # Dist
 dist/**/*.js
+build/**/*.js
+
+# Node dependencies
+node_modules
 
 # Webpack
 webpack.config.js

@@ -44,6 +44,24 @@ const FilterField = styled.div`
   }
 `;
 
+export function buildQuery(genreVal, formatVal, countryVal, titleVal) {
+  let query = '';
+  const BLANK = '--';
+  if (genreVal && genreVal !== BLANK) {
+    query += `genre=${genreVal},`;
+  }
+  if (formatVal && formatVal !== BLANK) {
+    query += `format=${formatVal},`;
+  }
+  if (countryVal && countryVal !== BLANK) {
+    query += `country=${countryVal},`;
+  }
+  if (titleVal) {
+    query += `title=${titleVal}`;
+  }
+  return query;
+}
+
 const useFilter = () => {
   const [genre, setGenre] = useState('');
   const [format, setFormat] = useState('');
@@ -58,25 +76,8 @@ const useFilter = () => {
   const [invalidSearch, setInvalidSearch] = useState(null);
   let currentPage = 1;
 
-  function buildQuery() {
-    let query = '';
-    if (genre && genre !== '--') {
-      query += `genre=${genre},`;
-    }
-    if (format && format !== '--') {
-      query += `format=${format},`;
-    }
-    if (country && country !== '--') {
-      query += `country=${country},`;
-    }
-    if (title) {
-      query += `title=${title}`;
-    }
-    return query;
-  }
-
   function getNewData() {
-    const query = buildQuery();
+    const query = buildQuery(genre, format, country, title);
     setLoading(true);
     getDiscogsData(
       (data) => {

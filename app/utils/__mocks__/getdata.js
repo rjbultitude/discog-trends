@@ -1,9 +1,9 @@
-import mockData from './mock-data';
+import mockData from './mock-data.json';
 
 export default function getData() {
   return Promise.resolve({
     json: () => {
-      Promise.resolve(mockData);
+      Promise.resolve(JSON.parse(mockData));
     },
   });
 }

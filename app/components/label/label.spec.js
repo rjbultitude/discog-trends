@@ -7,7 +7,7 @@ configure({ adapter: new Adapter() });
 
 describe('Label', () => {
   it('should render when valid forVal and text props are received', () => {
-    const component = shallow(<Label forVal="Test" text="Test" />);
-    expect(component).toMatchSnapshot();
+    const labelWrapper = shallow(<Label forVal="Test" text="Test" />);
+    expect(labelWrapper).toMatchSnapshot();
   });
 });

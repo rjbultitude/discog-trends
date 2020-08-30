@@ -1,0 +1,624 @@
+{
+  "pagination": {
+    "page": 1,
+    "pages": 500,
+    "per_page": 20,
+    "items": 14746243,
+    "urls": {
+      "last": "https://api.discogs.com/database/search?page=500&sort=year&sort_order=asc&per_page=20&q=",
+      "next": "https://api.discogs.com/database/search?page=2&sort=year&sort_order=asc&per_page=20&q="
+    }
+  },
+  "results": [
+    {
+      "country": "France",
+      "year": "1860",
+      "format": ["All Media"],
+      "label": [
+        "Not On Label (Édouard-Léon Scott De Martinville Self-released)"
+      ],
+      "type": "release",
+      "genre": ["Children's"],
+      "style": ["Nursery Rhymes"],
+      "id": 1289378,
+      "barcode": [],
+      "master_id": 200619,
+      "master_url": "https://api.discogs.com/masters/200619",
+      "uri": "/%C3%89douard-L%C3%A9on-Scott-De-Martinville-Au-Clair-De-La-Lune/release/1289378",
+      "catno": "N°5",
+      "title": "Édouard-Léon Scott De Martinville - Au Clair De La Lune",
+      "thumb": "https://img.discogs.com/fRZJD6wLAdFmaOp1EDOEMml1u2Q=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1289378-1463412891-4397.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/nkM9i_WF9SS_OtgjNDXTaTMMWq8=/fit-in/600x205/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1289378-1463412891-4397.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/1289378",
+      "community": {
+        "want": 221,
+        "have": 13
+      },
+      "format_quantity": 0,
+      "formats": [
+        {
+          "name": "All Media",
+          "qty": "1",
+          "text": "Phonautogram"
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "year": "1860",
+      "format": ["All Media"],
+      "label": [
+        "Not On Label (Édouard-Léon Scott De Martinville Self-released)"
+      ],
+      "type": "master",
+      "genre": ["Children's"],
+      "style": ["Nursery Rhymes"],
+      "id": 200619,
+      "barcode": [],
+      "master_id": 200619,
+      "master_url": "https://api.discogs.com/masters/200619",
+      "uri": "/%C3%89douard-L%C3%A9on-Scott-De-Martinville-Au-Clair-De-La-Lune/master/200619",
+      "catno": "N°5",
+      "title": "Édouard-Léon Scott De Martinville - Au Clair De La Lune",
+      "thumb": "https://img.discogs.com/fRZJD6wLAdFmaOp1EDOEMml1u2Q=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1289378-1463412891-4397.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/nkM9i_WF9SS_OtgjNDXTaTMMWq8=/fit-in/600x205/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1289378-1463412891-4397.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/masters/200619",
+      "community": {
+        "want": 411,
+        "have": 147
+      }
+    },
+    {
+      "country": "US",
+      "year": "1878",
+      "format": ["Cylinder"],
+      "label": ["Not On Label"],
+      "type": "release",
+      "genre": ["Non-Music"],
+      "style": ["Experimental", "Technical", "Speech"],
+      "id": 5695167,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Frank-Lambert-Experimental-Talking-Clock/release/5695167",
+      "catno": "none",
+      "title": "Frank Lambert (2) - Experimental Talking Clock",
+      "thumb": "https://img.discogs.com/HldQt7WURZtDHz3Mjn2cofbPWUg=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5695167-1400159035-3587.gif.jpg",
+      "cover_image": "https://img.discogs.com/CcvlErbupAqJhqv_sb92fOFnPKQ=/fit-in/204x155/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5695167-1400159035-3587.gif.jpg",
+      "resource_url": "https://api.discogs.com/releases/5695167",
+      "community": {
+        "want": 89,
+        "have": 5
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Lead"
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1878",
+      "format": ["Cylinder", "Test Pressing"],
+      "label": ["Not On Label (Thomas Edison Self-Released)"],
+      "type": "release",
+      "genre": ["Non-Music"],
+      "style": ["Spoken Word"],
+      "id": 8532114,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Thomas-Alva-Edison-Mary-Had-A-Little-Lamb-/release/8532114",
+      "catno": "none",
+      "title": "Thomas Alva Edison - Mary Had A Little Lamb ",
+      "thumb": "https://img.discogs.com/Kjk5wlCCw4Gb3hdvv6kKolyOW3I=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8532114-1463497666-6880.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/dfrQwcYTwlNDwoB6KBpGapevjvw=/fit-in/600x318/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8532114-1463497666-6880.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/8532114",
+      "community": {
+        "want": 65,
+        "have": 11
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Tinfoil",
+          "descriptions": ["Test Pressing"]
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1888",
+      "format": ["Vinyl", "5\""],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "release",
+      "genre": ["Children's"],
+      "style": ["Nursery Rhymes"],
+      "id": 15739753,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Emile-Berliner-Rear-Side-Labels-Mary-Had-A-Little-Lamb-And-Humpty-Dumpty-Nursery-Rymes/release/15739753",
+      "catno": "30",
+      "title": "Emile Berliner - Rear Side (Labels) Mary Had A Little Lamb And Humpty Dumpty Nursery Rymes",
+      "thumb": "https://img.discogs.com/a7pUP1DnKZ9Vg9FD7deYozTXiy0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-15739753-1596904369-7660.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/G4xS3Ugw5ZufEVuhFf3ZRXJr5bM=/fit-in/600x613/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-15739753-1596904369-7660.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/15739753",
+      "community": {
+        "want": 2,
+        "have": 0
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Vinyl",
+          "qty": "1",
+          "descriptions": ["5\""]
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1889",
+      "format": ["Cylinder", "2 Minute"],
+      "label": ["Edison Records"],
+      "type": "release",
+      "genre": ["Stage & Screen"],
+      "style": [],
+      "id": 2583289,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Isslers-Orchestra-Electric-Light-Quadrille/release/2583289",
+      "catno": "none",
+      "title": "Issler's Orchestra - Electric Light Quadrille",
+      "thumb": "",
+      "cover_image": "https://img.discogs.com/8c879adae0207cdaf833f1d073837729040f84c7/images/spacer.gif",
+      "resource_url": "https://api.discogs.com/releases/2583289",
+      "community": {
+        "want": 47,
+        "have": 6
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "descriptions": ["2 Minute"]
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "year": "1889",
+      "format": ["Shellac", "5\"", "Single Sided"],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "release",
+      "genre": ["Non-Music"],
+      "style": ["Speech"],
+      "id": 4275659,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Emile-Berliner-A-Little-Ship-Was-On-The-Sea/release/4275659",
+      "catno": "16",
+      "title": "Emile Berliner - A Little Ship Was On The Sea",
+      "thumb": "https://img.discogs.com/sGBZjGsqhgt0ZWTTw66_Om5Sx8o=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4275659-1360433021-4697.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/xVyP_uoV2kRR7ePAUbgtsKHmv58=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4275659-1360433021-4697.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/4275659",
+      "community": {
+        "want": 121,
+        "have": 3
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Shellac",
+          "qty": "1",
+          "descriptions": ["5\"", "Single Sided"]
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1893",
+      "format": ["Cylinder", "2 Minute"],
+      "label": ["North American Phonograph Company"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": [],
+      "id": 15485981,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Ada-Jones-Sweet-Marie/release/15485981",
+      "catno": "1289",
+      "title": "Ada Jones - Sweet Marie",
+      "thumb": "https://img.discogs.com/gyZoDmO37qCTcWIlT6fhPp8hKes=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-15485981-1592324079-9102.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/dOwdxG1uuAyxa-chPr7wV-8GgQs=/fit-in/600x450/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-15485981-1592324079-9102.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/15485981",
+      "community": {
+        "want": 1,
+        "have": 1
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "descriptions": ["2 Minute"]
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1894",
+      "format": ["Shellac", "7\"", "78 RPM", "Single Sided"],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": ["Light Music"],
+      "id": 9346100,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Unknown-Artist-La-Paloma/release/9346100",
+      "catno": "243",
+      "title": "Unknown Artist - La Paloma",
+      "thumb": "",
+      "cover_image": "https://img.discogs.com/8c879adae0207cdaf833f1d073837729040f84c7/images/spacer.gif",
+      "resource_url": "https://api.discogs.com/releases/9346100",
+      "community": {
+        "want": 26,
+        "have": 1
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Shellac",
+          "qty": "1",
+          "descriptions": ["7\"", "78 RPM", "Single Sided"]
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1895",
+      "format": ["Shellac", "7\"", "Single Sided"],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": ["Vocal"],
+      "id": 15484038,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Geo-J-Gaskin-When-You-Know-The-Girl-You-Love-Loves-You/release/15484038",
+      "catno": "156",
+      "title": "Geo J Gaskin* - When You Know The Girl You Love Loves You",
+      "thumb": "https://img.discogs.com/ufrqMtDl6XRe-LAIl8oPisIYfxE=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-15484038-1592296114-8701.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/aQkG9R5z2MaIckafkjjSYceso44=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-15484038-1592296114-8701.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/15484038",
+      "community": {
+        "want": 4,
+        "have": 1
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Shellac",
+          "qty": "1",
+          "descriptions": ["7\"", "Single Sided"]
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "year": "1895",
+      "format": ["Cylinder"],
+      "label": ["Lioret"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": ["Chanson"],
+      "id": 8815358,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Unknown-Artist-Le-Chat-Noir/release/8815358",
+      "catno": "1005",
+      "title": "Unknown Artist - Le Chat Noir",
+      "thumb": "https://img.discogs.com/p87LMoC6Lm4wZfJ6MLuJ6fVmgPw=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8815358-1469366462-3187.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/hog5fvdwWEvvz-f47EmQUJyO-_Y=/fit-in/600x608/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8815358-1469366462-3187.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/8815358",
+      "community": {
+        "want": 6,
+        "have": 2
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Lioret"
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "year": "1895",
+      "format": ["Cylinder"],
+      "label": ["Lioret"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": ["Chanson"],
+      "id": 8815983,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Unknown-Artist-Les-Matelots/release/8815983",
+      "catno": "1008",
+      "title": "Unknown Artist - Les Matelots",
+      "thumb": "https://img.discogs.com/mIcc1oCxIZEKLIM8SDfxHwN5OLs=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8815983-1469375856-4061.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/oDBxbp6qRU9vnBi1CmFDIYOL--E=/fit-in/600x585/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8815983-1469375856-4061.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/8815983",
+      "community": {
+        "want": 3,
+        "have": 2
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Lioret"
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "year": "1895",
+      "format": ["Cylinder"],
+      "label": ["Lioret"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": ["Chanson"],
+      "id": 8816419,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Unknown-Artist-Ousquest-St-Nazaire/release/8816419",
+      "catno": "1015",
+      "title": "Unknown Artist - Ousqu'est St Nazaire",
+      "thumb": "https://img.discogs.com/vOOwds4X1a_g8BCQMmhRwAbSNiI=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8816419-1469381711-5632.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/fU7h7ob5NKqZTNDBvfhcq5AWIdE=/fit-in/600x585/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8816419-1469381711-5632.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/8816419",
+      "community": {
+        "want": 5,
+        "have": 2
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Lioret"
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "year": "1895",
+      "format": ["Cylinder"],
+      "label": ["Lioret"],
+      "type": "release",
+      "genre": ["Brass & Military"],
+      "style": [],
+      "id": 8816500,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Unknown-Artist-Etoile-DAngleterre-Piston/release/8816500",
+      "catno": "4215",
+      "title": "Unknown Artist - Etoile D'Angleterre - Piston",
+      "thumb": "https://img.discogs.com/uhwQlULPfQhbD4dYA4TvzhYG5b4=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8816500-1469382717-1686.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/pV-S6vMEyDGKVFf99X8AzlAqJNU=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8816500-1469382717-1686.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/8816500",
+      "community": {
+        "want": 3,
+        "have": 2
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Lioret"
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1895",
+      "format": ["Shellac", "7\"", "Single Sided"],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": ["Vocal"],
+      "id": 4273683,
+      "barcode": [],
+      "master_id": 1705613,
+      "master_url": "https://api.discogs.com/masters/1705613",
+      "uri": "/Billy-Golden-Rabbit-Hash/release/4273683",
+      "catno": "635",
+      "title": "Billy Golden - Rabbit Hash",
+      "thumb": "https://img.discogs.com/8kMWLxbfvqLLrs4sS32Q2-QDmU8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4273683-1403003918-8738.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/coMQ_OxjixQ54ozcxxbeICVXm9Y=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4273683-1403003918-8738.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/4273683",
+      "community": {
+        "want": 25,
+        "have": 4
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Shellac",
+          "qty": "1",
+          "text": "70 RPM",
+          "descriptions": ["7\"", "Single Sided"]
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1895",
+      "format": ["Shellac", "7\"", "Single Sided"],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "release",
+      "genre": ["Jazz"],
+      "style": ["Ragtime"],
+      "id": 3647954,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Geo-J-Gaskin-When-Summer-Comes-Again/release/3647954",
+      "catno": "163 Y",
+      "title": "Geo J Gaskin* - When Summer Comes Again",
+      "thumb": "https://img.discogs.com/x2CnJYK_vyRZbu6m4btzkecqKjg=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3647954-1338776145-1384.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/h8sevz8I9JPGMLtt4Y1tEV63r5Q=/fit-in/332x251/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3647954-1338776145-1384.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/3647954",
+      "community": {
+        "want": 31,
+        "have": 0
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Shellac",
+          "qty": "1",
+          "descriptions": ["7\"", "Single Sided"]
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1895",
+      "format": ["Shellac", "7\"", "Single Sided"],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "master",
+      "genre": ["Pop"],
+      "style": ["Vocal"],
+      "id": 1705613,
+      "barcode": [],
+      "master_id": 1705613,
+      "master_url": "https://api.discogs.com/masters/1705613",
+      "uri": "/Billy-Golden-Rabbit-Hash/master/1705613",
+      "catno": "635",
+      "title": "Billy Golden - Rabbit Hash",
+      "thumb": "https://img.discogs.com/8kMWLxbfvqLLrs4sS32Q2-QDmU8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4273683-1403003918-8738.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/coMQ_OxjixQ54ozcxxbeICVXm9Y=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4273683-1403003918-8738.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/masters/1705613",
+      "community": {
+        "want": 28,
+        "have": 4
+      }
+    },
+    {
+      "country": "France",
+      "year": "1895",
+      "format": ["Cylinder"],
+      "label": ["Lioret"],
+      "type": "release",
+      "genre": ["Brass & Military"],
+      "style": ["Military"],
+      "id": 8817330,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Unknown-Artist-Fanfares-Trompette/release/8817330",
+      "catno": "3901",
+      "title": "Unknown Artist - Fanfares - Trompette",
+      "thumb": "https://img.discogs.com/GppN91s25_rueKfIgp3j4y1Mk8Y=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8817330-1469394873-5333.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/AWUp9drWT2e_jKmoNufMFaiYf44=/fit-in/600x601/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8817330-1469394873-5333.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/8817330",
+      "community": {
+        "want": 6,
+        "have": 2
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Lioret"
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "year": "1895",
+      "format": ["Cylinder"],
+      "label": ["Lioret"],
+      "type": "release",
+      "genre": ["Pop"],
+      "style": ["Chanson"],
+      "id": 8816195,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Unknown-Artist-Tararaboom/release/8816195",
+      "catno": "1007",
+      "title": "Unknown Artist - Tararaboom",
+      "thumb": "https://img.discogs.com/slJN7NxSqlXde3jfiOil-OfE7P0=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-8816195-1469378521-8085.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/pj3andKM99dAWP--KmMicKH8fzw=/fit-in/600x585/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8816195-1469378521-8085.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/8816195",
+      "community": {
+        "want": 4,
+        "have": 2
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Cylinder",
+          "qty": "1",
+          "text": "Lioret"
+        }
+      ]
+    },
+    {
+      "country": "US",
+      "year": "1896",
+      "format": ["Shellac", "7\"", "Single Sided"],
+      "label": ["E. Berliner's Gramophone"],
+      "type": "release",
+      "genre": ["Jazz"],
+      "style": ["Ragtime"],
+      "id": 3647951,
+      "barcode": [],
+      "master_id": 0,
+      "master_url": null,
+      "uri": "/Geo-J-Gaskin-Jane/release/3647951",
+      "catno": "1615",
+      "title": "Geo J Gaskin* - Jane",
+      "thumb": "https://img.discogs.com/vpJy4aq3C-u4ggyYHu0STWQtF9Y=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3647951-1338775889-8386.jpeg.jpg",
+      "cover_image": "https://img.discogs.com/NZml4CLN6hHxAJaT6vIPwoQsHw8=/fit-in/492x478/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3647951-1338775889-8386.jpeg.jpg",
+      "resource_url": "https://api.discogs.com/releases/3647951",
+      "community": {
+        "want": 17,
+        "have": 1
+      },
+      "format_quantity": 1,
+      "formats": [
+        {
+          "name": "Shellac",
+          "qty": "1",
+          "descriptions": ["7\"", "Single Sided"]
+        }
+      ]
+    }
+  ]
+}

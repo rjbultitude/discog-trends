@@ -9,11 +9,11 @@ const Sort = styled.div`
   display: inline-block;
 `;
 
-export default props => {
+export default (props) => {
   const { name, toggleCB, currentOrder } = props;
   return (
     <Sort>
-      <button onClick={e => toggleCB(e)} type="button">
+      <button onClick={(e) => toggleCB(e)} type="button">
         Toggle
         {name}
         {currentOrder}

@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 
-module.exports = (function() {
+module.exports = (function getCreds() {
   // Make env available
   dotenv.config();
 

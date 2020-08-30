@@ -82,7 +82,7 @@ function getKeyFromRelease(release) {
 }
 
 function createCells(data) {
-  return data.map(item => {
+  return data.map((item) => {
     const uKey = getKeyFromRelease(item);
     return (
       <TableRow key={`li-${uKey}`}>
@@ -129,7 +129,7 @@ function createHeaders(props) {
   const keys = Object.keys(releaseData[0]);
   return (
     <tr>
-      {keys.map(key => {
+      {keys.map((key) => {
         if (key !== 'url') {
           return React.createElement(
             'th',
@@ -153,7 +153,7 @@ function createTable(props) {
   );
 }
 
-export default props => {
+export default (props) => {
   const { releaseData } = props;
   return (
     <ResultsWrapper>

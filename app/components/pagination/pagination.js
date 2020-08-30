@@ -20,7 +20,7 @@ const Button = styled.button`
   font-size: 1rem;
 `;
 
-export default props => {
+export default (props) => {
   const { prevResults, nextResults, prevDisabled, nextDisabled } = props;
   return (
     <Pagination>

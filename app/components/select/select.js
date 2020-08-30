@@ -14,16 +14,16 @@ const Select = styled.select`
 `;
 
 function createOptions(optionsArr) {
-  return optionsArr.map(item => {
+  return optionsArr.map((item) => {
     const itemName = item.replace(/\s/g, '');
     return React.createElement('option', { key: `opt-${itemName}` }, item);
   });
 }
 
-export default props => {
+export default (props) => {
   const { id, changeCB, selectOptions } = props;
   return (
-    <Select onChange={e => changeCB(e)} id={id}>
+    <Select onChange={(e) => changeCB(e)} id={id}>
       {createOptions(selectOptions)}
     </Select>
   );

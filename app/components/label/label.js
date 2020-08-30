@@ -17,7 +17,7 @@ const Label = styled.label.attrs({
   width: 70px;
 `;
 
-export default props => {
+export default (props) => {
   const { forVal, text } = props;
   return <Label htmlFor={forVal}>{text}</Label>;
 };

@@ -37,9 +37,11 @@ function keyPress(e, changeCB) {
   }
 }
 
-export default props => {
+export default (props) => {
   const { id, changeCB } = props;
-  return <TextInput onKeyUp={e => keyPress(e, changeCB)} id={id} type="text" />;
+  return (
+    <TextInput onKeyUp={(e) => keyPress(e, changeCB)} id={id} type="text" />
+  );
 };
 
 TextInput.propTypes = {

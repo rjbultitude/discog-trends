@@ -70,7 +70,7 @@ export function getScarcity(release) {
 // getDemand is a dependency
 export function processData(results) {
   if (results.length > 0) {
-    const resultsFilteredTitles = results.map(release => {
+    const resultsFilteredTitles = results.map((release) => {
       return {
         title: release.title,
         url: `${DISCOGS_URL_BASE}${release.uri}`,

@@ -45,7 +45,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Search requests
-app.post('/api/search', corsOptions, function(req, res) {
+app.post('/api/search', corsOptions, function postCB(req, res) {
   db.search(req.body.searchTerm, req.body.params, (err, data) => {
     if (err !== null) {
       console.warn('error running search', err);

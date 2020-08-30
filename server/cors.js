@@ -1,6 +1,6 @@
 const cors = require('cors');
 
-module.exports = function(port) {
+module.exports = function configureCORS(port) {
   // Setup CORS
   const whitelist = [`http://localhost:${port}`, 'http://discogstrends.com'];
   return cors({

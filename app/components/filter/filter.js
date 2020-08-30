@@ -79,7 +79,7 @@ const useFilter = () => {
     const query = buildQuery();
     setLoading(true);
     getDiscogsData(
-      data => {
+      (data) => {
         if (data === 'error') {
           setError(true);
           return;
@@ -95,15 +95,15 @@ const useFilter = () => {
     );
   }
 
-  const changeGenre = e => {
+  const changeGenre = (e) => {
     setGenre(e.target.value);
   };
 
-  const changeFormat = e => {
+  const changeFormat = (e) => {
     setFormat(e.target.value);
   };
 
-  const changeCountry = e => {
+  const changeCountry = (e) => {
     setCountry(e.target.value);
   };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Label from './Label';
+import Label from './label';
 
 configure({ adapter: new Adapter() });
 

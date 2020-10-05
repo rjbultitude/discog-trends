@@ -74,7 +74,7 @@ const useFilter = () => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [invalidSearch, setInvalidSearch] = useState(null);
-  let currentPage = 1;
+  const [currentPage, setCurrentPage] = useState(1);
 
   function getNewData() {
     const query = buildQuery(genre, format, country, title);
@@ -142,22 +142,20 @@ const useFilter = () => {
 
   function prevResults() {
     if (currentPage > 1) {
-      currentPage -= 1;
-      getNewData();
+      setCurrentPage(() => currentPage - 1);
     }
   }
 
   function nextResults() {
     if (currentPage < pagination.pages) {
-      currentPage += 1;
-      getNewData();
+      setCurrentPage(() => currentPage + 1);
     }
   }
 
   // componentDidMount/componentDidUpdate
   useEffect(() => {
     getNewData();
-  }, [genre, format, country, title]);
+  }, [currentPage, genre, format, country, title]);
 
   return (
     <>

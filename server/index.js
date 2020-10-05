@@ -69,7 +69,7 @@ console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 // Configure Parcel middleware
 // to serve app in development mode
-const bundler = new Bundler('./app/index.html', options);
+const bundler = new Bundler('./src/index.html', options);
 app.use(bundler.middleware());
 
 app.listen(port, () => {

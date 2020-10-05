@@ -14,7 +14,29 @@ import Pagination from '../pagination/pagination';
 import Search from '../search/search';
 import * as appConstants from '../../utils/constants';
 
-const FilterWrapper = styled.div`
+const BP_MEDIUM = '720px';
+
+const FilterResultsWrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: ${BP_MEDIUM}) {
+    flex-direction: row;
+  }
+`;
+
+const FilterWrapper = styled.section`
+  display: flex;
+  flex-basis: 100%;
+
+  @media all and (min-width: ${BP_MEDIUM}) {
+    flex-basis: 30%;
+    flex-direction: column;
+    margin-right: ${padding};
+  }
+`;
+
+const FilterFieldset = styled.div`
   align-items: flex-start;
   border: 1px solid gray;
   box-sizing: border-box;
@@ -25,13 +47,24 @@ const FilterWrapper = styled.div`
   margin-top: ${padding};
   padding: ${padding};
 
+  & + div {
+    border-left: 0 none;
+  }
+
   h2 {
     flex-basis: 100%;
     margin: 0;
   }
 `;
-const ResultsWrapper = styled.div`
+const ResultsWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
   margin-top: ${padding};
+
+  @media all and (min-width: ${BP_MEDIUM}) {
+    flex-basis: 70%;
+  }
 `;
 const FilterField = styled.div`
   box-sizing: border-box;
@@ -162,39 +195,41 @@ const useFilter = () => {
       {error === true ? (
         <h2>No data. Bad connection</h2>
       ) : (
-        <>
+        <FilterResultsWrapper>
           <FilterWrapper>
-            <h2>Filter</h2>
-            <FilterField>
-              <Label text="Genre" forVal={appConstants.GENRES_STR} />
-              <Select
-                selectOptions={appConstants.GENRES}
-                changeCB={changeGenre}
-                id={appConstants.GENRES_STR}
-              />
-            </FilterField>
-            <FilterField>
-              <Label text="Format" forVal={appConstants.FORMATS_STR} />
-              <Select
-                selectOptions={appConstants.FORMATS}
-                changeCB={changeFormat}
-                id={appConstants.FORMATS_STR}
-              />
-            </FilterField>
-            <FilterField>
-              <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
-              <Select
-                selectOptions={appConstants.COUNTRIES}
-                changeCB={changeCountry}
-                id={appConstants.COUNTRIES_STR}
-              />
-            </FilterField>
-          </FilterWrapper>
-          <FilterWrapper>
-            <h2>Search</h2>
-            <Label text="Title" forVal="titleSearch" />
-            <Search id="search" changeCB={titleSearch} />
-            {invalidSearch === true ? <p>Bad character</p> : null}
+            <FilterFieldset>
+              <h2>Filter</h2>
+              <FilterField>
+                <Label text="Genre" forVal={appConstants.GENRES_STR} />
+                <Select
+                  selectOptions={appConstants.GENRES}
+                  changeCB={changeGenre}
+                  id={appConstants.GENRES_STR}
+                />
+              </FilterField>
+              <FilterField>
+                <Label text="Format" forVal={appConstants.FORMATS_STR} />
+                <Select
+                  selectOptions={appConstants.FORMATS}
+                  changeCB={changeFormat}
+                  id={appConstants.FORMATS_STR}
+                />
+              </FilterField>
+              <FilterField>
+                <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
+                <Select
+                  selectOptions={appConstants.COUNTRIES}
+                  changeCB={changeCountry}
+                  id={appConstants.COUNTRIES_STR}
+                />
+              </FilterField>
+            </FilterFieldset>
+            <FilterFieldset>
+              <h2>Search</h2>
+              <Label text="Title" forVal="titleSearch" />
+              <Search id="search" changeCB={titleSearch} />
+              {invalidSearch === true ? <p>Bad character</p> : null}
+            </FilterFieldset>
           </FilterWrapper>
           <ResultsWrapper>
             {releaseData && releaseData.length > 0 ? (
@@ -218,7 +253,7 @@ const useFilter = () => {
               <h2>No results</h2>
             )}
           </ResultsWrapper>
-        </>
+        </FilterResultsWrapper>
       )}
     </>
   );

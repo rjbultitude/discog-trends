@@ -18,14 +18,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-family: 'Saira Extra Condensed', sans-serif;
-    // text-transform: uppercase;
     font-weight: 200;
     font-size: 2.2rem;
+    margin: 0;
+  }
+
+  h1, h2 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 200;
   }
 
   h2 {
-    font-weight: 200;
+    font-size: 2rem;
+    line-height: 2rem;
   }
 
   select,

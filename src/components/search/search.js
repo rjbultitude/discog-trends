@@ -8,8 +8,10 @@ import { colours } from '../../utils/theme';
 // Styles
 const TextInput = styled.input`
   border: 1px solid grey;
-  font-size: 1rem;
+  box-sizing: border-box;
   color: ${colours.deepPurple};
+  font-size: 1rem;
+  width: 100%;
 `;
 
 let numStrokes = 0;

@@ -7,10 +7,11 @@ import { colours } from '../../utils/theme';
 
 // Styles
 const Select = styled.select`
+  color: ${colours.deepPurple};
   display: inline-block;
   font-size: 1rem;
   text-align: center;
-  color: ${colours.deepPurple};
+  width: 100%;
 `;
 
 function createOptions(optionsArr) {

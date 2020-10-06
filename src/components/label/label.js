@@ -12,7 +12,7 @@ const Label = styled.label.attrs({
   color: ${colours.deepPurple};
   display: inline-block;
   font-size: 1rem;
-  margin: 4px auto;
+  margin: 4px 0;
   text-align: left;
   width: 70px;
 `;

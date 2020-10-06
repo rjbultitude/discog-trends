@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 // Styles
 import styled from 'styled-components';
 import getDiscogsData from '../../utils/getdata';
-import Results from './results';
+import Results from '../results/results';
 import { processData, sortByRank } from '../../utils/filter-funcs';
-import { padding } from '../../utils/theme';
+import { breakPoints, colours, padding } from '../../utils/theme';
 // Components
 import Label from '../label/label';
 import Select from '../select/select';
@@ -14,22 +14,21 @@ import Pagination from '../pagination/pagination';
 import Search from '../search/search';
 import * as appConstants from '../../utils/constants';
 
-const BP_MEDIUM = '720px';
-
 const FilterResultsWrapper = styled.main`
   display: flex;
   flex-direction: column;
 
-  @media all and (min-width: ${BP_MEDIUM}) {
+  @media all and (min-width: ${breakPoints.medium}) {
     flex-direction: row;
   }
 `;
 
-const FilterWrapper = styled.section`
+const FilterForm = styled.section`
   display: flex;
   flex-basis: 100%;
+  margin-bottom: ${padding};
 
-  @media all and (min-width: ${BP_MEDIUM}) {
+  @media all and (min-width: ${breakPoints.medium}) {
     flex-basis: 30%;
     flex-direction: column;
     margin-right: ${padding};
@@ -38,13 +37,13 @@ const FilterWrapper = styled.section`
 
 const FilterFieldset = styled.div`
   align-items: flex-start;
-  border: 1px solid gray;
+  background-color: ${colours.lightGrey};
+  border: 1px solid ${colours.darkGrey};
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: ${padding};
   padding: ${padding};
 
   & + div {
@@ -56,9 +55,10 @@ const FilterFieldset = styled.div`
     margin: 0;
   }
 
-  @media all and (min-width: ${BP_MEDIUM}) {
+  @media all and (min-width: ${breakPoints.medium}) {
     & + div {
       border-left: 1px solid gray;
+      border-top: 0 none;
     }
   }
 `;
@@ -66,21 +66,15 @@ const ResultsWrapper = styled.section`
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  margin-top: ${padding};
 
-  @media all and (min-width: ${BP_MEDIUM}) {
+  @media all and (min-width: ${breakPoints.medium}) {
     flex-basis: 70%;
   }
 `;
 const FilterField = styled.div`
   box-sizing: border-box;
-  flex-basis: 30%;
-  padding: ${padding};
-  margin: 0 auto;
-
-  select {
-    min-width: 200px;
-  }
+  padding: ${padding} 0 0;
+  margin: 0;
 `;
 
 export function buildQuery({ genre, format, country, title, artist }) {
@@ -215,7 +209,7 @@ const useFilter = () => {
         <h2>No data. Bad connection</h2>
       ) : (
         <FilterResultsWrapper>
-          <FilterWrapper>
+          <FilterForm>
             <FilterFieldset>
               <h2>Filter</h2>
               <FilterField>
@@ -245,13 +239,17 @@ const useFilter = () => {
             </FilterFieldset>
             <FilterFieldset>
               <h2>Search</h2>
-              <Label text="Artist" forVal="artistSearch" />
-              <Search id="artistsSearch" changeCB={artistSearch} />
-              <Label text="Title" forVal="titleSearch" />
-              <Search id="titleSearch" changeCB={titleSearch} />
-              {invalidSearch === true ? <p>Bad character</p> : null}
+              <FilterField>
+                <Label text="Artist" forVal="artistSearch" />
+                <Search id="artistsSearch" changeCB={artistSearch} />
+              </FilterField>
+              <FilterField>
+                <Label text="Title" forVal="titleSearch" />
+                <Search id="titleSearch" changeCB={titleSearch} />
+                {invalidSearch === true ? <p>Bad character</p> : null}
+              </FilterField>
             </FilterFieldset>
-          </FilterWrapper>
+          </FilterForm>
           <ResultsWrapper>
             {releaseData && releaseData.length > 0 ? (
               <>

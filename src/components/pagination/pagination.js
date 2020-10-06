@@ -20,7 +20,14 @@ const Button = styled.button`
   font-size: 1rem;
 `;
 
-export default ({ prevResults, nextResults, prevDisabled, nextDisabled }) => {
+export default ({
+  prevResults,
+  nextResults,
+  prevDisabled,
+  nextDisabled,
+  currentPage,
+  numPages,
+}) => {
   return (
     <Pagination>
       <Button
@@ -33,6 +40,12 @@ export default ({ prevResults, nextResults, prevDisabled, nextDisabled }) => {
       >
         Previous
       </Button>
+      <span>
+        {currentPage}
+        of&nbsp;
+        {numPages}
+        &nbsp;pages
+      </span>
       <Button
         onClick={() => {
           nextResults();

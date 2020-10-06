@@ -40,6 +40,9 @@ const App = () => {
     <>
       <GlobalStyle />
       <h1>Discogs Trends</h1>
+      <p>
+        What&lsquo;s hot and what&lsquo;s not in the physical music marketplace
+      </p>
       <Filter />
     </>
   );

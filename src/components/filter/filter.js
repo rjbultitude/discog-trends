@@ -55,6 +55,12 @@ const FilterFieldset = styled.div`
     flex-basis: 100%;
     margin: 0;
   }
+
+  @media all and (min-width: ${BP_MEDIUM}) {
+    & + div {
+      border-left: 1px solid gray;
+    }
+  }
 `;
 const ResultsWrapper = styled.section`
   display: flex;
@@ -77,20 +83,24 @@ const FilterField = styled.div`
   }
 `;
 
-export function buildQuery(genreVal, formatVal, countryVal, titleVal) {
+export function buildQuery({ genre, format, country, title, artist }) {
   let query = '';
   const BLANK = '--';
-  if (genreVal && genreVal !== BLANK) {
-    query += `genre=${genreVal},`;
+  // TODO refactor
+  if (genre && genre !== BLANK) {
+    query += `genre=${genre},`;
   }
-  if (formatVal && formatVal !== BLANK) {
-    query += `format=${formatVal},`;
+  if (format && format !== BLANK) {
+    query += `format=${format},`;
   }
-  if (countryVal && countryVal !== BLANK) {
-    query += `country=${countryVal},`;
+  if (country && country !== BLANK) {
+    query += `country=${country},`;
   }
-  if (titleVal) {
-    query += `title=${titleVal}`;
+  if (title) {
+    query += `release_title=${title},`;
+  }
+  if (artist) {
+    query += `artist=${artist}`;
   }
   return query;
 }
@@ -100,6 +110,7 @@ const useFilter = () => {
   const [format, setFormat] = useState('');
   const [country, setCountry] = useState('');
   const [title, setTitle] = useState('');
+  const [artist, setArtist] = useState('');
   const [releaseData, setReleaseData] = useState([]);
   const [pagination, setPagination] = useState({ pages: 1 });
   const [sortOrderDemand, setSortOrderDemand] = useState('');
@@ -110,7 +121,7 @@ const useFilter = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   function getNewData() {
-    const query = buildQuery(genre, format, country, title);
+    const query = buildQuery({ genre, format, country, title, artist });
     setLoading(true);
     getDiscogsData(
       (data) => {
@@ -144,6 +155,14 @@ const useFilter = () => {
   function titleSearch(titleStr) {
     if (titleStr) {
       setTitle(titleStr);
+    } else {
+      setInvalidSearch(true);
+    }
+  }
+
+  function artistSearch(artistStr) {
+    if (artistStr) {
+      setArtist(artistStr);
     } else {
       setInvalidSearch(true);
     }
@@ -188,7 +207,7 @@ const useFilter = () => {
   // componentDidMount/componentDidUpdate
   useEffect(() => {
     getNewData();
-  }, [currentPage, genre, format, country, title]);
+  }, [currentPage, genre, format, country, title, artist]);
 
   return (
     <>
@@ -226,8 +245,10 @@ const useFilter = () => {
             </FilterFieldset>
             <FilterFieldset>
               <h2>Search</h2>
+              <Label text="Artist" forVal="artistSearch" />
+              <Search id="artistsSearch" changeCB={artistSearch} />
               <Label text="Title" forVal="titleSearch" />
-              <Search id="search" changeCB={titleSearch} />
+              <Search id="titleSearch" changeCB={titleSearch} />
               {invalidSearch === true ? <p>Bad character</p> : null}
             </FilterFieldset>
           </FilterWrapper>
@@ -247,6 +268,8 @@ const useFilter = () => {
                   nextResults={nextResults}
                   prevDisabled={currentPage === 1}
                   nextDisabled={currentPage === pagination.pages}
+                  currentPage={currentPage}
+                  numPages={pagination.pages}
                 />
               </>
             ) : (

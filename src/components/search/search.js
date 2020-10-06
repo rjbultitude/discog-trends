@@ -16,7 +16,7 @@ let numStrokes = 0;
 
 function keyPress(e, changeCB) {
   const { value } = e.target;
-  const pattern = /^[A-Za-z0-9 ]*$/;
+  const pattern = /^[A-Za-z0-9\s]*$/;
   const charCode = e.keyCode;
   const charStr = String.fromCharCode(charCode);
   if (value === '') {

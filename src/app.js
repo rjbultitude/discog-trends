@@ -5,8 +5,6 @@ import Filter from './components/filter/filter';
 
 const GlobalStyle = createGlobalStyle`
   html {
-    @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
-
     font-size: 1em;
   }
 
@@ -15,14 +13,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    max-width: 920px;
+    max-width: 1024px;
     margin: 0 auto;
   }
 
   h1 {
     font-family: 'Saira Extra Condensed', sans-serif;
-    text-transform: uppercase;
-    font-weight: normal;
+    // text-transform: uppercase;
+    font-weight: 200;
     font-size: 2.2rem;
   }
 

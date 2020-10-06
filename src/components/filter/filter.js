@@ -14,6 +14,8 @@ import Pagination from '../pagination/pagination';
 import Search from '../search/search';
 import * as appConstants from '../../utils/constants';
 
+const filterWidth = '200px';
+
 const FilterResultsWrapper = styled.main`
   display: flex;
   flex-direction: column;
@@ -29,7 +31,7 @@ const FilterForm = styled.section`
   margin-bottom: ${padding};
 
   @media all and (min-width: ${breakPoints.medium}) {
-    flex-basis: 30%;
+    flex-basis: ${filterWidth};
     flex-direction: column;
     margin-right: ${padding};
   }
@@ -68,7 +70,7 @@ const ResultsWrapper = styled.section`
   flex-basis: 100%;
 
   @media all and (min-width: ${breakPoints.medium}) {
-    flex-basis: 70%;
+    flex-basis: calc(100% - ${filterWidth});
   }
 `;
 const FilterField = styled.div`

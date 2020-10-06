@@ -11,6 +11,7 @@ const Select = styled.select`
   display: inline-block;
   font-size: 1rem;
   text-align: center;
+  min-width: 180px;
   width: 100%;
 `;
 

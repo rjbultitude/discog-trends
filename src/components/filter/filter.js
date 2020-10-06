@@ -114,6 +114,34 @@ const useFilter = () => {
   const [invalidSearch, setInvalidSearch] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
+  function toggleDemand() {
+    let order;
+    if (sortOrderDemand === appConstants.ASC) {
+      order = appConstants.DESC;
+    } else {
+      order = appConstants.ASC;
+    }
+    const sortedByDemand = sortByRank(releaseData, appConstants.DEMAND, order);
+    setReleaseData(sortedByDemand);
+    setSortOrderDemand(order);
+  }
+
+  function toggleScarcity() {
+    let order;
+    if (sortOrderScarcity === appConstants.ASC) {
+      order = appConstants.DESC;
+    } else {
+      order = appConstants.ASC;
+    }
+    const sortedByScarcity = sortByRank(
+      releaseData,
+      appConstants.SCARCITY,
+      order
+    );
+    setReleaseData(sortedByScarcity);
+    setSortOrderScarcity(order);
+  }
+
   function getNewData() {
     const query = buildQuery({ genre, format, country, title, artist });
     setLoading(true);
@@ -125,7 +153,14 @@ const useFilter = () => {
         }
         console.log('data', data);
         const processedData = processData(data.results);
-        setReleaseData(processedData);
+        const sortedByDemand = sortByRank(
+          processedData,
+          appConstants.DEMAND,
+          appConstants.ASC
+        );
+        setReleaseData(sortedByDemand);
+        setSortOrderDemand(appConstants.ASC);
+        // setReleaseData(processedData);
         setPagination(data.pagination);
         setLoading(false);
       },
@@ -160,30 +195,6 @@ const useFilter = () => {
     } else {
       setInvalidSearch(true);
     }
-  }
-
-  function toggleDemand() {
-    let order;
-    if (sortOrderDemand === 'asc') {
-      order = 'desc';
-    } else {
-      order = 'asc';
-    }
-    const sortedByDemand = sortByRank(releaseData, 'demand', order);
-    setReleaseData(sortedByDemand);
-    setSortOrderDemand(order);
-  }
-
-  function toggleScarcity() {
-    let order;
-    if (sortOrderScarcity === 'asc') {
-      order = 'desc';
-    } else {
-      order = 'asc';
-    }
-    const sortedByScarcity = sortByRank(releaseData, 'scarcity', order);
-    setReleaseData(sortedByScarcity);
-    setSortOrderScarcity(order);
   }
 
   function prevResults() {

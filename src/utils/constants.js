@@ -34,3 +34,7 @@ export const GENRES = [
   "Children's",
   `Brass & Military`,
 ];
+export const DEMAND = 'demand';
+export const SCARCITY = 'scarcity';
+export const ASC = 'asc';
+export const DESC = 'desc';

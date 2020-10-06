@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // Styles
 import styled from 'styled-components';
-import { colours } from '../../utils/theme';
+import { colours, padding } from '../../utils/theme';
 
 // Styles
 const Pagination = styled.nav`
@@ -12,6 +12,7 @@ const Pagination = styled.nav`
   flex-direction: row;
   font-size: 1rem;
   justify-content: space-between;
+  margin-top: ${padding}
   text-align: center;
 `;
 

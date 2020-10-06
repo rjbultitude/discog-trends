@@ -27,6 +27,7 @@ describe('Filter setError', () => {
 
 describe('buildQuery', () => {
   it('should return "genre=test" when genreVal is Test', () => {
-    expect(buildQuery('test')).toEqual('genre=test,');
+    const genre = 'test';
+    expect(buildQuery({ genre })).toEqual('genre=test,');
   });
 });

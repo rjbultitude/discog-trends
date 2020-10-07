@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 // Components
 import Sort from '../sort/sort';
-import * as appConstants from '../../utils/constants';
 
 // Styles
 import { colours, padding, typography } from '../../utils/theme';

@@ -44,30 +44,36 @@ export function getScarcity(release) {
   if (release.community.have <= 2) {
     return {
       text: 'Extremely rare',
-      rank: 3,
+      rank: 4,
     };
   }
   if (release.community.have <= 10) {
     return {
       text: 'Very rare',
-      rank: 2,
+      rank: 3,
     };
   }
   if (release.community.have <= 20) {
     return {
       text: 'Rare',
+      rank: 2,
+    };
+  }
+  if (release.community.have <= 40) {
+    return {
+      text: 'Common',
       rank: 1,
     };
   }
   return {
-    text: 'Common',
+    text: 'Very common',
     rank: 0,
   };
 }
 
 // Take search results data and filter it
 // using a callback function
-// getDemand is a dependency
+// getDemand and getScarcity are a dependencies
 export function processData(results) {
   if (results.length > 0) {
     const resultsFilteredTitles = results.map((release) => {

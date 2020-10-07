@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
 import Filter from './components/filter/filter';
-import { padding, typography } from './utils/theme';
+import { colours, padding, typography } from './utils/theme';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -43,10 +43,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .page__header {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: ${padding.normal};
-    margin-bottom: ${padding.normal};
     display: flex;
+    margin-bottom: ${padding.normal};
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .page__header h1 {
@@ -68,8 +68,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .page__header__strapline {
-    flex-basis: 70%;
-    text-align: right;
+    background-color: ${colours.white};
+    flex-basis: 50%;
+    padding: ${padding.tight};
   }
 
   select,

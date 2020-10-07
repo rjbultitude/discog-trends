@@ -7,6 +7,7 @@ export const colours = {
   lightGrey: '#D2D0CF',
   lightGreyAlpha: 'rgba(210, 208, 207, 0.9)',
   orange: '#CC5500',
+  rank: ['#cccab4', '#d9d48f', '#ccb639', '#cc8c39', '#cc5b39'],
   veryLightGrey: '#EBEAE9',
   white: 'white',
 };

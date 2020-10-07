@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 // Components
 import Sort from '../sort/sort';
+import * as appConstants from '../../utils/constants';
 
 // Styles
 import { colours, padding, typography } from '../../utils/theme';
@@ -84,11 +85,16 @@ function getKeyFromRelease(release) {
   return uKey;
 }
 
-function createDemandChildren(text) {
+function createRankedDataChildren(item) {
+  const { rank } = item;
+  const itemColour = colours.rank[rank - 1] || '';
+  const divStyle = {
+    backgroundColor: itemColour,
+  };
   return (
     <>
-      {text}
-      {/* <span style={getCellStyle(text)} /> */}
+      {item.text}
+      <div style={divStyle} />
     </>
   );
 }
@@ -99,8 +105,8 @@ function createCells(data) {
     return (
       <TableRow key={`li-${uKey}`}>
         {React.createElement('td', {}, createTitleLinks(item.title, item.url))}
-        {React.createElement('td', {}, createDemandChildren(item.demand.text))}
-        {React.createElement('td', {}, item.scarcity.text)}
+        {React.createElement('td', {}, createRankedDataChildren(item.demand))}
+        {React.createElement('td', {}, createRankedDataChildren(item.scarcity))}
       </TableRow>
     );
   });
@@ -143,7 +149,11 @@ function createHeaders(props) {
     <tr>
       {keys.map((key) => {
         if (key !== 'url') {
-          return <TableHeader>{createHeaderContent(key, props)}</TableHeader>;
+          return (
+            <TableHeader key={key}>
+              {createHeaderContent(key, props)}
+            </TableHeader>
+          );
         }
         return false;
       })}

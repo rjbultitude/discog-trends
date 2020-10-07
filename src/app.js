@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Franklin Gothic', sans-serif;
-    margin: ${padding};
+    margin: ${padding.normal};
   }
 
   div, form, fieldset, span, main, article, section {
@@ -44,8 +44,8 @@ const GlobalStyle = createGlobalStyle`
 
   .page__header {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: ${padding};
-    margin-bottom: ${padding};
+    padding: ${padding.normal};
+    margin-bottom: ${padding.normal};
     display: flex;
   }
 
@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-basis: 30%;
     justify-content: space-between;
-    padding: 0 ${padding};
+    padding: 0 ${padding.normal};
   }
 
   .page__header__icon {

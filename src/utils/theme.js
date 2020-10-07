@@ -10,8 +10,10 @@ export const colours = {
   veryLightGrey: '#EBEAE9',
   white: 'white',
 };
-export const padding = `${paddingNumber}px`;
-export const paddingTight = Math.round(paddingNumber / 2);
+export const padding = {
+  normal: `${paddingNumber}px`,
+  tight: `${Math.round(paddingNumber / 2)}px`,
+};
 export const breakPoints = {
   medium: '720px',
 };

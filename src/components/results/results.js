@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Sort from '../sort/sort';
 
 // Styles
-import { colours, paddingTight, typography } from '../../utils/theme';
+import { colours, padding, typography } from '../../utils/theme';
 
 const TableHeader = styled.th`
   padding: 1rem;
@@ -23,7 +23,7 @@ const TableHeader = styled.th`
 `;
 
 const TableRow = styled.tr`
-  padding: 6px;
+  padding: ${padding.tight};
   background-color: ${colours.veryLightGrey};
 
   &:nth-child(odd) {
@@ -31,7 +31,8 @@ const TableRow = styled.tr`
   }
 
   a {
-    color: ${colours.orange};
+    color: black;
+    text-decoration: none;
   }
 
   a:hover,
@@ -41,7 +42,7 @@ const TableRow = styled.tr`
   }
 
   td {
-    padding: ${paddingTight}px;
+    padding: ${padding.normal} ${padding.tight};
   }
 `;
 
@@ -83,13 +84,22 @@ function getKeyFromRelease(release) {
   return uKey;
 }
 
+function createDemandChildren(text) {
+  return (
+    <>
+      {text}
+      {/* <span style={getCellStyle(text)} /> */}
+    </>
+  );
+}
+
 function createCells(data) {
   return data.map((item) => {
     const uKey = getKeyFromRelease(item);
     return (
       <TableRow key={`li-${uKey}`}>
         {React.createElement('td', {}, createTitleLinks(item.title, item.url))}
-        {React.createElement('td', {}, item.demand.text)}
+        {React.createElement('td', {}, createDemandChildren(item.demand.text))}
         {React.createElement('td', {}, item.scarcity.text)}
       </TableRow>
     );

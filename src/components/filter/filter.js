@@ -28,12 +28,12 @@ const FilterResultsWrapper = styled.main`
 const FilterForm = styled.section`
   display: flex;
   flex-basis: 100%;
-  margin-bottom: ${padding};
+  margin-bottom: ${padding.normal};
 
   @media all and (min-width: ${breakPoints.medium}) {
     flex-basis: ${filterWidth};
     flex-direction: column;
-    margin-right: ${padding};
+    margin-right: ${padding.normal};
   }
 `;
 
@@ -44,7 +44,7 @@ const FilterFieldset = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  padding: ${padding};
+  padding: ${padding.normal};
 
   & + div {
     border-left: 1px solid ${colours.darkGrey};
@@ -73,7 +73,7 @@ const ResultsWrapper = styled.section`
 `;
 const FilterField = styled.div`
   box-sizing: border-box;
-  padding: ${padding} 0 0;
+  padding: ${padding.normal} 0 0;
   margin: 0;
 `;
 

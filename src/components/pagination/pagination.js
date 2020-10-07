@@ -12,7 +12,7 @@ const Pagination = styled.nav`
   flex-direction: row;
   font-size: 1rem;
   justify-content: space-between;
-  margin-top: ${padding};
+  margin-top: ${padding.normal};
   text-align: center;
 `;
 

@@ -6,18 +6,32 @@ import styled from 'styled-components';
 import Sort from '../sort/sort';
 
 // Styles
-import { colours, paddingTight } from '../../utils/theme';
+import { colours, paddingTight, typography } from '../../utils/theme';
+
+const TableHeader = styled.th`
+  padding: 1rem;
+  text-align: left;
+  text-transform: capitalize;
+  vertical-align: top;
+
+  .table__header__text {
+    font-weight: 200;
+    font-size: ${typography.titleSize};
+    font-family: 'Saira Extra Condensed', sans-serif;
+    line-height: 2rem;
+  }
+`;
 
 const TableRow = styled.tr`
   padding: 6px;
-  background-color: ${colours.paleBlue};
+  background-color: ${colours.veryLightGrey};
 
   &:nth-child(odd) {
-    background-color: ${colours.palePink};
+    background-color: ${colours.white};
   }
 
   a {
-    color: ${colours.deepPurple};
+    color: ${colours.orange};
   }
 
   a:hover,
@@ -32,24 +46,12 @@ const TableRow = styled.tr`
 `;
 
 const ResultsWrapper = styled.div`
-  background-color: ${colours.warn};
-
-  h2 {
-    color: white;
-  }
+  background-color: ${colours.lightGreyAlpha};
 `;
 
 const Results = styled.table`
   margin: 0;
   width: 100%;
-
-  th {
-    color: white;
-    font-size: 1.5em;
-    font-weight: 200;
-    text-transform: capitalize;
-    padding: 1rem;
-  }
 
   button {
     border: 0 none;
@@ -102,11 +104,11 @@ function createHeaderContent(key, props) {
     scarcityOrder,
   } = props;
   if (key === 'title') {
-    return key;
+    return <span className="table__header__text">{key}</span>;
   }
   return (
     <>
-      <span>{key}</span>
+      <span className="table__header__text">{key}</span>
       {key === 'demand' ? (
         <Sort
           name="demand"
@@ -131,11 +133,7 @@ function createHeaders(props) {
     <tr>
       {keys.map((key) => {
         if (key !== 'url') {
-          return React.createElement(
-            'th',
-            { key },
-            createHeaderContent(key, props)
-          );
+          return <TableHeader>{createHeaderContent(key, props)}</TableHeader>;
         }
         return false;
       })}

@@ -7,13 +7,17 @@ import { colours, padding } from '../../utils/theme';
 
 // Styles
 const Pagination = styled.nav`
-  color: ${colours.deepPurple};
+  background-color: ${colours.lightGreyAlpha};
   display: flex;
   flex-direction: row;
   font-size: 1rem;
   justify-content: space-between;
   margin-top: ${padding};
   text-align: center;
+`;
+
+const PagingationCount = styled.div`
+  padding-top: 6px;
 `;
 
 const Button = styled.button`
@@ -41,12 +45,12 @@ export default ({
       >
         Previous
       </Button>
-      <span>
+      <PagingationCount>
         {currentPage}
-        of&nbsp;
+        &nbsp;of&nbsp;
         {numPages}
         &nbsp;pages
-      </span>
+      </PagingationCount>
       <Button
         onClick={() => {
           nextResults();

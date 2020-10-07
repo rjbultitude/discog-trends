@@ -1,15 +1,20 @@
 // theme styles
-const paddingNumber = 15;
+const paddingNumber = 18;
 export const colours = {
-  paleBlue: '#e8ecf2',
-  deepPurple: '#322168',
-  palePink: '#eddfe6',
-  warn: '#db6b27',
-  lightGrey: '#dedad7',
   darkGrey: '#85817e',
+  paleBlue: '#e8ecf2',
+  palePink: '#eddfe6',
+  lightGrey: '#D2D0CF',
+  lightGreyAlpha: 'rgba(210, 208, 207, 0.9)',
+  orange: '#CC5500',
+  veryLightGrey: '#EBEAE9',
+  white: 'white',
 };
 export const padding = `${paddingNumber}px`;
 export const paddingTight = Math.round(paddingNumber / 2);
 export const breakPoints = {
   medium: '720px',
+};
+export const typography = {
+  titleSize: '2.35rem',
 };

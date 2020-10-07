@@ -39,9 +39,7 @@ const FilterForm = styled.section`
 
 const FilterFieldset = styled.div`
   align-items: flex-start;
-  background-color: ${colours.lightGrey};
-  border: 1px solid ${colours.darkGrey};
-  box-sizing: border-box;
+  background-color: ${colours.lightGreyAlpha};
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -49,7 +47,7 @@ const FilterFieldset = styled.div`
   padding: ${padding};
 
   & + div {
-    border-left: 0 none;
+    border-left: 1px solid ${colours.darkGrey};
   }
 
   h2 {
@@ -59,8 +57,8 @@ const FilterFieldset = styled.div`
 
   @media all and (min-width: ${breakPoints.medium}) {
     & + div {
-      border-left: 1px solid gray;
-      border-top: 0 none;
+      border-left: 0 none;
+      border-top: 1px solid ${colours.darkGrey};
     }
   }
 `;

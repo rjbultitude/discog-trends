@@ -152,12 +152,12 @@ describe('getScarcity', () => {
   it("should return an object with 'rank' property value of 3 when 'have' is two or less", () => {
     expect(getScarcity(releaseVinyl)).toEqual({
       text: 'Extremely rare',
-      rank: 3,
+      rank: 4,
     });
   });
   it("should return an object with 'rank' property value of 0 when 'have' is over 20", () => {
     expect(getScarcity(releaseCD)).toEqual({
-      text: 'Common',
+      text: 'Very common',
       rank: 0,
     });
   });
@@ -220,7 +220,7 @@ describe('processData', () => {
         },
         scarcity: {
           text: 'Very rare',
-          rank: 2,
+          rank: 3,
         },
       },
     ]);

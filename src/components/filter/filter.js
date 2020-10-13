@@ -111,7 +111,8 @@ const useFilter = () => {
   const [sortOrderScarcity, setSortOrderScarcity] = useState('');
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [invalidSearch, setInvalidSearch] = useState(null);
+  const [invalidTitleSearch, setInvalidTitleSearch] = useState(null);
+  const [invalidArtistSearch, setInvalidArtistSearch] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   function toggleDemand() {
@@ -185,7 +186,7 @@ const useFilter = () => {
     if (titleStr) {
       setTitle(titleStr);
     } else {
-      setInvalidSearch(true);
+      setInvalidTitleSearch(true);
     }
   }
 
@@ -193,7 +194,7 @@ const useFilter = () => {
     if (artistStr) {
       setArtist(artistStr);
     } else {
-      setInvalidSearch(true);
+      setInvalidArtistSearch(true);
     }
   }
 
@@ -253,11 +254,12 @@ const useFilter = () => {
               <FilterField>
                 <Label text="Artist" forVal="artistSearch" />
                 <Search id="artistsSearch" changeCB={artistSearch} />
+                {invalidArtistSearch === true ? <p>Bad character</p> : null}
               </FilterField>
               <FilterField>
                 <Label text="Title" forVal="titleSearch" />
                 <Search id="titleSearch" changeCB={titleSearch} />
-                {invalidSearch === true ? <p>Bad character</p> : null}
+                {invalidTitleSearch === true ? <p>Bad character</p> : null}
               </FilterField>
             </FilterFieldset>
           </FilterForm>

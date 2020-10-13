@@ -78,6 +78,10 @@ const GlobalStyle = createGlobalStyle`
   input {
     font-size: 1rem;
   }
+
+  .page__footer {
+    font-size: 0.8rem;
+  }
 `;
 
 const App = () => {

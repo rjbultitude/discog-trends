@@ -3,6 +3,7 @@ import {
   getScarcity,
   processData,
   sortByRank,
+  buildQuery,
 } from './filter-funcs.js';
 
 // mocks
@@ -224,5 +225,12 @@ describe('processData', () => {
         },
       },
     ]);
+  });
+});
+
+describe('buildQuery', () => {
+  it('should return "genre=test" when genreVal is Test', () => {
+    const genre = 'test';
+    expect(buildQuery({ genre })).toEqual('genre=test,');
   });
 });

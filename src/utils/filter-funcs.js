@@ -111,3 +111,25 @@ export function getStyle(release, styleTerm) {
   }
   return false;
 }
+
+export function buildQuery({ genre, format, country, title, artist }) {
+  let query = '';
+  const BLANK = '--';
+  // TODO refactor
+  if (genre && genre !== BLANK) {
+    query += `genre=${genre},`;
+  }
+  if (format && format !== BLANK) {
+    query += `format=${format},`;
+  }
+  if (country && country !== BLANK) {
+    query += `country=${country},`;
+  }
+  if (title) {
+    query += `release_title=${title},`;
+  }
+  if (artist) {
+    query += `artist=${artist}`;
+  }
+  return query;
+}

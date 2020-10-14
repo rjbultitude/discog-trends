@@ -5,13 +5,15 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import getDiscogsData from '../../utils/getdata';
 import Results from '../results/results';
+import SearchForm from '../search/search-form';
+import FilterFieldsetStyled from '../filter-fieldset/filter-fieldset';
+import FilterFieldStyled from '../filter-field/filter-field';
 import { processData, sortByRank } from '../../utils/filter-funcs';
-import { breakPoints, colours, padding } from '../../utils/theme';
+import { breakPoints, padding } from '../../utils/theme';
 // Components
 import Label from '../label/label';
 import Select from '../select/select';
 import Pagination from '../pagination/pagination';
-import Search from '../search/search';
 import * as appConstants from '../../utils/constants';
 
 const filterWidth = '200px';
@@ -37,31 +39,6 @@ const FilterForm = styled.section`
   }
 `;
 
-const FilterFieldset = styled.div`
-  align-items: flex-start;
-  background-color: ${colours.lightGreyAlpha};
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: ${padding.normal};
-
-  & + div {
-    border-left: 1px solid ${colours.darkGrey};
-  }
-
-  h2 {
-    flex-basis: 100%;
-    margin: 0;
-  }
-
-  @media all and (min-width: ${breakPoints.medium}) {
-    & + div {
-      border-left: 0 none;
-      border-top: 1px solid ${colours.darkGrey};
-    }
-  }
-`;
 const ResultsWrapper = styled.section`
   display: flex;
   flex-direction: column;
@@ -71,48 +48,17 @@ const ResultsWrapper = styled.section`
     flex-basis: calc(100% - ${filterWidth});
   }
 `;
-const FilterField = styled.div`
-  box-sizing: border-box;
-  padding: ${padding.normal} 0 0;
-  margin: 0;
-`;
-
-export function buildQuery({ genre, format, country, title, artist }) {
-  let query = '';
-  const BLANK = '--';
-  // TODO refactor
-  if (genre && genre !== BLANK) {
-    query += `genre=${genre},`;
-  }
-  if (format && format !== BLANK) {
-    query += `format=${format},`;
-  }
-  if (country && country !== BLANK) {
-    query += `country=${country},`;
-  }
-  if (title) {
-    query += `release_title=${title},`;
-  }
-  if (artist) {
-    query += `artist=${artist}`;
-  }
-  return query;
-}
 
 const useFilter = () => {
   const [genre, setGenre] = useState('');
   const [format, setFormat] = useState('');
   const [country, setCountry] = useState('');
-  const [title, setTitle] = useState('');
-  const [artist, setArtist] = useState('');
   const [releaseData, setReleaseData] = useState([]);
   const [pagination, setPagination] = useState({ pages: 1 });
   const [sortOrderDemand, setSortOrderDemand] = useState('');
   const [sortOrderScarcity, setSortOrderScarcity] = useState('');
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [invalidTitleSearch, setInvalidTitleSearch] = useState(null);
-  const [invalidArtistSearch, setInvalidArtistSearch] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   function toggleDemand() {
@@ -161,7 +107,6 @@ const useFilter = () => {
         );
         setReleaseData(sortedByDemand);
         setSortOrderDemand(appConstants.ASC);
-        // setReleaseData(processedData);
         setPagination(data.pagination);
         setLoading(false);
       },
@@ -182,22 +127,6 @@ const useFilter = () => {
     setCountry(e.target.value);
   };
 
-  function titleSearch(titleStr) {
-    if (titleStr) {
-      setTitle(titleStr);
-    } else {
-      setInvalidTitleSearch(true);
-    }
-  }
-
-  function artistSearch(artistStr) {
-    if (artistStr) {
-      setArtist(artistStr);
-    } else {
-      setInvalidArtistSearch(true);
-    }
-  }
-
   function prevResults() {
     if (currentPage > 1) {
       setCurrentPage(() => currentPage - 1);
@@ -213,7 +142,7 @@ const useFilter = () => {
   // componentDidMount/componentDidUpdate
   useEffect(() => {
     getNewData();
-  }, [currentPage, genre, format, country, title, artist]);
+  }, [currentPage, genre, format, country]);
 
   return (
     <>
@@ -222,46 +151,34 @@ const useFilter = () => {
       ) : (
         <FilterResultsWrapper>
           <FilterForm>
-            <FilterFieldset>
+            <FilterFieldsetStyled>
               <h2>Filter</h2>
-              <FilterField>
+              <FilterFieldStyled>
                 <Label text="Genre" forVal={appConstants.GENRES_STR} />
                 <Select
                   selectOptions={appConstants.GENRES}
                   changeCB={changeGenre}
                   id={appConstants.GENRES_STR}
                 />
-              </FilterField>
-              <FilterField>
+              </FilterFieldStyled>
+              <FilterFieldStyled>
                 <Label text="Format" forVal={appConstants.FORMATS_STR} />
                 <Select
                   selectOptions={appConstants.FORMATS}
                   changeCB={changeFormat}
                   id={appConstants.FORMATS_STR}
                 />
-              </FilterField>
-              <FilterField>
+              </FilterFieldStyled>
+              <FilterFieldStyled>
                 <Label text="Country" forVal={appConstants.COUNTRIES_STR} />
                 <Select
                   selectOptions={appConstants.COUNTRIES}
                   changeCB={changeCountry}
                   id={appConstants.COUNTRIES_STR}
                 />
-              </FilterField>
-            </FilterFieldset>
-            <FilterFieldset>
-              <h2>Search</h2>
-              <FilterField>
-                <Label text="Artist" forVal="artistSearch" />
-                <Search id="artistsSearch" changeCB={artistSearch} />
-                {invalidArtistSearch === true ? <p>Bad character</p> : null}
-              </FilterField>
-              <FilterField>
-                <Label text="Title" forVal="titleSearch" />
-                <Search id="titleSearch" changeCB={titleSearch} />
-                {invalidTitleSearch === true ? <p>Bad character</p> : null}
-              </FilterField>
-            </FilterFieldset>
+              </FilterFieldStyled>
+            </FilterFieldsetStyled>
+            <SearchForm />
           </FilterForm>
           <ResultsWrapper>
             {releaseData && releaseData.length > 0 ? (

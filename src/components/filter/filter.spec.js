@@ -24,10 +24,3 @@ describe('Filter setError', () => {
     expect(setPagination).toHaveBeenCalledWith({ pages: -1 });
   });
 });
-
-describe('buildQuery', () => {
-  it('should return "genre=test" when genreVal is Test', () => {
-    const genre = 'test';
-    expect(buildQuery({ genre })).toEqual('genre=test,');
-  });
-});

@@ -77,7 +77,7 @@ const FilterField = styled.div`
   margin: 0;
 `;
 
-export function buildQuery({ genre, format, country, title, artist }) {
+export function buildQuery({ genre, format, country, track, artist }) {
   let query = '';
   const BLANK = '--';
   // TODO refactor
@@ -90,8 +90,8 @@ export function buildQuery({ genre, format, country, title, artist }) {
   if (country && country !== BLANK) {
     query += `country=${country},`;
   }
-  if (title) {
-    query += `release_title=${title},`;
+  if (track) {
+    query += `track=${track},`;
   }
   if (artist) {
     query += `artist=${artist}`;
@@ -103,7 +103,7 @@ const useFilter = () => {
   const [genre, setGenre] = useState('');
   const [format, setFormat] = useState('');
   const [country, setCountry] = useState('');
-  const [title, setTitle] = useState('');
+  const [track, setTrack] = useState('');
   const [artist, setArtist] = useState('');
   const [releaseData, setReleaseData] = useState([]);
   const [pagination, setPagination] = useState({ pages: 1 });
@@ -111,7 +111,7 @@ const useFilter = () => {
   const [sortOrderScarcity, setSortOrderScarcity] = useState('');
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [invalidTitleSearch, setInvalidTitleSearch] = useState(null);
+  const [invalidTrackSearch, setInvalidTrackSearch] = useState(null);
   const [invalidArtistSearch, setInvalidArtistSearch] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -144,7 +144,7 @@ const useFilter = () => {
   }
 
   function getNewData() {
-    const query = buildQuery({ genre, format, country, title, artist });
+    const query = buildQuery({ genre, format, country, track, artist });
     setLoading(true);
     getDiscogsData(
       (data) => {
@@ -182,11 +182,11 @@ const useFilter = () => {
     setCountry(e.target.value);
   };
 
-  function titleSearch(titleStr) {
-    if (titleStr) {
-      setTitle(titleStr);
+  function trackSearch(trackStr) {
+    if (trackStr) {
+      setTrack(trackStr);
     } else {
-      setInvalidTitleSearch(true);
+      setInvalidTrackSearch(true);
     }
   }
 
@@ -213,7 +213,7 @@ const useFilter = () => {
   // componentDidMount/componentDidUpdate
   useEffect(() => {
     getNewData();
-  }, [currentPage, genre, format, country, title, artist]);
+  }, [currentPage, genre, format, country, track, artist]);
 
   return (
     <>
@@ -257,9 +257,9 @@ const useFilter = () => {
                 {invalidArtistSearch === true ? <p>Bad character</p> : null}
               </FilterField>
               <FilterField>
-                <Label text="Title" forVal="titleSearch" />
-                <Search id="titleSearch" changeCB={titleSearch} />
-                {invalidTitleSearch === true ? <p>Bad character</p> : null}
+                <Label text="track" forVal="trackSearch" />
+                <Search id="trackSearch" changeCB={trackSearch} />
+                {invalidTrackSearch === true ? <p>Bad character</p> : null}
               </FilterField>
             </FilterFieldset>
           </FilterForm>

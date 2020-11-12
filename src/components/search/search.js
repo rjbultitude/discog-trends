@@ -14,29 +14,19 @@ const TextInput = styled.input`
   width: 100%;
 `;
 
-let numStrokes = 0;
-
 function keyPress(e, changeCB) {
   const { value } = e.target;
   const pattern = /^[A-Za-z0-9\s]*$/;
   const charCode = e.keyCode;
   const charStr = String.fromCharCode(charCode);
-  if (value === '') {
-    numStrokes = 0;
-    return;
-  }
+  console.log('value', value);
+  console.log('charStr', charStr);
   if (pattern.test(value) !== true) {
     changeCB(null);
     return;
   }
-  if (pattern.test(charStr) || charCode === 8) {
-    if (numStrokes > 3) {
-      changeCB(e.target.value);
-      console.log('searching');
-    }
-    numStrokes += 1;
-    console.log('numStrokes', numStrokes);
-  }
+  changeCB(e.target.value);
+  return;
 }
 
 export default (props) => {

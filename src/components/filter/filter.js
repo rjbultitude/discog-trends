@@ -185,16 +185,24 @@ const useFilter = () => {
   function trackSearch(trackStr) {
     if (trackStr) {
       setTrack(trackStr);
-    } else {
+      setInvalidArtistSearch(false);
+    }
+    if (trackStr === null) {
       setInvalidTrackSearch(true);
+    } else {
+      setInvalidTrackSearch(false);
     }
   }
 
   function artistSearch(artistStr) {
     if (artistStr) {
       setArtist(artistStr);
-    } else {
+      setInvalidArtistSearch(false);
+    }
+    if (artistStr === null) {
       setInvalidArtistSearch(true);
+    } else {
+      setInvalidArtistSearch(false);
     }
   }
 
@@ -257,7 +265,7 @@ const useFilter = () => {
                 {invalidArtistSearch === true ? <p>Bad character</p> : null}
               </FilterField>
               <FilterField>
-                <Label text="track" forVal="trackSearch" />
+                <Label text="Track" forVal="trackSearch" />
                 <Search id="trackSearch" changeCB={trackSearch} />
                 {invalidTrackSearch === true ? <p>Bad character</p> : null}
               </FilterField>

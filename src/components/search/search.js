@@ -17,16 +17,11 @@ const TextInput = styled.input`
 function keyPress(e, changeCB) {
   const { value } = e.target;
   const pattern = /^[A-Za-z0-9\s]*$/;
-  const charCode = e.keyCode;
-  const charStr = String.fromCharCode(charCode);
-  console.log('value', value);
-  console.log('charStr', charStr);
   if (pattern.test(value) !== true) {
     changeCB(null);
     return;
   }
   changeCB(e.target.value);
-  return;
 }
 
 export default (props) => {

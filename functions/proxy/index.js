@@ -13,6 +13,9 @@ exports.handler = async function startSearch(event, context, callback) {
     event.queryStringParameters
   ).toString();
   try {
+    console.log('typeof e.qStringParas', typeof event.queryStringParameters);
+    console.log('event.queryStringParameters', event.queryStringParameters);
+    console.log('queryString', queryString);
     const results = await db.search(queryString);
     if (!results) {
       callback(null, {

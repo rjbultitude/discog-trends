@@ -1,30 +1,25 @@
-const API_URL = process.env.development
-  ? 'http://localhost:8080/'
-  : '/.netlify/functions/';
+console.log('process.env.development', process.env.development);
+console.log('process.env.production', process.env.production);
+
+const API_URL = process.env.production
+  ? '/.netlify/functions/'
+  : 'http://localhost:8080/search';
 
 // search data
-function params(page, sort, sortOrder, perPage) {
-  return {
-    page: page || 1,
-    sort: sort || 'year',
-    sort_order: sortOrder || 'asc',
-    per_page: perPage || 20,
-  };
+function params(page = 1, sort = 'year', sortOrder = 'asc', perPage = 20) {
+  return `page=${page}&sort=${sort}&sort_order=${sortOrder}&per_page=${perPage}`;
 }
 
 // Request headers and body
-
-function postBodyJSON(query, page) {
-  return JSON.stringify({
-    params: params(page),
-    searchTerm: query,
-  });
+function getQueryString(query, page) {
+  const pageStr = params(page);
+  return `?${pageStr}&searchTerm=${query}`;
 }
 
 export default async function getDiscogsData(callback, query, page) {
-  const postHeader = postBodyJSON(query, page);
-  const requestURL = `${API_URL}${postHeader}`;
-  console.log('postHeader', postHeader);
+  const getReqString = getQueryString(query, page);
+  const requestURL = `${API_URL}${getReqString}`;
+  console.log('getReqString', getReqString);
   console.log('requestURL', requestURL);
   try {
     const response = await fetch(requestURL);

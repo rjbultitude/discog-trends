@@ -2,7 +2,7 @@ console.log('process.env.development', process.env.development);
 console.log('process.env.production', process.env.production);
 
 const API_URL = process.env.production
-  ? '/.netlify/functions/'
+  ? '/.netlify/functions/proxy'
   : 'http://localhost:8080/search';
 
 // search data

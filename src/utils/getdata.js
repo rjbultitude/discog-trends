@@ -1,3 +1,9 @@
+require('dotenv').config();
+
+const API_URL = process.env.development
+  ? 'http://localhost:8080/'
+  : '/.netlify/functions/';
+
 // search data
 function params(page, sort, sortOrder, perPage) {
   return {
@@ -34,10 +40,7 @@ export default async function getDiscogsData(callback, query, page) {
   const postHeader = getDiscogsPostHeader(query, page);
   console.log('postheader', postHeader);
   try {
-    const response = await fetch(
-      `http://localhost:8080/api/search`,
-      postHeader
-    );
+    const response = await fetch(`${API_URL}api/search`, postHeader);
     let res;
     if (response.ok) {
       res = await response.json();

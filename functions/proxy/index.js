@@ -9,14 +9,11 @@ const db = new Discogs(creds).database();
 
 // Search requests
 exports.handler = async function startSearch(event, context, callback) {
-  const queryString = new URLSearchParams(
-    event.queryStringParameters
-  ).toString();
+  // const queryString = new URLSearchParams(
+  //   event.queryStringParameters
+  // ).toString();
   try {
-    console.log('typeof e.qStringParas', typeof event.queryStringParameters);
-    console.log('event.queryStringParameters', event.queryStringParameters);
-    console.log('queryString', queryString);
-    const results = await db.search(queryString);
+    const results = await db.search(event.queryStringParameters);
     if (!results) {
       callback(null, {
         statusCode: 500,

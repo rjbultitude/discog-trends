@@ -9,7 +9,9 @@ const db = new Discogs(creds).database();
 
 // Search requests
 exports.handler = async function startSearch(event, context, callback) {
-  const queryString = JSON.stringify(event.queryStringParameters);
+  const queryString = new URLSearchParams(
+    event.queryStringParameters
+  ).toString();
   console.log('queryString', queryString);
   const results = await db.search(queryString);
   console.log('results', results);

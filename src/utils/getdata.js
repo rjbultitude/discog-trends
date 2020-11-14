@@ -21,24 +21,10 @@ function postBodyJSON(query, page) {
   });
 }
 
-function getDiscogsPostHeader(query, page) {
-  return {
-    method: 'POST',
-    mode: 'same-origin',
-    credentials: 'include',
-    headers: {
-      Accept: 'application/json',
-      'Content-type': 'application/json',
-    },
-    body: postBodyJSON(query, page),
-  };
-}
-
 export default async function getDiscogsData(callback, query, page) {
-  const postHeader = getDiscogsPostHeader(query, page);
-  console.log('postheader', postHeader);
+  const postHeader = postBodyJSON(query, page);
   try {
-    const response = await fetch(`${API_URL}`, postHeader);
+    const response = await fetch(`${API_URL}${postHeader}`);
     let res;
     if (response.ok) {
       res = await response.json();

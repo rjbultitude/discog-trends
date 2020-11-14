@@ -33,7 +33,7 @@ export default async function getDiscogsData(callback, query, page) {
       res = await response.json();
       callback(res);
     } else {
-      throw new Error('response was not ok');
+      throw new Error('response was not ok', response);
     }
   } catch (err) {
     console.warn('discogs request error', err);

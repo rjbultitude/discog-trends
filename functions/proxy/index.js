@@ -15,13 +15,12 @@ exports.handler = async function startSearch(event, context, callback) {
   try {
     const results = await db.search(event.queryStringParameters);
     if (!results) {
-      callback(null, {
+      return callback(null, {
         statusCode: 500,
         body: 'Bad request',
       });
-      return;
     }
-    callback(null, {
+    return callback(null, {
       statusCode: 200,
       body: results,
     });

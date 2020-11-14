@@ -23,8 +23,11 @@ function postBodyJSON(query, page) {
 
 export default async function getDiscogsData(callback, query, page) {
   const postHeader = postBodyJSON(query, page);
+  const requestURL = `${API_URL}${postHeader}`;
+  console.log('postHeader', postHeader);
+  console.log('requestURL', requestURL);
   try {
-    const response = await fetch(`${API_URL}${postHeader}`);
+    const response = await fetch();
     let res;
     if (response.ok) {
       res = await response.json();

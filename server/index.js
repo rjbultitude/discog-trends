@@ -2,78 +2,28 @@
 
 // 3rd party dependencies
 const Discogs = require('disconnect').Client;
-const express = require('express');
 // const Bundler = require('parcel-bundler');
-const bodyParser = require('body-parser');
-
-const app = express();
 // Local files
 const creds = require('./creds.js');
 
-const port = process.env.PORT || 8080;
 const db = new Discogs(creds).database();
-// const configureCSP = require('./csp.js');
-// const configureCors = require('./cors.js');
-// const getStaticData = require('./get-static-data.js');
 // Config
-const isProd = process.env.NODE_ENV === 'production';
-let options;
-if (isProd) {
-  options = {
-    production: true,
-    cache: false,
-    minify: true,
-    sourceMaps: false,
-    http: true,
-  };
-} else {
-  options = {
-    cache: true,
-    minify: false,
-    sourceMaps: true,
-    watch: true,
-  };
-}
-
-// Security policy
-// configureCSP(app);
-// CORS
-// const corsOptions = configureCors(port);
-
-// Tell Node how to handle the request body
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// const isProd = process.env.NODE_ENV === 'production';
 
 // Search requests
-app.post('/api/search', function postCB(req, res) {
-  db.search(req.body.searchTerm, req.body.params, (err, data) => {
+exports.handler = async function startSearch(event, context, callback) {
+  const { searchTerm, params } = event.queryStringParams;
+  db.search(searchTerm, params, (err, data) => {
     if (err !== null) {
-      console.warn('error running search', err);
-      if (process.env.NODE_ENV !== 'production') {
-        console.log('getting static data');
-        // getStaticData(res);
-        return;
-      }
-      res.sendStatus(500);
+      callback(null, {
+        statusCode: 500,
+        body: 'Bad request',
+      });
       return;
     }
-    // console.log('post data', data);
-    res.send(data);
+    callback(null, {
+      statusCode: 200,
+      body: data,
+    });
   });
-});
-
-// Run app from root
-app.use(express.static('./'));
-
-console.log('process.env.NODE_ENV', process.env.NODE_ENV);
-
-// Configure Parcel middleware
-// to serve app in development mode
-// if (process.env.NODE_ENV === 'development') {
-//   const bundler = new Bundler('./src/index.html', options);
-//   app.use(bundler.middleware());
-// }
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
-});
+};

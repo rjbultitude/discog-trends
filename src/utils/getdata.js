@@ -27,7 +27,7 @@ export default async function getDiscogsData(callback, query, page) {
   console.log('postHeader', postHeader);
   console.log('requestURL', requestURL);
   try {
-    const response = await fetch();
+    const response = await fetch(requestURL);
     let res;
     if (response.ok) {
       res = await response.json();

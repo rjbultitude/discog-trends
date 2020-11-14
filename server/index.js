@@ -37,16 +37,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Search requests
-app.get('/search', function getCB(req, res) {
-  db.search(req.query, (err, data) => {
-    if (err !== null) {
-      console.warn('error running search', err);
+app.get('/search', async function getCB(req, res) {
+  try {
+    const results = await db.search(req.query);
+    if (!results) {
+      console.warn('error running search', results);
       res.sendStatus(500);
       return;
     }
     // console.log('post data', data);
-    res.send(data);
-  });
+    res.send(results);
+  } catch (err) {
+    console.warn('error in promise', err);
+  }
 });
 
 // Run app from root

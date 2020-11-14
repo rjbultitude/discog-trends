@@ -12,18 +12,20 @@ exports.handler = async function startSearch(event, context, callback) {
   const queryString = new URLSearchParams(
     event.queryStringParameters
   ).toString();
-  console.log('queryString', queryString);
-  const results = await db.search(queryString);
-  console.log('results', results);
-  if (results.err !== null) {
+  try {
+    const results = await db.search(queryString);
+    if (!results) {
+      callback(null, {
+        statusCode: 500,
+        body: 'Bad request',
+      });
+      return;
+    }
     callback(null, {
-      statusCode: 500,
-      body: 'Bad request',
+      statusCode: 200,
+      body: results,
     });
-    return;
+  } catch (err) {
+    console.warn('error in promise', err);
   }
-  callback(null, {
-    statusCode: 200,
-    body: results.data,
-  });
 };

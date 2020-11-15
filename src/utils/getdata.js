@@ -19,8 +19,6 @@ function getQueryString(query, page) {
 export default async function getDiscogsData(callback, query, page) {
   const getReqString = getQueryString(query, page);
   const requestURL = `${API_URL}${getReqString}`;
-  console.log('getReqString', getReqString);
-  console.log('requestURL', requestURL);
   try {
     const response = await fetch(requestURL);
     let res;

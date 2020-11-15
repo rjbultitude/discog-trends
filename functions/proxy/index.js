@@ -16,11 +16,10 @@ exports.handler = async function startSearch(event, context, callback) {
     const results = await db.search(event.queryStringParameters);
     console.log('results', results);
     const resultsStr = JSON.stringify(results);
-    callback(null, resultsStr);
-    // {
-    //   statusCode: 500,
-    //   body: 'Bad request',
-    // },
+    callback(null, {
+      statusCode: 200,
+      body: resultsStr,
+    });
   } catch (err) {
     console.warn('error in promise', err);
     callback(err, null);

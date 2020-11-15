@@ -9,12 +9,8 @@ const db = new Discogs(creds).database();
 
 // Search requests
 exports.handler = async function startSearch(event, context, callback) {
-  // const queryString = new URLSearchParams(
-  //   event.queryStringParameters
-  // ).toString();
   try {
     const results = await db.search(event.queryStringParameters);
-    console.log('results', results);
     const resultsStr = JSON.stringify(results);
     callback(null, {
       statusCode: 200,

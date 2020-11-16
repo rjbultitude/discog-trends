@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // Styles
 import styled from 'styled-components';
 import { colours } from '../../utils/theme';
+import { TEXT_FIELD_PATTERN, DATA_INPUT_TIMEOUT } from '../../utils/constants';
 
 // Styles
 const TextInput = styled.input`
@@ -13,15 +14,18 @@ const TextInput = styled.input`
   font-size: 1rem;
   width: 100%;
 `;
+let timeoutId = 0;
 
 function keyPress(e, changeCB) {
   const { value } = e.target;
-  const pattern = /^[A-Za-z0-9\s]*$/;
-  if (pattern.test(value) !== true) {
+  if (TEXT_FIELD_PATTERN.test(value) !== true) {
     changeCB(null);
     return;
   }
-  changeCB(e.target.value);
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(() => {
+    changeCB(value);
+  }, DATA_INPUT_TIMEOUT);
 }
 
 export default (props) => {

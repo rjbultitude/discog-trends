@@ -38,3 +38,5 @@ export const DEMAND = 'demand';
 export const SCARCITY = 'scarcity';
 export const ASC = 'asc';
 export const DESC = 'desc';
+export const TEXT_FIELD_PATTERN = /^[A-Za-z0-9\s]*$/;
+export const DATA_INPUT_TIMEOUT = 1500;

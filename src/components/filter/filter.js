@@ -77,25 +77,18 @@ const FilterField = styled.div`
   margin: 0;
 `;
 
-export function buildQuery({ genre, format, country, track, artist }) {
+export function buildQuery(queryArgs) {
   let query = '';
   const BLANK = '--';
-  // TODO refactor
-  if (genre && genre !== BLANK) {
-    query += `genre=${genre},`;
-  }
-  if (format && format !== BLANK) {
-    query += `format=${format},`;
-  }
-  if (country && country !== BLANK) {
-    query += `country=${country},`;
-  }
-  if (track) {
-    query += `track=${track},`;
-  }
-  if (artist) {
-    query += `artist=${artist}`;
-  }
+  Object.keys(queryArgs).forEach((queryArgKey, index) => {
+    const queryArgVal = queryArgs[queryArgKey];
+    if (queryArgVal && queryArgVal !== BLANK) {
+      query += `&${queryArgKey}=${queryArgVal}`;
+      if (index - 1 !== Object.keys(queryArgs).length) {
+        query += ',';
+      }
+    }
+  });
   return query;
 }
 

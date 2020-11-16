@@ -1,6 +1,3 @@
-console.log('process.env.development', process.env.development);
-console.log('process.env.production', process.env.production);
-
 const API_URL = process.env.production
   ? '/.netlify/functions/proxy'
   : 'http://localhost:8080/search';
@@ -13,7 +10,7 @@ function params(page = 1, sort = 'year', sortOrder = 'asc', perPage = 20) {
 // Request headers and body
 function getQueryString(query, page) {
   const pageStr = params(page);
-  return `?${pageStr}&searchTerm=${query}`;
+  return `?${pageStr}${query}`;
 }
 
 export default async function getDiscogsData(callback, query, page) {

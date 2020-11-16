@@ -14,7 +14,6 @@ configure({ adapter: new Adapter() });
 
 describe('Filter setError', () => {
   const filterWrapper = shallow(<Filter />);
-  console.log('filterWrapper', filterWrapper.instance());
   const setPagination = jest.fn();
   const useStateSpy = jest.spyOn(React, 'useState');
   useStateSpy.mockImplementation((init) => [init, setPagination]);

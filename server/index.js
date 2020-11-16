@@ -45,7 +45,6 @@ app.get('/search', async function getCB(req, res) {
       res.sendStatus(500);
       return;
     }
-    // console.log('post data', data);
     res.send(results);
   } catch (err) {
     console.warn('error in promise', err);
@@ -54,8 +53,6 @@ app.get('/search', async function getCB(req, res) {
 
 // Run app from root
 app.use(express.static('./'));
-
-console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 // Configure Parcel middleware
 // to serve app in development mode

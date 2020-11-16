@@ -26,8 +26,8 @@ describe('Filter setError', () => {
 });
 
 describe('buildQuery', () => {
-  it('should return "genre=test" when genreVal is Test', () => {
+  it('should return "&genre=test" when genreVal is Test', () => {
     const genre = 'test';
-    expect(buildQuery({ genre })).toEqual('genre=test,');
+    expect(buildQuery({ genre })).toEqual('&genre=test,');
   });
 });

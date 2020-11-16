@@ -39,7 +39,6 @@ app.use(bodyParser.json());
 // Search requests
 app.get('/search', async function getCB(req, res) {
   try {
-    console.log('req.query', req.query);
     const results = await db.search(req.query);
     if (!results) {
       console.warn('error running search', results);

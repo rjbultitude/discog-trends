@@ -8,6 +8,7 @@ import Results from '../results/results';
 import { processData, sortByRank } from '../../utils/filter-funcs';
 import { breakPoints, colours, padding } from '../../utils/theme';
 // Components
+import Message from '../state-message/state-message';
 import Label from '../label/label';
 import Select from '../select/select';
 import Pagination from '../pagination/pagination';
@@ -219,7 +220,7 @@ const useFilter = () => {
   return (
     <>
       {error === true ? (
-        <h2>No data. Bad connection</h2>
+        <Message title="No connection or bad data" />
       ) : (
         <FilterResultsWrapper>
           <FilterForm>
@@ -267,25 +268,30 @@ const useFilter = () => {
           <ResultsWrapper>
             {releaseData && releaseData.length > 0 ? (
               <>
-                {loading === true ? <h2>Loading</h2> : null}
-                <Results
-                  releaseData={releaseData}
-                  toggleScarcityCB={toggleScarcity}
-                  scarcityOrder={sortOrderScarcity}
-                  toggleDemandCB={toggleDemand}
-                  demandOrder={sortOrderDemand}
-                />
-                <Pagination
-                  prevResults={prevResults}
-                  nextResults={nextResults}
-                  prevDisabled={currentPage === 1}
-                  nextDisabled={currentPage === pagination.pages}
-                  currentPage={currentPage}
-                  numPages={pagination.pages}
-                />
+                {loading === true ? (
+                  <Message title="loading" />
+                ) : (
+                  <>
+                    <Results
+                      releaseData={releaseData}
+                      toggleScarcityCB={toggleScarcity}
+                      scarcityOrder={sortOrderScarcity}
+                      toggleDemandCB={toggleDemand}
+                      demandOrder={sortOrderDemand}
+                    />
+                    <Pagination
+                      prevResults={prevResults}
+                      nextResults={nextResults}
+                      prevDisabled={currentPage === 1}
+                      nextDisabled={currentPage === pagination.pages}
+                      currentPage={currentPage}
+                      numPages={pagination.pages}
+                    />
+                  </>
+                )}
               </>
             ) : (
-              <h2>No results</h2>
+              <Message title="No results" />
             )}
           </ResultsWrapper>
         </FilterResultsWrapper>
